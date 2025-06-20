@@ -7,23 +7,17 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <link rel="stylesheet" href="https://sasha1985y.github.io/Docker-help/styles/index.css">
+    <link rel="stylesheet" href="index.css">
     <title>Примеры JavaScript-кода</title>
     <style>
 
-        header {
+        /* header {
             text-align: center;
             min-height: 35vh;
-            background: url('https://sasha1985y.github.io/Docker-help/images/pano.jpg') fixed;
+            background: url('pano.jpg') fixed;
             background-repeat: no-repeat;
             background-size: auto 55%;
-        }
-
-        main {
-            background: url('https://sasha1985y.github.io/Docker-help/images/author.jpg') fixed no-repeat 0 50%, url('https://sasha1985y.github.io/Docker-help/images/job.jpg') fixed no-repeat 50% 100%, url('https://sasha1985y.github.io/Docker-help/images/evening.jpg') fixed no-repeat 99% 0;
-            background-size: auto 97%;
-            text-align: end;
-        }
+        } */
 
         footer {
             min-height: 5vh;
@@ -98,26 +92,24 @@
                 background-size: auto 68.2%;
             }
 
-            main {
-                background: url('https://sasha1985y.github.io/Docker-help/images/author.jpg') fixed no-repeat 0 50%, url('https://sasha1985y.github.io/Docker-help/images/job.jpg') fixed no-repeat 50% 100%, url('https://sasha1985y.github.io/Docker-help/images/evening.jpg') fixed no-repeat 99% 0;
+            /* main {
+                background: url('author.jpg') fixed no-repeat 0 50%, url('job.jpg') fixed no-repeat 50% 100%, url('evening.jpg') fixed no-repeat 99% 0;
                 background-size: auto 113%;
                 text-align: end;
-            }
+            } */
         }
     </style>
 </head>
 
-<body>
-    <header>
+<body class="body-general">
+    <header class="header-general">
         <select name="linkSelect" id="linkSelect"></select>
     </header>
-    <main>
+    <main class="main-general">
         <div class="text">В этом блоке рассмотрим команды Docker</div>
     </main>
-    <!-- <img src="logo.svg" alt="logo" class="applogo"> -->
     <footer></footer>
-    
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="index.js"></script>
 </body>
 
 </html>
