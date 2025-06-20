@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</p>
-    <p>Create and run a new container from an image</p>
-    <p>Aliases: docker container run, docker run</p>
-    <pre>
+    <header>
+        <select name="linkSelect" id="linkSelect"></select>
+    </header>
+    <main>
+        <p>Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</p>
+        <p>Create and run a new container from an image</p>
+        <p>Aliases: docker container run, docker run</p>
+        <pre>
                 Опции:
             <code>--add-host list                    Добавить пользовательское картирование хоста в IP(host:ip)</code>
             <code>--annotation map                   Добавить аннотацию в контейнер (перенесено в OCI Runtime)(default map[])</code>
@@ -125,6 +131,11 @@
             <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
         <code>-w, --workdir string                   Рабочий каталог внутри контейнера</code>
     </pre>
-    
+        <div class="text">В этом блоке рассмотрим команды Docker</div>
+    </main>
+
+    <footer></footer>
+    <script src="https://sasha1985y.github.io/Docker-help/js/index.js"></script>
 </body>
+
 </html>
