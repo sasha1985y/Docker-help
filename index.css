@@ -39,10 +39,11 @@
         text-align: end;
 }
 
-footer {
-    min-height: 20vh;
+.footer-general {
+    min-height: 5vh;
     max-width: 100vw;
     text-align: center;
+    background-color: var(--grey-color);
 }
 
 

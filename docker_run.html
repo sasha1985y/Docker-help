@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Docker run</title>
 </head>
 
 <body>
@@ -21,8 +21,8 @@
                 <code>--add-host list                    Добавить пользовательское картирование хоста в IP(host:ip)</code>
                 <code>--annotation map                   Добавить аннотацию в контейнер (перенесено в OCI Runtime)(default map[])</code>
             <code>-a, --attach list                      Прикрепить к STDIN, STDOUT or STDERR</code>
-                <code>--blkio-weight uint16              Блок IO (относительный вес), между 10 и 1000 или 0, чтобы отключить (по умолчанию 0)</code>
-                                                    
+                <code>--blkio-weight uint16              Блок IO (относительный вес), между 10 и 1000 или 0, чтобы отключить</code>
+                                                    <code>(по умолчанию 0)</code>
                 <code>--blkio-weight-device list         Блок IO Вес (относительный вес устройства) (по умолчанию [])</code>
                 <code>--cap-add list                     Добавить возможности Linux</code>
                 <code>--cap-drop list                    Drop Linux возможностей</code>
@@ -60,7 +60,8 @@
             <code>-e, --env list                         Установите переменные среды</code>
                 <code>--env-file list                    Чтение в файле переменных окружения</code>
                 <code>--expose list                      Укажите порт или диапазон портов</code>
-                <code>--gpus gpu-request                 Графические устройства для добавления в контейнер ("все" для передачи всех графических процессоров)</code>
+                <code>--gpus gpu-request                 Графические устройства для добавления в контейнер</code>
+                                                    <code>("все" для передачи всех графических процессоров)</code>
                 <code>--group-add list                   Добавьте дополнительные группы для присоединения</code>
                 <code>--health-cmd string                Команда, которую нужно запустить для проверки работоспособности</code>
                 <code>--health-interval duration         Время между выполнением проверки (мс|с|м|ч) (по умолчанию 0 секунд)</code>
@@ -68,7 +69,8 @@
                 <code>--health-start-interval duration   Время между выполнением проверки в течение начального периода</code>
                                                     <code>(ms|s|m|h) (default 0s)</code>
                 <code>--health-start-period duration     Начальный период инициализации контейнера до</code>
-                                                    <code>запуск работоспособности - обратный отсчет повторных попыток (мс|с|м|ч) (по умолчанию 0 секунд)</code>
+                                                    <code>запуск работоспособности - обратный отсчет повторных попыток (мс|с|м|ч)</code>
+                                                    <code>(по умолчанию 0 секунд)</code>
                 <code>--health-timeout duration          Максимальное время выполнения одной проверки (мс|с|м|ч) (по умолчанию 0 секунд)</code>
                 <code>--help                             Использование печати</code>
             <code>-h, --hostname string                  Имя хоста контейнера</code>
@@ -100,7 +102,8 @@
                 <code>--oom-kill-disable                 Отключить OOM-убийцу</code>
                 <code>--oom-score-adj int                Настройка параметров OOM хоста (от -1000 до 1000)</code>
                 <code>--pid string                       Используемое пространство имен PID</code>
-                <code>--pids-limit int                   Настройка лимита pid-кодов контейнера (установите значение -1 для неограниченного количества)</code>
+                <code>--pids-limit int                   Настройка лимита pid-кодов контейнера </code>
+                                                    <code>(установите значение -1 для неограниченного количества)</code>
                 <code>--platform string                  Установите платформу, если сервер поддерживает работу с несколькими платформами</code>
                 <code>--privileged                       Предоставьте расширенные привилегии этому контейнеру</code>
             <code>-p, --publish list                     Опубликуйте порт(ы) контейнера на хосте</code>
