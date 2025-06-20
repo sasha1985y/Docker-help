@@ -5,8 +5,8 @@ function createDropdown() {
     // Создаем опции
     var options = [
         { value: "", text: "Выберите ссылку" },
-        { value: "https://sasha1985y.github.io/Docker-help/index.html", text: "Главная" },
-        { value: "https://sasha1985y.github.io/Docker-help/docker_run.html", text: "docker run" },
+        { value: "https://sasha1985y.github.io/Docker-help/pages/index.html", text: "Главная" },
+        { value: "https://sasha1985y.github.io/Docker-help/pages/docker_run.html", text: "docker run" },
     ];
 
     options.forEach(function(option) {
