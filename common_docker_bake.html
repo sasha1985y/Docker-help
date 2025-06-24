@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker bake</title>
+</head>
+
+<body>
+    <header>
+        <select name="commonCommands" id="commonCommands"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Build from a file</code>
+
+            <code>Usage:  docker buildx bake [OPTIONS] [TARGET...]</code>
+
+            <code>Build from a file</code>
+
+            <code>Aliases:</code>
+            <code>docker buildx bake, docker buildx f</code>
+
+            <code>Options:</code>
+            <code>    --allow stringArray      Разрешить сборке доступ к указанным ресурсам</code>
+            <code>    --builder string         Переопределение настроенного экземпляра builder</code>
+            <code>                            (по умолчанию "рабочий стол-linux")</code>
+            <code>    --call string            Установите метод оценки сборки ("проверка",</code>
+            <code>                            "схема", "цели") (по умолчанию "построение")</code>
+            <code>    --check                  Сокращение от "--вызов=проверка" (по умолчанию)</code>
+            <code>-D, --debug                  Включить ведение журнала отладки</code>
+            <code>-f, --file stringArray       Build definition file</code>
+            <code>    --list string            Включить ведение журнала отладки</code>
+            <code>    --load                   Сокращение от "--set=*.output=type=docker"</code>
+            <code>    --metadata-file string   Запись метаданных результата сборки в файл</code>
+            <code>    --no-cache               Не используйте кэш при создании образа</code>
+            <code>    --print                  Распечатайте параметры, не создавая</code>
+            <code>    --progress string        Установите тип вывода хода выполнения ("автоматический",</code>
+            <code>                            "quiet", "plain", "tty", "rawjson"). Воспользуйся</code>
+            <code>                            простой для отображения выходных данных контейнера (по умолчанию "автоматически")</code>
+            <code>    --provenance string      Сокращение от "--set=*.attest=type=provenance"</code>
+            <code>    --pull                   Всегда пытайтесь извлечь все изображения, на которые есть ссылки</code>
+            <code>    --push                   Сокращение от "--set=*.output=type=registry"</code>
+            <code>    --sbom string            Сокращение от "--set=*.attest=type=sbom"</code>
+            <code>    --set stringArray        Переопределить целевое значение (например,</code>
+            <code>                            "целевой шаблон.key=value")</code>
+            <code>Экспериментальные команды и флаги скрыты. Set BUILDX_EXPERIMENTAL=1 to show them.</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,24 @@
 function createDropdown() {
-    var select = document.getElementById("linkSelect");
+    var select = document.getElementById("commonCommands");
     select.onchange = navigate;
 
     // Создаем опции
     var options = [
-        { value: "", text: "Выберите ссылку" },
-        { value: "index.html", text: "Главная" },
-        { value: "docker_run.html", text: "docker run" },
+        { value: "", text: "Основные команды" },
+        { value: "index.html", text: "Домой" },
+        { value: "common_docker_bake.html", text: "docker bake" },
+        { value: "common_docker_build.html", text: "docker build" },
+        { value: "common_docker_exec.html", text: "docker exec" },
+        { value: "common_docker_images.html", text: "docker images" },
+        { value: "common_docker_info.html", text: "docker info" },
+        { value: "common_docker_login.html", text: "docker login" },
+        { value: "common_docker_logout.html", text: "docker logout" },
+        { value: "common_docker_ps.html", text: "docker ps" },
+        { value: "common_docker_pull.html", text: "docker pull" },
+        { value: "common_docker_push.html", text: "docker push" },
+        { value: "common_docker_run.html", text: "docker run" },
+        { value: "common_docker_search.html", text: "docker search" },
+        { value: "common_docker_version.html", text: "docker version" },
     ];
 
     options.forEach(function(option) {
@@ -18,7 +30,7 @@ function createDropdown() {
 }
 
 function navigate() {
-    var select = document.getElementById("linkSelect");
+    var select = document.getElementById("commonCommands");
     var url = select.value;
     if (url) {
         window.location.href = url; // Переход по выбранной ссылке

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker exec</title>
+</head>
+
+<body>
+    <header>
+        <select name="commonCommands" id="commonCommands"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code>
+
+            <code>Execute a command in a running container</code>
+
+            <code>Aliases:</code>
+            <code>docker container exec, docker exec</code>
+
+            <code>Options:</code>
+            <code>-d, --detach               Detached mode: run command in the background</code>
+            <code>    --detach-keys string   Override the key sequence for detaching a</code>
+            <code>                            container</code>
+            <code>-e, --env list             Set environment variables</code>
+            <code>    --env-file list        Read in a file of environment variables</code>
+            <code>-i, --interactive          Keep STDIN open even if not attached</code>
+            <code>    --privileged           Give extended privileges to the command</code>
+            <code>-t, --tty                  Allocate a pseudo-TTY</code>
+            <code>-u, --user string          Username or UID (format:</code>
+            <code>                            "<name|uid>[:<group|gid>]")</code>
+            <code>-w, --workdir string       Working directory inside the container</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

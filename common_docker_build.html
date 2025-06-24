@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker build</title>
+</head>
+
+<body>
+    <header>
+        <select name="commonCommands" id="commonCommands"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Usage:  docker buildx build [OPTIONS] PATH | URL | -</code>
+
+            <code>Start a build</code>
+
+            <code>Aliases:</code>
+            <code>docker build, docker builder build, docker image build, docker buildx b</code>
+
+            <code>Options:</code>
+            <code>    --add-host strings              Добавьте пользовательское сопоставление хоста с IP-адресом</code>
+            <code>                                    (format: "host:ip")</code>
+            <code>    --allow strings                 Разрешить дополнительные привилегии</code>
+            <code>                                    (e.g., "network.host",</code>
+            <code>                                    "security.insecure")</code>
+            <code>    --annotation stringArray        Добавьте аннотацию к изображению</code>
+            <code>    --attest stringArray            Параметры аттестации (format:</code>
+            <code>                                    "type=sbom,generator=image")</code>
+            <code>    --build-arg stringArray         Установите переменные времени сборки</code>
+            <code>    --build-context stringArray     Дополнительные контексты сборки (напр.,</code>
+            <code>                                    name=path)</code>
+            <code>    --builder string                Переопределить настроенный конструктор</code>
+            <code>                                    пример (default "default")</code>
+            <code>    --cache-from stringArray        Внешние источники кэша (напр.,</code>
+            <code>                                    "user/app:cache",</code>
+            <code>                                    "type=local,src=path/to/dir")</code>
+            <code>    --cache-to stringArray          Пункты назначения экспорта кэша (напр.,</code>
+            <code>                                    "user/app:cache",</code>
+            <code>                                    "type=local,dest=path/to/dir")</code>
+            <code>    --call string                   Установите метод для оценки сборки</code>
+            <code>                                    ("check", "outline", "targets")</code>
+            <code>                                    (default "build")</code>
+            <code>    --cgroup-parent string          Установите родительскую группу для "RUN"</code>
+            <code>                                    инструкции во время сборки</code>
+            <code>    --check                         Сокращение для "--call=check" (default )</code>
+            <code>-D, --debug                         Включить ведение журнала отладки</code>
+            <code>-f, --file string                   Имя файла Dockerfile (по умолчанию:</code>
+            <code>                                    "PATH/Dockerfile")</code>
+            <code>    --iidfile string                Запишите идентификатор изображения в файл</code>
+            <code>    --label stringArray             Set metadata for an image</code>
+            <code>    --load                          Shorthand for "--output=type=docker"</code>
+            <code>    --metadata-file string          Write build result metadata to a file</code>
+            <code>    --network string                Set the networking mode for the</code>
+            <code>                                    "RUN" instructions during build</code>
+            <code>                                    (default "default")</code>
+            <code>    --no-cache                      Do not use cache when building the image</code>
+            <code>    --no-cache-filter stringArray   Do not cache specified stages</code>
+            <code>-o, --output stringArray            Output destination (format:</code>
+            <code>                                    "type=local,dest=path")</code>
+            <code>    --platform stringArray          Set target platform for build</code>
+            <code>    --progress string               Set type of progress output</code>
+            <code>                                    ("auto", "quiet", "plain", "tty",</code>
+            <code>                                    "rawjson"). Use plain to show</code>
+            <code>                                    container output (default "auto")</code>
+            <code>    --provenance string             Сокращение для "--attest=type=provenance"</code>
+            <code>    --pull                          Always attempt to pull all</code>
+            <code>                                    referenced images</code>
+            <code>    --push                          Сокращение для "--output=type=registry"</code>
+            <code>-q, --quiet                         Suppress the build output and print</code>
+            <code>                                    image ID on success</code>
+            <code>    --sbom string                   Shorthand for "--attest=type=sbom"</code>
+            <code>    --secret stringArray            Secret to expose to the build</code>
+            <code>                                    (format:</code>
+            <code>                                    "id=mysecret[,src=/local/secret]")</code>
+            <code>    --shm-size bytes                Shared memory size for build containers</code>
+            <code>    --ssh stringArray               SSH agent socket or keys to expose</code>
+            <code>                                    to the build (format:</code>
+            <code>                                    "default|<id>[=<socket>|<key>[,<key>]]")</code>
+            <code>-t, --tag stringArray               Name and optionally a tag (format:</code>
+            <code>                                    "name:tag")</code>
+            <code>                                    docker build -t sasha-backend:0.0.1 .</code>
+            <code>    --target string                 Set the target build stage to build</code>
+            <code>    --ulimit ulimit                 Ulimit options (default [])</code>
+
+            <code>Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show them.</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
