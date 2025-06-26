@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker search</title>
+    <title>Docker restart</title>
 </head>
 
 <body>
@@ -19,15 +19,17 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker search [OPTIONS] TERM</code>
+            <code>Usage:  docker restart [OPTIONS] CONTAINER [CONTAINER...]</code>
 
-            <code>Search Docker Hub for images</code>
+            <code>Restart one or more containers</code>
 
+            <code>Aliases:</code>
+            <code>docker container restart, docker restart</code>
+            <code class="e">docker restart container1 container2</code>
             <code>Options:</code>
-            <code>-f, --filter filter   Filter output based on conditions provided</code>
-            <code>    --format string   Pretty-print search using a Go template</code>
-            <code>    --limit int       Max number of search results</code>
-            <code>    --no-trunc        Don't truncate output</code>
+            <code>-s, --signal string   Signal to send to the container</code>
+            <code>-t, --timeout int     Seconds to wait before killing the container</code>
+            <code class="e">docker restart -t 20 my_container</code>
         </pre>
     </main>
 

@@ -1,9 +1,18 @@
 function createDropdown() {
-    var select = document.getElementById("commonCommands");
-    select.onchange = navigate;
+    var commonCommandsSelect = document.getElementById("commonCommands");
+    var overalCommandsSelect = document.getElementById("overalCommands");
+    var managementCommandsSelect = document.getElementById("managementCommands");
+    var swarmCommandsSelect = document.getElementById("swarmCommands");
+    var globalOptionsSelect = document.getElementById("globalOptions");
+    commonCommandsSelect.onchange = commonNavigate;
+    overalCommandsSelect.onchange = overalNavigate;
+    managementCommandsSelect.onchange = managementNavigate;
+    swarmCommandsSelect.onchange = swarmNavigate;
+    globalOptionsSelect.onchange = globalOptionsNavigate;
+
 
     // Создаем опции
-    var options = [
+    var commonCommandsOptions = [
         { value: "", text: "Основные команды" },
         { value: "index.html", text: "Домой" },
         { value: "common_docker_bake.html", text: "docker bake" },
@@ -21,19 +30,120 @@ function createDropdown() {
         { value: "common_docker_version.html", text: "docker version" },
     ];
 
-    options.forEach(function(option) {
+    commonCommandsOptions.forEach(function(option) {
         var opt = document.createElement("option");
         opt.value = option.value;
         opt.textContent = option.text;
-        select.appendChild(opt);
+        commonCommandsSelect.appendChild(opt);
+    });
+
+    var overalCommandsOptions = [
+        { value: "", text: "Общие команды" },
+        { value: "index.html", text: "Домой" },
+        { value: "overal_docker_restart.html", text: "docker restart" },
+        { value: "overal_docker_rm.html", text: "docker rm" },
+        { value: "overal_docker_start.html", text: "docker start" },
+        { value: "overal_docker_stop.html", text: "docker stop" },
+        
+    ];
+
+    overalCommandsOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        overalCommandsSelect.appendChild(opt);
+    });
+
+    var managementCommandsOptions = [
+        { value: "", text: "Управляющие команды" },
+        { value: "index.html", text: "Домой" },
+        { value: "common_docker_bake.html", text: "docker bake" },
+        
+    ];
+
+    managementCommandsOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        managementCommandsSelect.appendChild(opt);
+    });
+
+    var swarmCommandsOptions = [
+        { value: "", text: "Swarm-команды" },
+        { value: "index.html", text: "Домой" },
+        { value: "common_docker_bake.html", text: "docker bake" },
+        
+    ];
+
+    swarmCommandsOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        swarmCommandsSelect.appendChild(opt);
+    });
+
+    var globalOptions = [
+        { value: "", text: "Глобальные опции" },
+        { value: "index.html", text: "Домой" },
+        { value: "common_docker_bake.html", text: "docker bake" },
+        
+    ];
+
+    globalOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        globalOptionsSelect.appendChild(opt);
     });
 }
 
-function navigate() {
-    var select = document.getElementById("commonCommands");
-    var url = select.value;
-    if (url) {
-        window.location.href = url; // Переход по выбранной ссылке
+function commonNavigate() {
+    var commonSelect = document.getElementById("commonCommands");
+
+    var commonUrl = commonSelect.value;
+
+    if (commonUrl) {
+        window.location.href = commonUrl; // Переход по выбранной ссылке
+    }
+}
+
+function overalNavigate() {
+
+    var overalSelect = document.getElementById("overalCommands");
+
+    var overalUrl = overalSelect.value;
+    if (overalUrl) {
+        window.location.href = overalUrl;
+    }
+}
+
+function managementNavigate() {
+
+    var overalSelect = document.getElementById("managementCommands");
+
+    var managementUrl = managementSelect.value;
+    if (managementUrl) {
+        window.location.href = managementUrl;
+    }
+}
+
+function swarmNavigate() {
+
+    var swarmSelect = document.getElementById("swarmCommands");
+
+    var swarmUrl = swarmSelect.value;
+    if (swarmUrl) {
+        window.location.href = swarmUrl;
+    }
+}
+
+function globalOptionsNavigate() {
+
+    var globalOptionsSelect = document.getElementById("globalOptions");
+
+    var globalOptionsUrl = globalOptionsSelect.value;
+    if (globalOptionsUrl) {
+        window.location.href = globalOptionsUrl;
     }
 }
 

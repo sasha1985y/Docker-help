@@ -10,8 +10,12 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-overal">
         <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
     </header>
     <main>
         <pre>
@@ -24,8 +28,13 @@
 
             <code>Options:</code>
             <code>-a, --all             Show all containers (default shows just running)</code>
+            <code class="e">docker ps -a -f "status=exited"</code>
             <code>-f, --filter filter   Filter output based on conditions provided</code>
+            <code class="e">docker ps --filter "since=24h"</code>
+            <code class="e">docker ps -f "status=exited" or "name=my_container" or "ancestor=nginx" or...</code>
             <code>    --format string   Format output using a custom template:</code>
+            <code class="e">docker ps --format "table {{.RunningFor}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"</code>
+            <code class="e">docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.CreatedAt}}"</code>
             <code>                        'table':            Print output in table format</code>
             <code>                        with column headers (default)</code>
             <code>                        'table TEMPLATE':   Print output in table format</code>

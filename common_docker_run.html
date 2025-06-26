@@ -9,8 +9,12 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-overal">
         <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
     </header>
     <main>
         <p>Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</p>
@@ -44,6 +48,7 @@
                 <code>--cpuset-cpus string               Процессоры, в которых разрешено выполнение (0-3, 0,1)</code>
                 <code>--cpuset-mems string               MEMS, в которых можно разрешить выполнение (0-3, 0,1)</code>
             <code>-d, --detach                           Запустите контейнер в фоновом режиме и выведите идентификатор контейнера</code>
+            <code class="e">docker run -d --name my_nginx nginx</code>
                 <code>--detach-keys string               Переопределение последовательности клавиш для отсоединения контейнера</code>
                 <code>--device list                      Добавьте хост-устройство в контейнер</code>
                 <code>--device-cgroup-rule list          Добавьте правило в список разрешенных устройств cgroup</code>
@@ -77,6 +82,7 @@
                 <code>--init                             Запустите init внутри контейнера, который пересылает сигналы и</code>
                                                     <code>пожинает плоды процессов</code>
             <code>-i, --interactive                      Держите стандартный ввод открытым, даже если он не подключен</code>
+                <code class="e">docker run -it ubuntu bash</code>    
                 <code>--ip string                        IPv4 address (e.g., 172.30.100.104)</code>
                 <code>--ip6 string                       IPv6 address (e.g., 2001:db8::33)</code>
                 <code>--ipc string                       Используемый режим IPC</code>
@@ -96,6 +102,7 @@
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
                 <code>--mount mount                      Прикрепите монтируемую файловую систему к контейнеру</code>
                 <code>--name string                      Присвойте имя контейнеру</code>
+                <code class="e">docker run --name my_nginx nginx</code>
                 <code>--network network                  Подключение контейнера к сети</code>
                 <code>--network-alias list               Добавьте сетевой псевдоним для контейнера</code>
                 <code>--no-healthcheck                   Отключите любую проверку работоспособности, указанную в контейнере</code>
@@ -125,6 +132,7 @@
                 <code>--sysctl map                       Параметры Sysctl (карта по умолчанию[])</code>
                 <code>--tmpfs list                       Монтирование каталога tmpfs</code>
             <code>-t, --tty                              Выделите псевдо-TTY</code>
+                <code class="e">docker run -it ubuntu bash</code>     
                 <code>--ulimit ulimit                    Ограничить параметры (по умолчанию [])</code>
             <code>-u, --user string                      Имя пользователя или UID (format: <name|uid>[:<group|gid>])</code>
                 <code>--userns string                    Используемое пространство имен пользователя</code>

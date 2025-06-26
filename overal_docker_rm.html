@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker search</title>
+    <title>Docker rm</title>
 </head>
 
 <body>
@@ -19,15 +19,17 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker search [OPTIONS] TERM</code>
+            <code>Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]</code>
 
-            <code>Search Docker Hub for images</code>
+            <code>Remove one or more containers</code>
 
+            <code>Aliases:</code>
+            <code>docker container rm, docker container remove, docker rm</code>
+            <code class="e">docker rm $(docker ps -a -f "status=exited" -q)</code>
             <code>Options:</code>
-            <code>-f, --filter filter   Filter output based on conditions provided</code>
-            <code>    --format string   Pretty-print search using a Go template</code>
-            <code>    --limit int       Max number of search results</code>
-            <code>    --no-trunc        Don't truncate output</code>
+            <code>-f, --force     Force the removal of a running container (uses SIGKILL)</code>
+            <code>-l, --link      Remove the specified link</code>
+            <code>-v, --volumes   Remove anonymous volumes associated with the container</code>
         </pre>
     </main>
 

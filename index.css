@@ -12,6 +12,9 @@
     --dark-color: #5c5c5c;
     --font-general-size: 16px;
     --no-color: #5c5c5c00;
+    --example-bg-color: #b9f5ff;
+    --example-color: #ed61ff;
+    --before-example-color: #ff7739;
 }
 
 .body-general {
@@ -21,12 +24,18 @@
     max-width: 100vw;
 }
 
+
 .header-general {
     text-align: center;
     min-height: 35vh;
     background: url('image_pano.jpg') fixed;
     background-repeat: no-repeat;
     background-size: auto 55%;
+    text-align: center;
+    max-width: 100vw;
+}
+
+.header-overal {
     text-align: center;
     max-width: 100vw;
 }
@@ -83,9 +92,24 @@
     }
 }
 
-pre code:hover {
+code:hover {
     color: var(--white-color);
     background-color: var(--dark-color);
     box-shadow: 4px 4px 4px 4px var(--dark-color), -4px -4px 4px 4px var(--dark-color);
     transition: all 0.5s;
+}
+
+.e {
+    background-color: var(--example-bg-color);
+    color: var(--example-color);
+}
+
+.e::before {
+    content: "<example>   ";
+    color: var(--before-example-color);
+}
+
+.e::after {
+    content: "  </example>";
+    color: var(--before-example-color);
 }

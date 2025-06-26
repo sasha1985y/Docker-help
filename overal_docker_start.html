@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker start</title>
+</head>
+
+<body>
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]</code>
+
+            <code>Start one or more stopped containers</code>
+
+            <code>Aliases:</code>
+            <code>docker container start, docker start</code>
+
+            <code>Options:</code>
+            <code>-a, --attach                  Подключайте сигналы STDOUT/STDERR и пересылайте их</code>
+            <code class="e">docker start -a my_container</code>
+            <code>    --checkpoint string       Restore from this checkpoint</code>
+            <code>    --checkpoint-dir string   Use a custom checkpoint storage directory</code>
+            <code>    --detach-keys string      Override the key sequence for detaching a</code>
+            <code>                                container</code>
+            <code>-i, --interactive             Attach container's STDIN</code>
+
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
