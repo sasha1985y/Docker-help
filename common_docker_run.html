@@ -8,7 +8,7 @@
     <title>Docker run</title>
 </head>
 
-<body>
+<body class="body-overal">
     <header class="header-overal">
         <select name="commonCommands" id="commonCommands"></select>
         <select name="overalCommands" id="overalCommands"></select>
@@ -41,14 +41,22 @@
                 <code>--cidfile string                   Запишите идентификатор контейнера в файл</code>
                 <code>--cpu-period int                   Ограничьте период использования CPU CFS (полностью справедливый планировщик)</code>
                 <code>--cpu-quota int                    Ограничьте квоту CPU CFS (полностью справедливый планировщик)</code>
+                <code class="e">docker run -d --name custom_cpu_quota_container --cpu-period=50000 --cpu-quota=25000 nginx</code>
                 <code>--cpu-rt-period int                Ограничение периода реального времени процессора в микросекундах</code>
                 <code>--cpu-rt-runtime int               Ограничьте время работы процессора в реальном времени микросекундами</code>
             <code>-c, --cpu-shares int                   Доли процессора (относительный вес)</code>
+                <code class="e">docker run -d --name low_priority_container --cpu-shares=512 nginx</code>
+                <code class="e">docker run -d --name high_priority_container --cpu-shares=2048 nginx</code>
+                <code class="e">docker run -d --name high_priority_task --cpu-shares=2048 my_high_priority_image</code>
+                <code class="e">docker run -d --name low_priority_task --cpu-shares=512 my_low_priority_image</code>
                 <code>--cpus decimal                     Количество процессоров</code>
+                <code class="e">docker run -d --name test_container --cpus="1" --memory="256m" my_test_image</code>
+                <code class="e">docker run -d --name isolated_container --cpus="2" --memory="1g" my_app_image</code>
+                <code class="e">docker run -d --name limited_cpu_container --cpus="1.5" nginx</code>
                 <code>--cpuset-cpus string               Процессоры, в которых разрешено выполнение (0-3, 0,1)</code>
                 <code>--cpuset-mems string               MEMS, в которых можно разрешить выполнение (0-3, 0,1)</code>
             <code>-d, --detach                           Запустите контейнер в фоновом режиме и выведите идентификатор контейнера</code>
-            <code class="e">docker run -d --name my_nginx nginx</code>
+                <code class="e">docker run -d --name my_nginx nginx</code>
                 <code>--detach-keys string               Переопределение последовательности клавиш для отсоединения контейнера</code>
                 <code>--device list                      Добавьте хост-устройство в контейнер</code>
                 <code>--device-cgroup-rule list          Добавьте правило в список разрешенных устройств cgroup</code>
@@ -96,9 +104,11 @@
                 <code>--log-opt list                     Параметры драйвера журнала</code>
                 <code>--mac-address string               MAC-адрес контейнера (e.g., 92:d0:c6:0a:29:33)</code>
             <code>-m, --memory bytes                     Ограничение памяти</code>
+                <code class="e">docker run -d --name limited_memory_container --memory="512m" nginx</code>
                 <code>--memory-reservation bytes         Мягкий предел памяти</code>
-                -<code>-memory-swap bytes                Предел подкачки, равный объему памяти плюс подкачка: '-1' для включения</code>
-                                                    <code>неограниченный своп</code>
+                -<code>-memory-swap bytes                Предел подкачки, равный объему памяти плюс подкачка: '-1' для выключения подкачки</code>
+                <code class="e">docker run -d --name swap_limited_container --memory="512m" --memory-swap="1g" nginx</code>
+                <code class="e">docker run -d --name no_swap_container --memory="512m" --memory-swap="-1" nginx</code>
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
                 <code>--mount mount                      Прикрепите монтируемую файловую систему к контейнеру</code>
                 <code>--name string                      Присвойте имя контейнеру</code>

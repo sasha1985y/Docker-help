@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker logs</title>
+</head>
+
+<body>
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Usage:  docker logs [OPTIONS] CONTAINER</code>
+
+            <code>Fetch the logs of a container</code>
+
+            <code>Aliases:</code>
+            <code>docker container logs, docker logs</code>
+            <code class="e">docker logs --stdout my_container</code>
+            <code>Options:</code>
+            <code>    --details        Show extra details provided to logs</code>
+            <code>-f, --follow         Follow log output</code>
+            <code class="e">docker logs -f my_container</code>
+            <code class="e">docker logs -f --tail 50 my_container</code>
+            <code>    --since string   Show logs since timestamp (e.g.</code>
+            <code>                    "2013-01-02T13:23:37Z") or relative (e.g. "42m"</code>
+            <code>                    for 42 minutes)</code>
+            <code class="e">docker logs --since "2023-07-20T15:00:00" my_container</code>
+            <code class="e">docker logs --since 1h my_container</code>
+            <code class="e">docker logs --since "2023-07-20T15:00:00" --until "2023-07-20T16:00:00" my_container</code>
+            <code>-n, --tail string    Number of lines to show from the end of the logs</code>
+            <code class="e">docker logs --tail 100 my_container</code>
+            <code>                    (default "all")</code>
+            <code>-t, --timestamps     Show timestamps</code>
+            <code>    --until string   Show logs before a timestamp (e.g.</code>
+            <code>                    "2013-01-02T13:23:37Z") or relative (e.g. "42m"</code>
+            <code>                    for 42 minutes)</code>
+            <code class="e">docker logs --until "2023-07-20T16:00:00" my_container</code>
+            <code class="e">docker logs --until 10m my_container</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -9,7 +9,7 @@
     <title>Docker exec</title>
 </head>
 
-<body>
+<body class="body-overal">
     <header class="header-overal">
         <select name="commonCommands" id="commonCommands"></select>
         <select name="overalCommands" id="overalCommands"></select>
@@ -25,14 +25,22 @@
 
             <code>Aliases:</code>
             <code>docker container exec, docker exec</code>
-
+            <code class="e">docker exec my_container ps aux</code>
+            <code class="e">docker exec my_container service nginx status</code>
+            <code class="e">docker exec my_container apt-get update && apt-get install -y vim</code>
+            <code class="e">docker exec -it my_container vim /etc/nginx/nginx.conf</code>
+            <code class="e">docker exec -it my_container python /app/scripts/debug.py</code>
+            <code class="e">docker exec my_container top</code>
             <code>Options:</code>
             <code>-d, --detach               Detached mode: run command in the background</code>
             <code>    --detach-keys string   Override the key sequence for detaching a</code>
             <code>                            container</code>
+            <code class="e">docker exec -d my_container touch /app/newfile.txt</code>
             <code>-e, --env list             Set environment variables</code>
+            <code class="e">docker exec -e MY_VAR=value my_container env</code>
             <code>    --env-file list        Read in a file of environment variables</code>
             <code>-i, --interactive          Keep STDIN open even if not attached</code>
+            <code class="e">docker exec -it my_container /bin/bash</code>
             <code>    --privileged           Give extended privileges to the command</code>
             <code>-t, --tty                  Allocate a pseudo-TTY</code>
             <code>-u, --user string          Username or UID (format:</code>
