@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker volume</title>
+</head>
+
+<body>
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker volume COMMAND</code>
+
+            <code>Manage volumes</code>
+
+            <code>Commands:</code>
+            <code>create      Create a volume</code>
+            <code>inspect     Display detailed information on one or more volumes</code>
+            <code class="e">docker volume inspect my_volume</code>
+            <code>ls          List volumes</code>
+            <code class="e">docker volume ls</code>
+            <code>prune       Remove unused local volumes</code>
+            <code>rm          Remove one or more volumes</code>
+            <code class="e">docker volume rm my_volume</code>
+            <code>update      Update a volume (cluster volumes only)</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

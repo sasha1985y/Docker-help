@@ -112,6 +112,7 @@
                 <code class="e">docker run -d --name no_swap_container --memory="512m" --memory-swap="-1" nginx</code>
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
                 <code>--mount mount                      Прикрепите монтируемую файловую систему к контейнеру</code>
+                <code class="e">docker run -d --mount type=bind,source=/host/data,target=/container/data nginx</code>
                 <code>--name string                      Присвойте имя контейнеру</code>
                 <code class="e">docker run --name my_nginx nginx</code>
                 <code>--network network                  Подключение контейнера к сети</code>
@@ -139,6 +140,8 @@
                 <code>--restart string                   Политика перезапуска, применяемая при выходе из контейнера (по умолчанию "нет")</code>
                 <code>--rm                               Автоматически извлекать контейнер и связанные с ним</code>
                                                     <code>безымянные тома при выходе</code>
+<code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar czf /backup/my_volume_backup.tar.gz /volume</code>
+<code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar xzf /backup/my_volume_backup.tar.gz -C /volume</code>
                 <code>--runtime string                   Среда выполнения, используемая для этого контейнера</code>
                 <code>--security-opt list                Параметры безопасности</code>
                 <code>--shm-size bytes                   Размер /dev/shm</code>
@@ -155,6 +158,8 @@
                 <code>--userns string                    Используемое пространство имен пользователя</code>
                 <code>--uts string                       Используемое пространство имен UTS</code>
             <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>
+                <code class="p">docker run -v &lt;host_path&gt;:&lt;container_path&gt; [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
+                <code class="e">docker run -d -v /host/data:/container/data nginx</code>
                 <code>--volume-driver string             Дополнительный драйвер тома для контейнера</code>
                 <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
             <code class="f">-w</code>, <code>--workdir string                   Рабочий каталог внутри контейнера</code>

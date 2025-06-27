@@ -40,26 +40,26 @@ function createDropdown() {
     var overalCommandsOptions = [
         { value: "", text: "Общие команды" },
         { value: "index.html", text: "Домой" },
+        { value: "overal_docker_create.html", text: "docker create" },
+        { value: "overal_docker_logs.html", text: "docker logs" },
         { value: "overal_docker_restart.html", text: "docker restart" },
         { value: "overal_docker_rm.html", text: "docker rm" },
         { value: "overal_docker_start.html", text: "docker start" },
         { value: "overal_docker_stop.html", text: "docker stop" },
-        { value: "overal_docker_logs.html", text: "docker logs" },
         
     ];
-
+    
     overalCommandsOptions.forEach(function(option) {
         var opt = document.createElement("option");
         opt.value = option.value;
         opt.textContent = option.text;
         overalCommandsSelect.appendChild(opt);
     });
-
+    
     var managementCommandsOptions = [
         { value: "", text: "Управляющие команды" },
         { value: "index.html", text: "Домой" },
-        { value: "common_docker_bake.html", text: "docker bake" },
-        
+        { value: "management_docker_volume.html", text: "docker volume" },
     ];
 
     managementCommandsOptions.forEach(function(option) {
@@ -120,7 +120,7 @@ function overalNavigate() {
 
 function managementNavigate() {
 
-    var overalSelect = document.getElementById("managementCommands");
+    var managementSelect = document.getElementById("managementCommands");
 
     var managementUrl = managementSelect.value;
     if (managementUrl) {
