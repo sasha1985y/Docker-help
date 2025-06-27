@@ -17,14 +17,14 @@
         <select name="globalOptions" id="globalOptions"></select>
     </header>
     <main>
-        <p>Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</p>
-        <p>Create and run a new container from an image</p>
-        <p>Aliases: docker container run, docker run</p>
         <pre>
+            <code class="p">Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</code>
+            <code>Create and run a new container from an image</code>
+            <code>Aliases: docker container run, docker run</code>
                     Опции:
                 <code>--add-host list                    Добавить пользовательское картирование хоста в IP(host:ip)</code>
                 <code>--annotation map                   Добавить аннотацию в контейнер (перенесено в OCI Runtime)(default map[])</code>
-            <code>-a, --attach list                      Прикрепить к STDIN, STDOUT or STDERR</code>
+            <code class="f">-a</code>, <code>--attach list                      Прикрепить к STDIN, STDOUT or STDERR</code>
                 <code>--blkio-weight uint16              Блок IO (относительный вес), между 10 и 1000 или 0, чтобы отключить</code>
                                                     <code>(по умолчанию 0)</code>
                 <code>--blkio-weight-device list         Блок IO Вес (относительный вес устройства) (по умолчанию [])</code>
@@ -44,7 +44,7 @@
                 <code class="e">docker run -d --name custom_cpu_quota_container --cpu-period=50000 --cpu-quota=25000 nginx</code>
                 <code>--cpu-rt-period int                Ограничение периода реального времени процессора в микросекундах</code>
                 <code>--cpu-rt-runtime int               Ограничьте время работы процессора в реальном времени микросекундами</code>
-            <code>-c, --cpu-shares int                   Доли процессора (относительный вес)</code>
+            <code class="f">-c</code>, <code>--cpu-shares int                   Доли процессора (относительный вес)</code>
                 <code class="e">docker run -d --name low_priority_container --cpu-shares=512 nginx</code>
                 <code class="e">docker run -d --name high_priority_container --cpu-shares=2048 nginx</code>
                 <code class="e">docker run -d --name high_priority_task --cpu-shares=2048 my_high_priority_image</code>
@@ -55,7 +55,7 @@
                 <code class="e">docker run -d --name limited_cpu_container --cpus="1.5" nginx</code>
                 <code>--cpuset-cpus string               Процессоры, в которых разрешено выполнение (0-3, 0,1)</code>
                 <code>--cpuset-mems string               MEMS, в которых можно разрешить выполнение (0-3, 0,1)</code>
-            <code>-d, --detach                           Запустите контейнер в фоновом режиме и выведите идентификатор контейнера</code>
+            <code class="f">-d</code>, <code>--detach                           Запустите контейнер в фоновом режиме и выведите идентификатор контейнера</code>
                 <code class="e">docker run -d --name my_nginx nginx</code>
                 <code>--detach-keys string               Переопределение последовательности клавиш для отсоединения контейнера</code>
                 <code>--device list                      Добавьте хост-устройство в контейнер</code>
@@ -70,7 +70,8 @@
                 <code>--dns-search list                  Настройка пользовательских доменов поиска DNS</code>
                 <code>--domainname string                Доменное имя контейнера NIS</code>
                 <code>--entrypoint string                Перезапишите точку входа изображения по умолчанию</code>
-            <code>-e, --env list                         Установите переменные среды</code>
+            <code class="f">-e</code>, <code>--env list                         Установите переменные среды</code>
+                <code class="e">docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres</code>
                 <code>--env-file list                    Чтение в файле переменных окружения</code>
                 <code>--expose list                      Укажите порт или диапазон портов</code>
                 <code>--gpus gpu-request                 Графические устройства для добавления в контейнер</code>
@@ -86,24 +87,24 @@
                                                     <code>(по умолчанию 0 секунд)</code>
                 <code>--health-timeout duration          Максимальное время выполнения одной проверки (мс|с|м|ч) (по умолчанию 0 секунд)</code>
                 <code>--help                             Использование печати</code>
-            <code>-h, --hostname string                  Имя хоста контейнера</code>
+            <code class="f">-h</code>, <code>--hostname string                  Имя хоста контейнера</code>
                 <code>--init                             Запустите init внутри контейнера, который пересылает сигналы и</code>
                                                     <code>пожинает плоды процессов</code>
-            <code>-i, --interactive                      Держите стандартный ввод открытым, даже если он не подключен</code>
+            <code class="f">-i</code>, <code>--interactive                      Держите стандартный ввод открытым, даже если он не подключен</code>
                 <code class="e">docker run -it ubuntu bash</code>    
                 <code>--ip string                        IPv4 address (e.g., 172.30.100.104)</code>
                 <code>--ip6 string                       IPv6 address (e.g., 2001:db8::33)</code>
                 <code>--ipc string                       Используемый режим IPC</code>
                 <code>--isolation string                 Технология изоляции контейнеров</code>
                 <code>--kernel-memory bytes              Ограничение памяти ядра</code>
-            <code>-l, --label list                       Установка метаданных в контейнер</code>
+            <code class="f">-l</code>, <code>--label list                       Установка метаданных в контейнер</code>
                 <code>--label-file list                  Чтение в файле меток, разделенных строками</code>
                 <code>--link list                        Добавить ссылку на другой контейнер</code>
                 <code>--link-local-ip list               Контейнер IPv4/IPv6 link-локальные адреса</code>
                 <code>--log-driver string                Драйвер ведения журнала для контейнера</code>
                 <code>--log-opt list                     Параметры драйвера журнала</code>
                 <code>--mac-address string               MAC-адрес контейнера (e.g., 92:d0:c6:0a:29:33)</code>
-            <code>-m, --memory bytes                     Ограничение памяти</code>
+            <code class="f">-m</code>, <code>--memory bytes                     Ограничение памяти</code>
                 <code class="e">docker run -d --name limited_memory_container --memory="512m" nginx</code>
                 <code>--memory-reservation bytes         Мягкий предел памяти</code>
                 -<code>-memory-swap bytes                Предел подкачки, равный объему памяти плюс подкачка: '-1' для выключения подкачки</code>
@@ -123,11 +124,17 @@
                                                     <code>(установите значение -1 для неограниченного количества)</code>
                 <code>--platform string                  Установите платформу, если сервер поддерживает работу с несколькими платформами</code>
                 <code>--privileged                       Предоставьте расширенные привилегии этому контейнеру</code>
-            <code>-p, --publish list                     Опубликуйте порт(ы) контейнера на хосте</code>
-            <code>-P, --publish-all                      Опубликуйте все открытые порты на случайных портах</code>
+            <code class="f">-p</code>, <code>--publish list                     Опубликуйте порт(ы) контейнера на хосте</code>
+                <code class="p">docker run -p [HOST_PORT]:[CONTAINER_PORT] [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
+                <code class="e">docker run -d -p 8080:80 nginx</code>
+                <code class="e">docker run -d -p 8080:80 -p 8443:443 nginx</code>
+                <code class="e">docker run -d -p 127.0.0.1:8080:80 nginx</code>
+                <code class="e">docker run -d -p 7000-8000:7000-8000 someimage</code>
+                <code class="e">docker run -d -p 8080:80 -p 8443:443 myapp</code>
+            <code class="f">-P</code>, <code>--publish-all                      Опубликуйте все открытые порты на случайных портах</code>
                 <code>--pull string                      Извлеките изображение перед запуском ("всегда", "отсутствует", "никогда")</code>
                                                     <code>(по умолчанию "отсутствует")</code>
-            <code>-q, --quiet                            Подавите выходное напряжение</code>
+            <code class="f">-q</code>, <code>--quiet                            Подавите выходное напряжение</code>
                 <code>--read-only                        Смонтируйте корневую файловую систему контейнера как доступную только для чтения</code>
                 <code>--restart string                   Политика перезапуска, применяемая при выходе из контейнера (по умолчанию "нет")</code>
                 <code>--rm                               Автоматически извлекать контейнер и связанные с ним</code>
@@ -141,16 +148,16 @@
                 <code>--storage-opt list                 Опции драйвера хранилища для контейнера</code>
                 <code>--sysctl map                       Параметры Sysctl (карта по умолчанию[])</code>
                 <code>--tmpfs list                       Монтирование каталога tmpfs</code>
-            <code>-t, --tty                              Выделите псевдо-TTY</code>
+            <code class="f">-t</code>, <code>--tty                              Выделите псевдо-TTY</code>
                 <code class="e">docker run -it ubuntu bash</code>     
                 <code>--ulimit ulimit                    Ограничить параметры (по умолчанию [])</code>
-            <code>-u, --user string                      Имя пользователя или UID (format: <name|uid>[:<group|gid>])</code>
+            <code class="f">-u</code>, <code>--user string                      Имя пользователя или UID (format: <name|uid>[:<group|gid>])</code>
                 <code>--userns string                    Используемое пространство имен пользователя</code>
                 <code>--uts string                       Используемое пространство имен UTS</code>
-            <code>-v, --volume list                      Привязать, смонтировать том</code>
+            <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>
                 <code>--volume-driver string             Дополнительный драйвер тома для контейнера</code>
                 <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
-            <code>-w, --workdir string                   Рабочий каталог внутри контейнера</code>
+            <code class="f">-w</code>, <code>--workdir string                   Рабочий каталог внутри контейнера</code>
         </pre>
     </main>
 
