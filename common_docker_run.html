@@ -72,6 +72,7 @@
                 <code>--entrypoint string                Перезапишите точку входа изображения по умолчанию</code>
             <code class="f">-e</code>, <code>--env list                         Установите переменные среды</code>
                 <code class="e">docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres</code>
+                <code class="e">docker run -d -p 3306:3306 --name my_mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql:latest</code>
                 <code>--env-file list                    Чтение в файле переменных окружения</code>
                 <code>--expose list                      Укажите порт или диапазон портов</code>
                 <code>--gpus gpu-request                 Графические устройства для добавления в контейнер</code>
@@ -107,7 +108,7 @@
             <code class="f">-m</code>, <code>--memory bytes                     Ограничение памяти</code>
                 <code class="e">docker run -d --name limited_memory_container --memory="512m" nginx</code>
                 <code>--memory-reservation bytes         Мягкий предел памяти</code>
-                -<code>-memory-swap bytes                Предел подкачки, равный объему памяти плюс подкачка: '-1' для выключения подкачки</code>
+                <code>--memory-swap bytes                Предел подкачки, равный объему памяти плюс подкачка: '-1' для выключения подкачки</code>
                 <code class="e">docker run -d --name swap_limited_container --memory="512m" --memory-swap="1g" nginx</code>
                 <code class="e">docker run -d --name no_swap_container --memory="512m" --memory-swap="-1" nginx</code>
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
