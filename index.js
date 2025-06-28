@@ -4,11 +4,13 @@ function createDropdown() {
     var managementCommandsSelect = document.getElementById("managementCommands");
     var swarmCommandsSelect = document.getElementById("swarmCommands");
     var globalOptionsSelect = document.getElementById("globalOptions");
+    var editFilesSelect = document.getElementById("editFiles");
     commonCommandsSelect.onchange = commonNavigate;
     overalCommandsSelect.onchange = overalNavigate;
     managementCommandsSelect.onchange = managementNavigate;
     swarmCommandsSelect.onchange = swarmNavigate;
     globalOptionsSelect.onchange = globalOptionsNavigate;
+    editFilesSelect.onchange = editFilesNavigate;
 
 
     // Создаем опции
@@ -96,6 +98,20 @@ function createDropdown() {
         opt.textContent = option.text;
         globalOptionsSelect.appendChild(opt);
     });
+
+    var editFilesOptions = [
+        { value: "", text: "Редактировать файлы" },
+        { value: "index.html", text: "Домой" },
+        { value: "edition_dockerfile.html", text: "Dockerfile" },
+        
+    ];
+
+    editFilesOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        editFilesSelect.appendChild(opt);
+    });
 }
 
 function commonNavigate() {
@@ -145,6 +161,16 @@ function globalOptionsNavigate() {
     var globalOptionsUrl = globalOptionsSelect.value;
     if (globalOptionsUrl) {
         window.location.href = globalOptionsUrl;
+    }
+}
+
+function editFilesNavigate() {
+
+    var editFilesSelect = document.getElementById("editFiles");
+
+    var editFilesUrl = editFilesSelect.value;
+    if (editFilesUrl) {
+        window.location.href = editFilesUrl;
     }
 }
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Dockerfile</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">FROM &lt;image&gt;[:&lt;tag&gt;] [AS &lt;name&gt;]</code>
+
+            <code class="p">RUN &lt;command&gt;</code>
+            <code class="e">RUN apt-get update && apt-get install -y curl git</code>
+            <code class="e">RUN gcc -o myapp myapp.c</code>
+
+            <code class="e">RUN apt-get update \</code>
+                <code class="e">&& apt-get install -y curl git \</code>
+                <code class="e">&& rm -rf /var/lib/apt/lists/*</code>
+
+            <code class="p">COPY &lt;src&gt; &lt;dest&gt;</code>
+
+            <code class="e">FROM node:14 AS builder</code>
+            <code class="e">WORKDIR /app</code>
+            <code class="e">COPY package*.json ./</code>
+            <code class="e">RUN npm install</code>
+            <code class="e">COPY . .</code>
+            <code class="e">RUN npm run build</code>
+
+            <code class="e">FROM nginx:alpine</code>
+            <code class="e">COPY --from=builder /app/build /usr/share/nginx/html</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
