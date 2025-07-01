@@ -20,7 +20,7 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker buildx build [OPTIONS] PATH | URL | -</code>
+            <code class="p">Usage:  docker build [OPTIONS] PATH | URL | -</code>
 
             <code>Start a build</code>
 
@@ -37,6 +37,7 @@
             <code>    --attest stringArray            Параметры аттестации (format:</code>
             <code>                                    "type=sbom,generator=image")</code>
             <code>    --build-arg stringArray         Установите переменные времени сборки</code>
+            <code class="e">docker build --build-arg APP_VERSION=1.0 -t myimage:1.0 .</code>
             <code>    --build-context stringArray     Дополнительные контексты сборки (напр.,</code>
             <code>                                    name=path)</code>
             <code>    --builder string                Переопределить настроенный конструктор</code>
@@ -56,6 +57,7 @@
             <code>-D, --debug                         Включить ведение журнала отладки</code>
             <code>-f, --file string                   Имя файла Dockerfile (по умолчанию:</code>
             <code>                                    "PATH/Dockerfile")</code>
+            <code class="e">docker build -f Dockerfile.dev -t myimage:dev </code>
             <code>    --iidfile string                Запишите идентификатор изображения в файл</code>
             <code>    --label stringArray             Set metadata for an image</code>
             <code>    --load                          Shorthand for "--output=type=docker"</code>
@@ -64,6 +66,7 @@
             <code>                                    "RUN" instructions during build</code>
             <code>                                    (default "default")</code>
             <code>    --no-cache                      Do not use cache when building the image</code>
+            <code class="e">docker build --no-cache -t myimage:latest .</code>
             <code>    --no-cache-filter stringArray   Do not cache specified stages</code>
             <code>-o, --output stringArray            Output destination (format:</code>
             <code>                                    "type=local,dest=path")</code>
@@ -78,6 +81,9 @@
             <code>    --push                          Сокращение для "--output=type=registry"</code>
             <code>-q, --quiet                         Suppress the build output and print</code>
             <code>                                    image ID on success</code>
+            <code>    --rm указывает                  Docker удалить промежуточные контейнеры</code>
+            <code>                                    после успешной сборки образа (по умолчанию включена).</code>
+            <code class="e">docker build --rm -t myimage:latest .</code>
             <code>    --sbom string                   Shorthand for "--attest=type=sbom"</code>
             <code>    --secret stringArray            Secret to expose to the build</code>
             <code>                                    (format:</code>
@@ -89,8 +95,10 @@
             <code>-t, --tag stringArray               Name and optionally a tag (format:</code>
             <code>                                    "name:tag")</code>
             <code class="e">docker build -t my_python_app .</code>
+            <code class="e">docker build -t myimage:latest .</code>
             <code>                                    docker build -t sasha-backend:0.0.1 .</code>
             <code>    --target string                 Set the target build stage to build</code>
+            <code class="e">docker build --target builder -t myimage:builder .</code>
             <code>    --ulimit ulimit                 Ulimit options (default [])</code>
 
             <code>Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show them.</code>
