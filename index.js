@@ -46,6 +46,7 @@ function createDropdown() {
         { value: "overal_docker_logs.html", text: "docker logs" },
         { value: "overal_docker_restart.html", text: "docker restart" },
         { value: "overal_docker_rm.html", text: "docker rm" },
+        { value: "overal_docker_rmi.html", text: "docker rmi" },
         { value: "overal_docker_start.html", text: "docker start" },
         { value: "overal_docker_stop.html", text: "docker stop" },
         
