@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker tag</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code>
+            <code class="e">docker tag myapp:1.0 myapp:latest</code>           
+            <code>Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</code>
+            <code>Aliases:</code>
+            <code>docker image tag, docker tag</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
