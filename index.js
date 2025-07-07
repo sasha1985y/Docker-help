@@ -97,7 +97,12 @@ function createDropdown() {
     var swarmCommandsOptions = [
         { value: "", text: "Swarm-команды" },
         { value: "index.html", text: "Домой" },
-        { value: "common_docker_bake.html", text: "docker bake" },
+        { value: "swarm_docker_config.html", text: "docker config" },
+        { value: "swarm_docker_node.html", text: "docker node" },
+        { value: "swarm_docker_secret.html", text: "docker secret" },
+        { value: "swarm_docker_service.html", text: "docker service" },
+        { value: "swarm_docker_stack.html", text: "docker stack" },
+        { value: "swarm_docker_swarm.html", text: "docker swarm" },
         
     ];
 
