@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker model</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker model COMMAND</code>
+            <code>Docker Model Runner (EXPERIMENTAL)</code>
+            <code>EXPERIMENTAL:</code>
+            <code>docker model is an experimental feature.</code>
+            <code>Experimental features provide early access to product functionality. These</code>
+            <code>features may change between releases without warning, or can be removed from a</code>
+            <code>future release. Learn more about experimental features in our documentation:</code>
+            <code>https://docs.docker.com/go/experimental/</code>
+            <code>Commands:</code>
+            <code>configure             Configure runtime options for a model</code>
+            <code>df                    Show Docker Model Runner disk usage</code>
+            <code>inspect               Display detailed information on one model</code>
+            <code>install-runner        Install Docker Model Runner (Docker Engine only)</code>
+            <code>list                  List the models pulled to your local environment</code>
+            <code>logs                  Fetch the Docker Model Runner logs</code>
+            <code>package               Package a GGUF file into a Docker model OCI artifact, </code>
+            <code>                      with optional licenses, and pushes it to the specified registry</code>
+            <code>ps                    List running models</code>
+            <code>pull                  Pull a model from Docker Hub or HuggingFace to your local environment</code>
+            <code>push                  Push a model to Docker Hub</code>
+            <code>rm                    Remove local models downloaded from Docker Hub</code>
+            <code>run                   Run a model and interact with it using a submitted prompt or chat mode</code>
+            <code>status                Check if the Docker Model Runner is running</code>
+            <code>tag                   Tag a model</code>
+            <code>uninstall-runner      Uninstall Docker Model Runner</code>
+            <code>unload                Unload running models</code>
+            <code>version               Show the Docker Model Runner version</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

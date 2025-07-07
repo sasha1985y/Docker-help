@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker login</title>
+    <title>Docker plugin</title>
 </head>
 
 <body class="body-overal">
@@ -22,16 +22,20 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker login [OPTIONS] [SERVER]</code>
-
-            <code>Authenticate to a registry.</code>
-            <code>Defaults to Docker Hub if no server is specified.</code>
-
-            <code>Options:</code>
-            <code>-p, --password string   Password or Personal Access Token (PAT)</code>
-            <code>    --password-stdin    Take the Password or Personal Access Token</code>
-            <code>                        (PAT) from stdin</code>
-            <code>-u, --username string   Username
+            <code class="p">Usage:  docker plugin COMMAND</code>
+            <code>Manage plugins</code>
+            <code>Commands:</code>
+            <code>create          Create a plugin from a rootfs and configuration. </code>
+            <code>                Plugin data directory must contain config.json and rootfs directory.</code>
+            <code>disable         Disable a plugin</code>
+            <code>enable          Enable a plugin</code>
+            <code>inspect         Display detailed information on one or more plugins</code>
+            <code>install         Install a plugin</code>
+            <code>ls              List plugins</code>
+            <code>push            Push a plugin to a registry</code>
+            <code>rm              Remove one or more plugins</code>
+            <code>set             Change settings for a plugin</code>
+            <code>upgrade         Upgrade an existing plugin</code>
         </pre>
     </main>
 

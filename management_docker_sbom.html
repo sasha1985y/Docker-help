@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker sbom</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker sbom [OPTIONS] COMMAND</code>
+
+            <code>View the packaged-based Software Bill Of Materials (SBOM) for an image.</code>
+
+            <code>EXPERIMENTAL: The flags and outputs of this command may change. Leave feedback on https://github.com/docker/sbom-cli-plugin.</code>
+
+            <code>Examples:</code>
+
+            <code>docker sbom alpine:latest                                          a summary of discovered packages</code>
+            <code>docker sbom alpine:latest --format syft-json                       show all possible cataloging details</code>
+            <code>docker sbom alpine:latest --output sbom.txt                        write report output to a file</code>
+            <code>docker sbom alpine:latest --exclude /lib  --exclude '**/*.db'      ignore one or more paths/globs in the image</code>
+
+
+            <code>Options:</code>
+            <code>-D, --debug                 show debug logging</code>
+            <code>    --exclude stringArray   exclude paths from being scanned using a</code>
+            <code>                            glob expression</code>
+            <code>    --format string         report output format, options=[syft-json</code>
+            <code>                            cyclonedx-xml cyclonedx-json github-0-json</code>
+            <code>                            spdx-tag-value spdx-json table text]</code>
+            <code>                            (default "table")</code>
+            <code>    --layers string         [experimental] selection of layers to</code>
+            <code>                            catalog, options=[squashed all] (default</code>
+            <code>                            "squashed")</code>
+            <code>-o, --output string         file to write the default report output to</code>
+            <code>                            (default is STDOUT)</code>
+            <code>    --platform string       an optional platform specifier for</code>
+            <code>                            container image sources (e.g.</code>
+            <code>                            'linux/arm64', 'linux/arm64/v8', 'arm64',</code>
+            <code>                            'linux')</code>
+            <code>    --quiet                 suppress all non-report output</code>
+            <code>-v, --version               version for sbom</code>
+
+            <code>Commands:</code>
+            <code>version     Show Docker sbom version information</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

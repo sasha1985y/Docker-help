@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker debug</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker debug [OPTIONS] COMMAND</code>
+            <code>Get an enhanced shell with additional tools into any container or image</code>
+            <code>Options:</code>
+            <code>-c, --command string   Evaluate the specified commands instead, passing</code>
+            <code>                        additional positional arguments through $argv.</code>
+            <code>    --host string      Daemon docker socket to connect to. E.g.:</code>
+            <code>                        'ssh://root@example.org',</code>
+            <code>                        'unix:///some/path/docker.sock'</code>
+            <code>    --preserve-user    Running containers only: Use same user as the</code>
+            <code>                        running container. Default is root.</code>
+            <code>    --privileged       Running containers only: Give privileges to the</code>
+            <code>                        shell (all capabilities).</code>
+            <code>    --shell shell      Select a shell. Supported: "bash", "fish",</code>
+            <code>                        "zsh", "auto". (default auto)</code>
+            <code>    --version          Display version of the docker-debug plugin</code>
+            <code>Commands:</code>
+            <code>docker-cli-plugin-hooks </code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -5,12 +5,16 @@ function createDropdown() {
     var swarmCommandsSelect = document.getElementById("swarmCommands");
     var globalOptionsSelect = document.getElementById("globalOptions");
     var editFilesSelect = document.getElementById("editFiles");
+    var overalComposeCommandsSelect = document.getElementById("overalComposeCommands");
+    var composeOptionsSelect = document.getElementById("composeOptions");
     commonCommandsSelect.onchange = commonNavigate;
     overalCommandsSelect.onchange = overalNavigate;
     managementCommandsSelect.onchange = managementNavigate;
     swarmCommandsSelect.onchange = swarmNavigate;
     globalOptionsSelect.onchange = globalOptionsNavigate;
     editFilesSelect.onchange = editFilesNavigate;
+    overalComposeCommandsSelect.onchange = overalComposeCommandsNavigate;
+    composeOptionsSelect.onchange = composeOptionsNavigate;
 
 
     // Создаем опции
@@ -62,6 +66,24 @@ function createDropdown() {
     var managementCommandsOptions = [
         { value: "", text: "Управляющие команды" },
         { value: "index.html", text: "Домой" },
+        { value: "management_docker_ai.html", text: "docker ai" },
+        { value: "management_docker_checkpoint.html", text: "docker checkpoint" },
+        { value: "management_docker_cloud.html", text: "docker cloud" },
+        { value: "management_docker_container.html", text: "docker container" },
+        { value: "management_docker_context.html", text: "docker context" },
+        { value: "management_docker_debug.html", text: "docker debug" },
+        { value: "management_docker_extension.html", text: "docker extension" },
+        { value: "management_docker_image.html", text: "docker image" },
+        { value: "management_docker_init.html", text: "docker init" },
+        { value: "management_docker_manifest.html", text: "docker manifest" },
+        { value: "management_docker_mcp.html", text: "docker mcp" },
+        { value: "management_docker_model.html", text: "docker model" },
+        { value: "management_docker_network.html", text: "docker network" },
+        { value: "management_docker_plugin.html", text: "docker plugin" },
+        { value: "management_docker_sbom.html", text: "docker sbom" },
+        { value: "management_docker_scout.html", text: "docker scout" },
+        { value: "management_docker_system.html", text: "docker system" },
+        { value: "management_docker_trust.html", text: "docker trust" },
         { value: "management_docker_volume.html", text: "docker volume" },
     ];
 
@@ -112,6 +134,34 @@ function createDropdown() {
         opt.value = option.value;
         opt.textContent = option.text;
         editFilesSelect.appendChild(opt);
+    });
+
+    var overalComposeCommandsOptions = [
+        { value: "", text: "Общие команды compose" },
+        { value: "index.html", text: "Домой" },
+        { value: "edition_dockerfile.html", text: "Dockerfile" },
+        
+    ];
+
+    overalComposeCommandsOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        overalComposeCommandsSelect.appendChild(opt);
+    });
+
+    var composeOptions = [
+        { value: "", text: "Compose опции" },
+        { value: "index.html", text: "Домой" },
+        { value: "edition_dockerfile.html", text: "Dockerfile" },
+        
+    ];
+
+    composeOptions.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.text;
+        composeOptionsSelect.appendChild(opt);
     });
 }
 
@@ -172,6 +222,26 @@ function editFilesNavigate() {
     var editFilesUrl = editFilesSelect.value;
     if (editFilesUrl) {
         window.location.href = editFilesUrl;
+    }
+}
+
+function overalComposeCommandsNavigate() {
+
+    var overalComposeCommandsSelect = document.getElementById("overalComposeCommands");
+
+    var overalComposeUrl = overalComposeCommandsSelect.value;
+    if (overalComposeUrl) {
+        window.location.href = overalComposeUrl;
+    }
+}
+
+function composeOptionsNavigate() {
+
+    var composeOptionsSelect = document.getElementById("composeOptions");
+
+    var composeOptionsUrl = composeOptionsSelect.value;
+    if (composeOptionsUrl) {
+        window.location.href = composeOptionsUrl;
     }
 }
 

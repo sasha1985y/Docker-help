@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker login</title>
+    <title>Docker trust</title>
 </head>
 
 <body class="body-overal">
@@ -22,16 +22,18 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker login [OPTIONS] [SERVER]</code>
+            <code class="p">Usage:  docker trust COMMAND</code>
 
-            <code>Authenticate to a registry.</code>
-            <code>Defaults to Docker Hub if no server is specified.</code>
+            <code>Manage trust on Docker images</code>
 
-            <code>Options:</code>
-            <code>-p, --password string   Password or Personal Access Token (PAT)</code>
-            <code>    --password-stdin    Take the Password or Personal Access Token</code>
-            <code>                        (PAT) from stdin</code>
-            <code>-u, --username string   Username
+            <code>Management Commands:</code>
+            <code>key         Manage keys for signing Docker images</code>
+            <code>signer      Manage entities who can sign Docker images</code>
+
+            <code>Commands:</code>
+            <code>inspect     Return low-level information about keys and signatures</code>
+            <code>revoke      Remove trust for an image</code>
+            <code>sign        Sign an image</code>
         </pre>
     </main>
 

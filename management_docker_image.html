@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker volume</title>
+    <title>Docker image</title>
 </head>
 
 <body class="body-overal">
@@ -22,20 +22,21 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker volume COMMAND</code>
-
-            <code>Manage volumes</code>
-
+            <code class="p">Usage:  docker image COMMAND</code>
+            <code>Manage images</code>
             <code>Commands:</code>
-            <code>create      Create a volume</code>
-            <code>inspect     Display detailed information on one or more volumes</code>
-            <code class="e">docker volume inspect my_volume</code>
-            <code>ls          List volumes</code>
-            <code class="e">docker volume ls</code>
-            <code>prune       Remove unused local volumes</code>
-            <code>rm          Remove one or more volumes</code>
-            <code class="e">docker volume rm my_volume</code>
-            <code>update      Update a volume (cluster volumes only)</code>
+            <code>build       Build an image from a Dockerfile</code>
+            <code>history     Show the history of an image</code>
+            <code>import      Import the contents from a tarball to create a filesystem image</code>
+            <code>inspect     Display detailed information on one or more images</code>
+            <code>load        Load an image from a tar archive or STDIN</code>
+            <code>ls          List images</code>
+            <code>prune       Remove unused images</code>
+            <code>pull        Download an image from a registry</code>
+            <code>push        Upload an image to a registry</code>
+            <code>rm          Remove one or more images</code>
+            <code>save        Save one or more images to a tar archive (streamed to STDOUT by default)</code>
+            <code>tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</code>
         </pre>
     </main>
 

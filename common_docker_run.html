@@ -16,13 +16,15 @@
         <select name="swarmCommands" id="swarmCommands"></select>
         <select name="globalOptions" id="globalOptions"></select>
         <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
     </header>
     <main>
         <pre>
             <code class="p">Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</code>
             <code>Create and run a new container from an image</code>
             <code>Aliases: docker container run, docker run</code>
-                    Опции:
+            Опции:
                 <code>--add-host list                    Добавить пользовательское картирование хоста в IP(host:ip)</code>
                 <code>--annotation map                   Добавить аннотацию в контейнер (перенесено в OCI Runtime)(default map[])</code>
             <code class="f">-a</code>, <code>--attach list                      Прикрепить к STDIN, STDOUT or STDERR</code>
@@ -45,11 +47,12 @@
                 <code class="e">docker run -d --name custom_cpu_quota_container --cpu-period=50000 --cpu-quota=25000 nginx</code>
                 <code>--cpu-rt-period int                Ограничение периода реального времени процессора в микросекундах</code>
                 <code>--cpu-rt-runtime int               Ограничьте время работы процессора в реальном времени микросекундами</code>
-            <code class="f">-c</code>, <code>--cpu-shares int                   Доли процессора (относительный вес)</code>
+                <code class="f">-c</code>, <code>--cpu-shares int                   Доли процессора (относительный вес)</code>
                 <code class="e">docker run -d --name low_priority_container --cpu-shares=512 nginx</code>
                 <code class="e">docker run -d --name high_priority_container --cpu-shares=2048 nginx</code>
                 <code class="e">docker run -d --name high_priority_task --cpu-shares=2048 my_high_priority_image</code>
                 <code class="e">docker run -d --name low_priority_task --cpu-shares=512 my_low_priority_image</code>
+                <code class="e">docker run -d -p 3000:3000 yourusername/mynodeapp:latest</code>
                 <code>--cpus decimal                     Количество процессоров</code>
                 <code class="e">docker run -d --name test_container --cpus="1" --memory="256m" my_test_image</code>
                 <code class="e">docker run -d --name isolated_container --cpus="2" --memory="1g" my_app_image</code>

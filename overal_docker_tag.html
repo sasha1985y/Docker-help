@@ -17,11 +17,14 @@
         <select name="swarmCommands" id="swarmCommands"></select>
         <select name="globalOptions" id="globalOptions"></select>
         <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
     </header>
     <main>
         <pre>
             <code class="p">Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code>
-            <code class="e">docker tag myapp:1.0 myapp:latest</code>           
+            <code class="e">docker tag myapp:1.0 myapp:latest</code>
+            <code class="e">docker tag myapp:latest yourusername/myapp:latest</code>           
             <code>Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</code>
             <code>Aliases:</code>
             <code>docker image tag, docker tag</code>

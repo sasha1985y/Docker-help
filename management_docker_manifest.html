@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker manifest</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker manifest COMMAND</code>
+            <code>The **docker manifest** command has subcommands for managing image manifests and</code>
+            <code>manifest lists. A manifest list allows you to use one name to refer to the same image</code>
+            <code>built for multiple architectures.</code>
+            <code>To see help for a subcommand, use:</code>
+            <code>    docker manifest CMD --help</code>
+            <code>For full details on using docker manifest lists, see the registry v2 specification.</code>
+            <code>EXPERIMENTAL:</code>
+            <code>docker manifest is an experimental feature.</code>
+            <code>Experimental features provide early access to product functionality. These</code>
+            <code>features may change between releases without warning, or can be removed from a</code>
+            <code>future release. Learn more about experimental features in our documentation:</code>
+            <code>https://docs.docker.com/go/experimental/</code>
+            <code>Commands:</code>
+            <code>annotate    Add additional information to a local image manifest</code>
+            <code>create      Create a local manifest list for annotating and pushing to a registry</code>
+            <code>inspect     Display an image manifest, or manifest list</code>
+            <code>push        Push a manifest list to a repository</code>
+            <code>rm          Delete one or more manifest lists from local storage</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

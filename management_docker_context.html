@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker login</title>
+    <title>Docker context</title>
 </head>
 
 <body class="body-overal">
@@ -22,16 +22,18 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker login [OPTIONS] [SERVER]</code>
-
-            <code>Authenticate to a registry.</code>
-            <code>Defaults to Docker Hub if no server is specified.</code>
-
-            <code>Options:</code>
-            <code>-p, --password string   Password or Personal Access Token (PAT)</code>
-            <code>    --password-stdin    Take the Password or Personal Access Token</code>
-            <code>                        (PAT) from stdin</code>
-            <code>-u, --username string   Username
+            <code class="p">Usage:  docker context COMMAND</code>
+            <code>Manage contexts</code>
+            <code>Commands:</code>
+            <code>create      Create a context</code>
+            <code>export      Export a context to a tar archive FILE or a tar stream on STDOUT.</code>
+            <code>import      Import a context from a tar or zip file</code>
+            <code>inspect     Display detailed information on one or more contexts</code>
+            <code>ls          List contexts</code>
+            <code>rm          Remove one or more contexts</code>
+            <code>show        Print the name of the current context</code>
+            <code>update      Update a context</code>
+            <code>use         Set the current docker context</code>
         </pre>
     </main>
 

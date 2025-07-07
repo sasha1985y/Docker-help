@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker ai</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker ai [OPTIONS] COMMAND</code>
+
+            <code>Docker AI Agent - Ask Gordon</code>
+
+            <code>Examples:</code>
+            <code>    To start a conversation thread</code>
+            <code>    $ docker ai</code>
+
+            <code>    Or ask a single question:</code>
+            <code>    $ docker ai "How do I run redis?"</code>
+            <code>    $ docker ai "What's Docker Scout?"</code>
+
+            <code>    Or run any docker command with AI assistance:</code>
+            <code>    $ docker ai run redis</code>
+            <code>    $ docker ai pull some_image</code>
+            <code>    $ docker ai build .</code>
+
+            <code>Options:</code>
+            <code>    --send-files               Send files when asked to (default true)</code>
+            <code>    --send-project-structure   Send project structure when asked to</code>
+            <code>                                (default true)</code>
+            <code>-s, --shell-out                Run commands after a confirmation</code>
+            <code>-C, --working-dir string       Sets the working directory for the command</code>
+            <code>    --write-files              Write files when asked to (default true)</code>
+
+            <code>Management Commands:</code>
+            <code>config      Configuration management commands</code>
+
+            <code>Commands:</code>
+            <code>feedback    Share your feedback with Docker Inc.</code>
+            <code>version     Show the version information</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
