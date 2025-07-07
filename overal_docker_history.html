@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker history</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker history [OPTIONS] IMAGE</code>
+
+            <code>Show the history of an image</code>
+
+            <code>Aliases:</code>
+            <code>docker image history, docker history</code>
+
+            <code>Options:</code>
+            <code>    --format string     Format output using a custom template:</code>
+            <code>                        'table':            Print output in table</code>
+            <code>                        format with column headers (default)</code>
+            <code>                        'table TEMPLATE':   Print output in table</code>
+            <code>                        format using the given Go template</code>
+            <code>                        'json':             Print in JSON format</code>
+            <code>                        'TEMPLATE':         Print output using the</code>
+            <code>                        given Go template.</code>
+            <code>                        Refer to https://docs.docker.com/go/formatting/</code>
+            <code>                        for more information about formatting output</code>
+            <code>                        with templates</code>
+            <code>-H, --human             Print sizes and dates in human readable format</code>
+            <code>                        (default true)</code>
+            <code>    --no-trunc          Don't truncate output</code>
+            <code>    --platform string   Show history for the given platform. Formatted</code>
+            <code>                        as "os[/arch[/variant]]" (e.g., "linux/amd64")</code>
+            <code>-q, --quiet             Only show image IDs</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

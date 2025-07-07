@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker stop</title>
+    <title>Docker pause</title>
 </head>
 
 <body class="body-overal">
@@ -22,18 +22,12 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code class="p">Usage:  docker pause CONTAINER [CONTAINER...]</code>
 
-            <code>Stop one or more running containers</code>
+            <code>Pause all processes within one or more containers</code>
 
             <code>Aliases:</code>
-            <code>docker container stop, docker stop</code>
-
-            <code>Options:</code>
-            <code>-s, --signal string   Signal to send to the container</code>
-            <code>-t, --timeout int     Seconds to wait before killing the container</code>
-            <code class="e">docker stop -t 30 my_container</code>
-
+            <code>docker container pause, docker pause</code>
         </pre>
     </main>
 

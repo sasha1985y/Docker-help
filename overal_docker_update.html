@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker update</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker update [OPTIONS] CONTAINER [CONTAINER...]</code>
+
+            <code>Update configuration of one or more containers</code>
+
+            <code>Aliases:</code>
+            <code>docker container update, docker update</code>
+
+            <code>Options:</code>
+            <code>    --blkio-weight uint16        Block IO (relative weight), between 10</code>
+            <code>                                and 1000, or 0 to disable (default 0)</code>
+            <code>    --cpu-period int             Limit CPU CFS (Completely Fair</code>
+            <code>                                Scheduler) period</code>
+            <code>    --cpu-quota int              Limit CPU CFS (Completely Fair</code>
+            <code>                                Scheduler) quota</code>
+            <code>    --cpu-rt-period int          Limit the CPU real-time period in</code>
+            <code>                                microseconds</code>
+            <code>    --cpu-rt-runtime int         Limit the CPU real-time runtime in</code>
+            <code>                                microseconds</code>
+            <code>-c, --cpu-shares int             CPU shares (relative weight)</code>
+            <code>    --cpus decimal               Number of CPUs</code>
+            <code>    --cpuset-cpus string         CPUs in which to allow execution (0-3, 0,1)</code>
+            <code>    --cpuset-mems string         MEMs in which to allow execution (0-3, 0,1)</code>
+            <code>-m, --memory bytes               Memory limit</code>
+            <code>    --memory-reservation bytes   Memory soft limit</code>
+            <code>    --memory-swap bytes          Swap limit equal to memory plus swap:</code>
+            <code>                                -1 to enable unlimited swap</code>
+            <code>    --pids-limit int             Tune container pids limit (set -1 for</code>
+            <code>                                unlimited)</code>
+            <code>    --restart string             Restart policy to apply when a</code>
+            <code>                                container exits</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker stop</title>
+    <title>Docker cp</title>
 </head>
 
 <body class="body-overal">
@@ -22,18 +22,25 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code class="p">Usage:  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-</code>
+            <code class="p">    docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH</code>
 
-            <code>Stop one or more running containers</code>
+            <code>Copy files/folders between a container and the local filesystem</code>
+
+            <code>Use '-' as the source to read a tar archive from stdin</code>
+            <code>and extract it to a directory destination in a container.</code>
+            <code>Use '-' as the destination to stream a tar archive of a</code>
+            <code>container source to stdout.</code>
 
             <code>Aliases:</code>
-            <code>docker container stop, docker stop</code>
+            <code>docker container cp, docker cp</code>
 
             <code>Options:</code>
-            <code>-s, --signal string   Signal to send to the container</code>
-            <code>-t, --timeout int     Seconds to wait before killing the container</code>
-            <code class="e">docker stop -t 30 my_container</code>
-
+            <code>-a, --archive       Archive mode (copy all uid/gid information)</code>
+            <code>-L, --follow-link   Always follow symbol link in SRC_PATH</code>
+            <code>-q, --quiet         Suppress progress output during copy. Progress</code>
+            <code>                    output is automatically suppressed if no terminal</code>
+            <code>                    is attached</code>
         </pre>
     </main>
 

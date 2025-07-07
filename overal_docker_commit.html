@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker stop</title>
+    <title>Docker commit</title>
 </head>
 
 <body class="body-overal">
@@ -22,18 +22,19 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code>Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</code>
 
-            <code>Stop one or more running containers</code>
+            <code>Create a new image from a container's changes</code>
 
             <code>Aliases:</code>
-            <code>docker container stop, docker stop</code>
+            <code>docker container commit, docker commit</code>
 
             <code>Options:</code>
-            <code>-s, --signal string   Signal to send to the container</code>
-            <code>-t, --timeout int     Seconds to wait before killing the container</code>
-            <code class="e">docker stop -t 30 my_container</code>
-
+            <code>-a, --author string    Author (e.g., "John Hannibal Smith</code>
+            <code>                        <hannibal@a-team.com>")</code>
+            <code>-c, --change list      Apply Dockerfile instruction to the created image</code>
+            <code>-m, --message string   Commit message</code>
+            <code>-p, --pause            Pause container during commit (default true)</code>
         </pre>
     </main>
 

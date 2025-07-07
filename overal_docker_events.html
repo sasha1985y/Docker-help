@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker events</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker events [OPTIONS]</code>
+
+            <code>Get real time events from the servercod</code>
+
+            <code>Aliases:cod</code>
+            <code>docker system events, docker events</code>
+
+            <code>Options:cod</code>
+            <code>-f, --filter filter   Filter output based on conditions providedcod</code>
+            <code>    --format string   Format output using a custom template:cod</code>
+            <code>                        'json':             Print in JSON formatcod</code>
+            <code>                        'TEMPLATE':         Print output using the givencod</code>
+            <code>                        Go template.cod</code>
+            <code>                        Refer to https://docs.docker.com/go/formatting/</code>
+            <code>                        for more information about formatting output withco</code>
+            <code>                        templatesco</code>
+            <code>    --since string    Show all events created since timestampco</code>
+            <code>    --until string    Stream events until this timestampcod</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

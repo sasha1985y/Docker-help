@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker stop</title>
+    <title>Docker inspect</title>
 </head>
 
 <body class="body-overal">
@@ -22,18 +22,20 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code class="p">Usage:  docker inspect [OPTIONS] NAME|ID [NAME|ID...]</code>
 
-            <code>Stop one or more running containers</code>
-
-            <code>Aliases:</code>
-            <code>docker container stop, docker stop</code>
+            <code>Return low-level information on Docker objects</code>
 
             <code>Options:</code>
-            <code>-s, --signal string   Signal to send to the container</code>
-            <code>-t, --timeout int     Seconds to wait before killing the container</code>
-            <code class="e">docker stop -t 30 my_container</code>
-
+            <code>-f, --format string   Format output using a custom template:</code>
+            <code>                        'json':             Print in JSON format</code>
+            <code>                        'TEMPLATE':         Print output using the given</code>
+            <code>                        Go template.</code>
+            <code>                        Refer to https://docs.docker.com/go/formatting/</code>
+            <code>                        for more information about formatting output with</code>
+            <code>                        templates</code>
+            <code>-s, --size            Display total file sizes if the type is container</code>
+            <code>    --type string     Only inspect objects of the given type</code>
         </pre>
     </main>
 
