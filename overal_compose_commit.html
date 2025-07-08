@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose commit</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose commit [OPTIONS] SERVICE [REPOSITORY[:TAG]]</code>
+
+            <code>Create a new image from a service container's changes</code>
+
+            <code>Options:</code>
+            <code>-a, --author string    Author (e.g., "John Hannibal Smith</code>
+            <code>                        <hannibal@a-team.com>")</code>
+            <code>-c, --change list      Apply Dockerfile instruction to the created image</code>
+            <code>    --dry-run          Execute command in dry run mode</code>
+            <code>    --index int        index of the container if service has multiple</code>
+            <code>                        replicas.</code>
+            <code>-m, --message string   Commit message</code>
+            <code>-p, --pause            Pause container during commit (default true)</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

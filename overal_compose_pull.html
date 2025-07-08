@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose pull</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose pull [OPTIONS] [SERVICE...]</code>
+
+            <code>Pull service images</code>
+
+            <code>Options:</code>
+            <code>    --dry-run                Execute command in dry run mode</code>
+            <code>    --ignore-buildable       Ignore images that can be built</code>
+            <code>    --ignore-pull-failures   Pull what it can and ignores images with</code>
+            <code>                            pull failures</code>
+            <code>    --include-deps           Also pull services declared as dependencies</code>
+            <code>    --policy string          Apply pull policy ("missing"|"always")</code>
+            <code>-q, --quiet                  Pull without printing progress information</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

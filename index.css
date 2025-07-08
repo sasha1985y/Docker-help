@@ -71,42 +71,9 @@
 }
 
 
-@media (min-width: 1298px) {
-    
-    pre {
-        font-size: var(--font-general-size);
-    }
-}
-
-@media (max-width: 1297px) {
-    
-    pre {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    
-    pre {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 760px) {
-    
-    pre {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 320px) {
-    
-    pre {
-        font-size: 0.6rem;
-    }
-}
 
 pre {
+    max-width: 100vw;
     padding-top: 1%;
     color: var(--text-color);
 }
@@ -159,4 +126,89 @@ pre code {
 
 .f {
     color: var(--flag-color);
+}
+
+@media (min-width: 1298px) {
+    
+    pre {
+        font-size: var(--font-general-size);
+    }
+}
+
+@media (max-width: 1297px) {
+    
+    pre {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        height: 0 auto;
+    }
+    
+    main {
+        width: 90%;
+        height: 0 auto;
+    }
+    
+    .header-overal select {
+        width: 10vw;
+    }
+    
+    pre {
+        font-size: 0.5rem;
+        padding-top: 10%;
+        width: 90%;
+        height: 0 auto;
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    body {
+        height: 0 auto;
+    }
+    
+    main {
+        width: 90%;
+        height: 0 auto;
+    }
+    
+    .header-overal select {
+        width: 10vw;
+    }
+    
+    pre {
+        font-size: 0.5rem;
+        padding-top: 10%;
+        width: 90%;
+        height: 0 auto;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+    body {
+        height: 0 auto;
+    }
+    
+    main {
+        width: 90%;
+        height: 0 auto;
+    }
+
+    .header-overal {
+        position: relative;
+        left: 20%;
+        width: 60%;
+        flex-direction: column;
+    }
+    
+    pre {
+        font-size: 0.5rem;
+        width: 90%;
+        height: 0 auto;
+    }
 }

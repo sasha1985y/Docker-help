@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker global options</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code>Global Options:</code>
+            <code>    --config string      Location of client config files (default</code>
+            <code>                        "/home/alexander/.docker")</code>
+            <code>-c, --context string     Name of the context to use to connect to the</code>
+            <code>                        daemon (overrides DOCKER_HOST env var and</code>
+            <code>                        default context set with "docker context use")</code>
+            <code>-D, --debug              Enable debug mode</code>
+            <code>-H, --host list          Daemon socket to connect to</code>
+            <code>-l, --log-level string   Set the logging level ("debug", "info",</code>
+            <code>                        "warn", "error", "fatal") (default "info")</code>
+            <code>    --tls                Use TLS; implied by --tlsverify</code>
+            <code>    --tlscacert string   Trust certs signed only by this CA (default</code>
+            <code>                        "/home/alexander/.docker/ca.pem")</code>
+            <code>    --tlscert string     Path to TLS certificate file (default</code>
+            <code>                        "/home/alexander/.docker/cert.pem")</code>
+            <code>    --tlskey string      Path to TLS key file (default</code>
+            <code>                        "/home/alexander/.docker/key.pem")</code>
+            <code>    --tlsverify          Use TLS and verify the remote</code>
+            <code>-v, --version            Print version information and quit</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

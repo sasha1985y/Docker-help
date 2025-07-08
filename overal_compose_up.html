@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose up</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose up [OPTIONS] [SERVICE...]</code>
+
+            <code>Create and start containers</code>
+
+            <code>Options:</code>
+            <code>    --abort-on-container-exit      Stops all containers if any</code>
+            <code>                                    container was stopped. Incompatible</code>
+            <code>                                    with -d</code>
+            <code>    --abort-on-container-failure   Stops all containers if any</code>
+            <code>                                    container exited with failure.</code>
+            <code>                                    Incompatible with -d</code>
+            <code>    --always-recreate-deps         Recreate dependent containers.</code>
+            <code>                                    Incompatible with --no-recreate.</code>
+            <code>    --attach stringArray           Restrict attaching to the specified</code>
+            <code>                                    services. Incompatible with</code>
+            <code>                                    --attach-dependencies.</code>
+            <code>    --attach-dependencies          Automatically attach to log output</code>
+            <code>                                    of dependent services</code>
+            <code>    --build                        Build images before starting containers</code>
+            <code>-d, --detach                       Detached mode: Run containers in the</code>
+            <code>                                    background</code>
+            <code>    --dry-run                      Execute command in dry run mode</code>
+            <code>    --exit-code-from string        Return the exit code of the selected</code>
+            <code>                                    service container. Implies</code>
+            <code>                                    --abort-on-container-exit</code>
+            <code>    --force-recreate               Recreate containers even if their</code>
+            <code>                                    configuration and image haven't changed</code>
+            <code>    --menu                         Enable interactive shortcuts when</code>
+            <code>                                    running attached. Incompatible with</code>
+            <code>                                    --detach. Can also be enable/disable</code>
+            <code>                                    by setting COMPOSE_MENU environment var.</code>
+            <code>    --no-attach stringArray        Do not attach (stream logs) to the</code>
+            <code>                                    specified services</code>
+            <code>    --no-build                     Don't build an image, even if it's policy</code>
+            <code>    --no-color                     Produce monochrome output</code>
+            <code>    --no-deps                      Don't start linked services</code>
+            <code>    --no-log-prefix                Don't print prefix in logs</code>
+            <code>    --no-recreate                  If containers already exist, don't</code>
+            <code>                                    recreate them. Incompatible with</code>
+            <code>                                    --force-recreate.</code>
+            <code>    --no-start                     Don't start the services after</code>
+            <code>                                    creating them</code>
+            <code>    --pull string                  Pull image before running</code>
+            <code>                                    ("always"|"missing"|"never")</code>
+            <code>                                    (default "policy")</code>
+            <code>    --quiet-pull                   Pull without printing progress</code>
+            <code>                                    information</code>
+            <code>    --remove-orphans               Remove containers for services not</code>
+            <code>                                    defined in the Compose file</code>
+            <code>-V, --renew-anon-volumes           Recreate anonymous volumes instead</code>
+            <code>                                    of retrieving data from the previous</code>
+            <code>                                    containers</code>
+            <code>    --scale scale                  Scale SERVICE to NUM instances.</code>
+            <code>                                    Overrides the scale setting in the</code>
+            <code>                                    Compose file if present.</code>
+            <code>-t, --timeout int                  Use this timeout in seconds for</code>
+            <code>                                    container shutdown when attached or</code>
+            <code>                                    when containers are already running</code>
+            <code>    --timestamps                   Show timestamps</code>
+            <code>    --wait                         Wait for services to be</code>
+            <code>                                    running|healthy. Implies detached mode.</code>
+            <code>    --wait-timeout int             Maximum duration in seconds to wait</code>
+            <code>                                    for the project to be running|healthy</code>
+            <code>-w, --watch                        Watch source code and</code>
+            <code>                                    rebuild/refresh containers when</code>
+            <code>                                    files are updated.</code>
+            <code>-y, --yes                          Assume "yes" as answer to all</code>
+            <code>                                    prompts and run non-interactively</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

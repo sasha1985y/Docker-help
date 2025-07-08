@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose stats</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose stats [OPTIONS] [SERVICE]</code>
+
+            <code>Display a live stream of container(s) resource usage statistics</code>
+
+            <code>Options:</code>
+            <code>-a, --all             Show all containers (default shows just running)</code>
+            <code>    --dry-run         Execute command in dry run mode</code>
+            <code>    --format string   Format output using a custom template:</code>
+            <code>                        'table':            Print output in table format</code>
+            <code>                        with column headers (default)</code>
+            <code>                        'table TEMPLATE':   Print output in table format</code>
+            <code>                        using the given Go template</code>
+            <code>                        'json':             Print in JSON format</code>
+            <code>                        'TEMPLATE':         Print output using the given</code>
+            <code>                        Go template.</code>
+            <code>                        Refer to</code>
+            <code>                        https://docs.docker.com/engine/cli/formatting/</code>
+            <code>                        for more information about formatting output with</code>
+            <code>                        templates</code>
+            <code>    --no-stream       Disable streaming stats and only pull the first result</code>
+            <code>    --no-trunc        Do not truncate output</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

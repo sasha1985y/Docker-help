@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose attach</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose attach [OPTIONS] SERVICE</code>
+
+            <code>Attach local standard input, output, and error streams to a service's running container</code>
+
+            <code>Options:</code>
+            <code>    --detach-keys string   Override the key sequence for detaching from</code>
+            <code>                            a container.</code>
+            <code>    --dry-run              Execute command in dry run mode</code>
+            <code>    --index int            index of the container if service has</code>
+            <code>                            multiple replicas.</code>
+            <code>    --no-stdin             Do not attach STDIN</code>
+            <code>    --sig-proxy            Proxy all received signals to the process</code>
+            <code>                            (default true)</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

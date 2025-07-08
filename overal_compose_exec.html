@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose exec</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose exec [OPTIONS] SERVICE COMMAND [ARGS...]</code>
+
+            <code>Execute a command in a running container</code>
+
+            <code>Options:</code>
+            <code>-d, --detach                       Detached mode: Run command in the</code>
+            <code>                                    background</code>
+            <code>    --dry-run                      Execute command in dry run mode</code>
+            <code>-e, --env stringArray              Set environment variables</code>
+            <code>    --index int                    Index of the container if service</code>
+            <code>                                    has multiple replicas</code>
+            <code>-T, --no-TTY docker compose exec   Disable pseudo-TTY allocation. By</code>
+            <code>                                    default docker compose exec</code>
+            <code>                                    allocates a TTY.</code>
+            <code>    --privileged                   Give extended privileges to the process</code>
+            <code>-u, --user string                  Run the command as this user</code>
+            <code>-w, --workdir string               Path to workdir directory for this</code>
+            <code>                                    command</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

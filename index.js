@@ -137,7 +137,7 @@ function createDropdown() {
     var globalOptions = [
         { value: "", text: "Глобальные опции" },
         { value: "index.html", text: "Домой" },
-        { value: "common_docker_bake.html", text: "docker bake" },
+        { value: "global_docker_options.html", text: "global options" },
         
     ];
 
@@ -165,8 +165,40 @@ function createDropdown() {
     var overalComposeCommandsOptions = [
         { value: "", text: "Общие команды compose" },
         { value: "index.html", text: "Домой" },
-        { value: "edition_dockerfile.html", text: "Dockerfile" },
-        
+        { value: "overal_compose_attach.html", text: "compose attach" },
+        { value: "overal_compose_bridge.html", text: "compose bridge" },
+        { value: "overal_compose_build.html", text: "compose build" },
+        { value: "overal_compose_commit.html", text: "compose commit" },
+        { value: "overal_compose_config.html", text: "compose config" },
+        { value: "overal_compose_cp.html", text: "compose cp" },
+        { value: "overal_compose_create.html", text: "compose create" },
+        { value: "overal_compose_down.html", text: "compose down" },
+        { value: "overal_compose_events.html", text: "compose events" },
+        { value: "overal_compose_exec.html", text: "compose exec" },
+        { value: "overal_compose_export.html", text: "compose export" },
+        { value: "overal_compose_images.html", text: "compose images" },
+        { value: "overal_compose_kill.html", text: "compose kill" },
+        { value: "overal_compose_logs.html", text: "compose logs" },
+        { value: "overal_compose_ls.html", text: "compose ls" },
+        { value: "overal_compose_pause.html", text: "compose pause" },
+        { value: "overal_compose_port.html", text: "compose port" },
+        { value: "overal_compose_ps.html", text: "compose ps" },
+        { value: "overal_compose_publish.html", text: "compose publish" },
+        { value: "overal_compose_pull.html", text: "compose pull" },
+        { value: "overal_compose_push.html", text: "compose push" },
+        { value: "overal_compose_restart.html", text: "compose restart" },
+        { value: "overal_compose_rm.html", text: "compose rm" },
+        { value: "overal_compose_run.html", text: "compose run" },
+        { value: "overal_compose_scale.html", text: "compose scale" },
+        { value: "overal_compose_start.html", text: "compose start" },
+        { value: "overal_compose_stats.html", text: "compose stats" },
+        { value: "overal_compose_stop.html", text: "compose stop" },
+        { value: "overal_compose_top.html", text: "compose top" },
+        { value: "overal_compose_unpause.html", text: "compose unpause" },
+        { value: "overal_compose_up.html", text: "compose up" },
+        { value: "overal_compose_version.html", text: "compose version" },
+        { value: "overal_compose_wait.html", text: "compose wait" },
+        { value: "overal_compose_watch.html", text: "compose watch" },
     ];
 
     overalComposeCommandsOptions.forEach(function(option) {
@@ -179,7 +211,7 @@ function createDropdown() {
     var composeOptions = [
         { value: "", text: "Compose опции" },
         { value: "index.html", text: "Домой" },
-        { value: "edition_dockerfile.html", text: "Dockerfile" },
+        { value: "compose_docker_options.html", text: "compose options" },
         
     ];
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose create</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose create [OPTIONS] [SERVICE...]</code>
+
+            <code>Creates containers for a service</code>
+
+            <code>Options:</code>
+            <code>    --build            Build images before starting containers</code>
+            <code>    --dry-run          Execute command in dry run mode</code>
+            <code>    --force-recreate   Recreate containers even if their configuration</code>
+            <code>                        and image haven't changed</code>
+            <code>    --no-build         Don't build an image, even if it's policy</code>
+            <code>    --no-recreate      If containers already exist, don't recreate</code>
+            <code>                        them. Incompatible with --force-recreate.</code>
+            <code>    --pull string      Pull image before running</code>
+            <code>                        ("always"|"missing"|"never"|"build") (default</code>
+            <code>                        "policy")</code>
+            <code>    --quiet-pull       Pull without printing progress information</code>
+            <code>    --remove-orphans   Remove containers for services not defined in</code>
+            <code>                        the Compose file</code>
+            <code>    --scale scale      Scale SERVICE to NUM instances. Overrides the</code>
+            <code>                        scale setting in the Compose file if present.</code>
+            <code>-y, --yes              Assume "yes" as answer to all prompts and run</code>
+            <code>                        non-interactively</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

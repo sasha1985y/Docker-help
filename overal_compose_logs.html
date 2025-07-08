@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose logs</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose logs [OPTIONS] [SERVICE...]</code>
+
+            <code>View output from containers</code>
+
+            <code>Options:</code>
+            <code>    --dry-run         Execute command in dry run mode</code>
+            <code>-f, --follow          Follow log output</code>
+            <code>    --index int       index of the container if service has multiple</code>
+            <code>                        replicas</code>
+            <code>    --no-color        Produce monochrome output</code>
+            <code>    --no-log-prefix   Don't print prefix in logs</code>
+            <code>    --since string    Show logs since timestamp (e.g.</code>
+            <code>                        2013-01-02T13:23:37Z) or relative (e.g. 42m for</code>
+            <code>                        42 minutes)</code>
+            <code>-n, --tail string     Number of lines to show from the end of the logs</code>
+            <code>                        for each container (default "all")</code>
+            <code>-t, --timestamps      Show timestamps</code>
+            <code>    --until string    Show logs before a timestamp (e.g.</code>
+            <code>                        2013-01-02T13:23:37Z) or relative (e.g. 42m for</code>
+            <code>                        42 minutes)</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

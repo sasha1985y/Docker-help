@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose run</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose run [OPTIONS] SERVICE [COMMAND] [ARGS...]</code>
+
+            <code>Run a one-off command on a service</code>
+
+            <code>Options:</code>
+            <code>    --build                       Build image before starting container</code>
+            <code>    --cap-add list                Add Linux capabilities</code>
+            <code>    --cap-drop list               Drop Linux capabilities</code>
+            <code>-d, --detach                      Run container in background and print</code>
+            <code>                                    container ID</code>
+            <code>    --dry-run                     Execute command in dry run mode</code>
+            <code>    --entrypoint string           Override the entrypoint of the image</code>
+            <code>-e, --env stringArray             Set environment variables</code>
+            <code>    --env-from-file stringArray   Set environment variables from file</code>
+            <code>-i, --interactive                 Keep STDIN open even if not attached</code>
+            <code>                                    (default true)</code>
+            <code>-l, --label stringArray           Add or override a label</code>
+            <code>    --name string                 Assign a name to the container</code>
+            <code>-T, --no-TTY                      Disable pseudo-TTY allocation</code>
+            <code>                                    (default: auto-detected)</code>
+            <code>    --no-deps                     Don't start linked services</code>
+            <code>-p, --publish stringArray         Publish a container's port(s) to the host</code>
+            <code>    --pull string                 Pull image before running</code>
+            <code>                                    ("always"|"missing"|"never") (default</code>
+            <code>                                    "policy")</code>
+            <code>-q, --quiet                       Don't print anything to STDOUT</code>
+            <code>    --quiet-build                 Suppress progress output from the</code>
+            <code>                                    build process</code>
+            <code>    --quiet-pull                  Pull without printing progress information</code>
+            <code>    --remove-orphans              Remove containers for services not</code>
+            <code>                                    defined in the Compose file</code>
+            <code>    --rm                          Automatically remove the container</code>
+            <code>                                    when it exits</code>
+            <code>-P, --service-ports               Run command with all service's ports</code>
+            <code>                                    enabled and mapped to the host</code>
+            <code>    --use-aliases                 Use the service's network useAliases</code>
+            <code>                                    in the network(s) the container</code>
+            <code>                                    connects to</code>
+            <code>-u, --user string                 Run as specified username or uid</code>
+            <code>-v, --volume stringArray          Bind mount a volume</code>
+            <code>-w, --workdir string              Working directory inside the container</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

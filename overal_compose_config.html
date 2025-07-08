@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose config</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose config [OPTIONS] [SERVICE...]</code>
+
+            <code>Parse, resolve and render compose file in canonical format</code>
+
+            <code>Options:</code>
+            <code>    --dry-run                 Execute command in dry run mode</code>
+            <code>    --environment             Print environment used for interpolation.</code>
+            <code>    --format string           Format the output. Values: [yaml | json]</code>
+            <code>    --hash string             Print the service config hash, one per line.</code>
+            <code>    --images                  Print the image names, one per line.</code>
+            <code>    --lock-image-digests      Produces an override file with image digests</code>
+            <code>    --no-consistency          Don't check model consistency - warning:</code>
+            <code>                                may produce invalid Compose output</code>
+            <code>    --no-env-resolution       Don't resolve service env files</code>
+            <code>    --no-interpolate          Don't interpolate environment variables</code>
+            <code>    --no-normalize            Don't normalize compose model</code>
+            <code>    --no-path-resolution      Don't resolve file paths</code>
+            <code>-o, --output string           Save to file (default to stdout)</code>
+            <code>    --profiles                Print the profile names, one per line.</code>
+            <code>-q, --quiet                   Only validate the configuration, don't</code>
+            <code>                                print anything</code>
+            <code>    --resolve-image-digests   Pin image tags to digests</code>
+            <code>    --services                Print the service names, one per line.</code>
+            <code>    --variables               Print model variables and default values.</code>
+            <code>    --volumes                 Print the volume names, one per line.</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

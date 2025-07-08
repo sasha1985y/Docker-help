@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose rm</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose rm [OPTIONS] [SERVICE...]</code>
+
+            <code>Removes stopped service containers</code>
+
+            <code>By default, anonymous volumes attached to containers will not be removed. You</code>
+            <code>can override this with -v. To list all volumes, use "docker volume ls".</code>
+
+            <code>Any data which is not in a volume will be lost.</code>
+
+            <code>Options:</code>
+            <code>    --dry-run   Execute command in dry run mode</code>
+            <code>-f, --force     Don't ask to confirm removal</code>
+            <code>-s, --stop      Stop the containers, if required, before removing</code>
+            <code>-v, --volumes   Remove any anonymous volumes attached to containers</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

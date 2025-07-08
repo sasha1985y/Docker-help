@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Docker compose build</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="p">Usage:  docker compose build [OPTIONS] [SERVICE...]</code>
+
+            <code>Build or rebuild services</code>
+
+            <code>Options:</code>
+            <code>    --build-arg stringArray   Set build-time variables for services</code>
+            <code>    --builder string          Set builder to use</code>
+            <code>    --check                   Check build configuration</code>
+            <code>    --dry-run                 Execute command in dry run mode</code>
+            <code>-m, --memory bytes            Set memory limit for the build container.</code>
+            <code>                                Not supported by BuildKit.</code>
+            <code>    --no-cache                Do not use cache when building the image</code>
+            <code>    --print                   Print equivalent bake file</code>
+            <code>    --pull                    Always attempt to pull a newer version of</code>
+            <code>                                the image</code>
+            <code>    --push                    Push service images</code>
+            <code>-q, --quiet                   Don't print anything to STDOUT</code>
+            <code>    --ssh string              Set SSH authentications used when</code>
+            <code>                                building service images. (use 'default'</code>
+            <code>                                for using your default SSH Agent)</code>
+            <code>    --with-dependencies       Also build dependencies (transitively)</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
