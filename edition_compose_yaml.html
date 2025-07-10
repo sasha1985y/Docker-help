@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>compose.yaml</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+        <style>
+            main {
+                display: flex;
+                justify-content: start;
+            }
+
+            .p::before {
+                content: "<pattern> ";
+                color: var(--before-after-pattern-color);
+            }
+
+            .p::after {
+                content: " </pattern>";
+                color: var(--before-after-pattern-color);
+            }
+
+            .e::before {
+                content: "<example> ";
+                color: var(--before-after-example-color);
+            }
+
+            .e::after {
+                content: " </example>";
+                color: var(--before-after-example-color);
+            }
+
+            .example_1 {
+                z-index: 1;
+            }
+
+            .example_2 {
+                z-index: 2;
+            }
+
+            .example_2 code {
+                display: inline-block;
+                margin-top: 2.05%;
+            }
+        </style>
+    </header>
+    <main>
+        <div class="example_1">
+            <pre>
+                <code class="p">version:</code> <code class="e"> '3.8'</code>
+    
+                <code class="p">services:</code>
+                <code class="e">    web:</code>
+                <code class="p">        image:</code> <code class="e">nginx:latest</code>
+                <code class="p">        ports:</code>
+                <code class="e">            - "80:80"</code>
+                <code class="p">        volumes:</code>
+                <code class="e">            - ./nginx.conf:/etc/nginx/nginx.conf</code>
+                <code class="p">        depends_on:</code>
+                <code class="e">            - app</code>
+                <code class="p">        networks:</code>
+                <code class="e">            - front-end</code>
+                
+                <code class="e">    app:</code>
+                <code class="p">        build:</code> <code class="e">./app</code>
+                <code class="p">        volumes:</code>
+                <code class="e">            - ./app:/usr/src/app</code>
+                <code class="p">        environment:</code>
+                <code class="e">            - NODE_ENV=production</code>
+                <code class="p">        networks:</code>
+                <code class="e">            - front-end</code>
+                <code class="e">            - back-end</code>
+                
+                <code class="e">    db:</code>
+                <code class="p">        image:</code> <code class="e">mongo:latest</code>
+                <code class="p">        volumes:</code>
+                <code class="e">            - mongo-data:/data/db</code>
+                <code class="p">        networks:</code>
+                <code class="e">            - back-end</code>
+    
+                <code class="p">volumes:</code>
+                <code class="e">    mongo-data:</code>
+    
+                <code class="p">networks:</code>
+                <code class="e">    front-end:</code>
+                <code class="e">    back-end:</code>
+            </pre>
+        </div>
+
+        <div class="example_2">
+            <pre>
+                <code>version: '3.8'</code>
+    
+                <code>services:</code>
+                    <code>web:</code>
+                    <code>    image: nginx:latest</code>
+                    <code>    ports:</code>
+                    <code>      - "80:80"</code>
+                    <code>    volumes:</code>
+                    <code>      - ./nginx.conf:/etc/nginx/nginx.conf</code>
+                    <code>    depends_on:</code>
+                    <code>      - app</code>
+                    <code>    networks:</code>
+                    <code>      - front-end</code>
+                
+                    <code>app:</code>
+                    <code>    build: ./app</code>
+                    <code>    volumes:</code>
+                    <code>      - ./app:/usr/src/app</code>
+                    <code>    environment:</code>
+                    <code>      - NODE_ENV=production</code>
+                    <code>    networks:</code>
+                    <code>      - front-end</code>
+                    <code>      - back-end</code>
+                
+                    <code>db:</code>
+                    <code>    image: mongo:latest</code>
+                    <code>    volumes:</code>
+                    <code>      - mongo-data:/data/db</code>
+                    <code>    networks:</code>
+                    <code>      - back-end</code>
+    
+                <code>volumes:</code>
+                <code>  mongo-data:</code>
+    
+                <code>networks:</code>
+                <code>  front-end:</code>
+                <code>  back-end:</code>
+            </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
