@@ -47,7 +47,7 @@
 
             .example_2 code {
                 display: inline-block;
-                margin-top: 2.4%;
+                margin-top: 2.6%;
             }
         </style>
     </header>
@@ -62,7 +62,7 @@
                 <code class="p">        ports:</code>
                 <code class="e">            - "${HOST_PORT}:80"</code>
                 <code class="p">        volumes:</code>
-                <code class="e">            - ./nginx.conf:/etc/nginx/nginx.conf</code>
+                <code class="e">            - ./nginx.conf:${PWD}/nginx.conf</code>
                 <code class="p">        depends_on:</code>
                 <code class="e">            - app</code>
                 <code class="p">        networks:</code>
