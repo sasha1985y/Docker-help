@@ -30,13 +30,16 @@
             <code>    --dry-run          Execute command in dry run mode</code>
             <code>    --remove-orphans   Remove containers for services not defined in</code>
             <code>                        the Compose file</code>
+            <code class="e">docker compose down --remove-orphans</code>
             <code>    --rmi string       Remove images used by services. "local" remove</code>
             <code>                        only images that don't have a custom tag</code>
             <code>                        ("local"|"all")</code>
+            <code class="e">docker compose down --rmi all</code>
             <code>-t, --timeout int      Specify a shutdown timeout in seconds</code>
             <code>-v, --volumes          Remove named volumes declared in the "volumes"</code>
             <code>                        section of the Compose file and anonymous</code>
             <code>                        volumes attached to containers</code>
+            <code class="e">docker compose down --volumes</code>
         </pre>
     </main>
 

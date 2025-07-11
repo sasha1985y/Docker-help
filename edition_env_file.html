@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>.env</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code class="e">.env</code>
+            <code class="e">NGINX_VERSION=latest</code>
+            <code class="e">HOST_PORT=8080</code>
+            <code class="e">DB_USER=admin</code>
+            <code class="e">DB_PASSWORD=secret</code>
+            <code class="e">PWD=/etc/nginx</code>
+
+            <code class="e">.env.dev:</code>
+            <code class="e">NGINX_VERSION=latest</code>
+            <code class="e">HOST_PORT=8080</code>
+            <code class="e">DB_USER=devuser</code>
+            <code class="e">DB_PASSWORD=devpassword</code>
+
+            <code class="e">.env.prod:</code>
+            <code class="e">NGINX_VERSION=1.19.3</code>
+            <code class="e">HOST_PORT=80</code>
+            <code class="e">DB_USER=produser</code>
+            <code class="e">DB_PASSWORD=prodpassword</code>
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

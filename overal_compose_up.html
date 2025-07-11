@@ -23,7 +23,9 @@
     <main>
         <pre>
             <code class="p">Usage:  docker compose up [OPTIONS] [SERVICE...]</code>
-
+            <code class="e">export NGINX_VERSION=latest</code>
+            <code class="e">export HOST_PORT=8080</code>
+            <code class="e">docker compose up web</code>
             <code>Create and start containers</code>
 
             <code>Options:</code>
@@ -41,14 +43,17 @@
             <code>    --attach-dependencies          Automatically attach to log output</code>
             <code>                                    of dependent services</code>
             <code>    --build                        Build images before starting containers</code>
+            <code class="e">docker compose up --build</code>
             <code>-d, --detach                       Detached mode: Run containers in the</code>
             <code>                                    background</code>
+            <code class="e">docker compose up -d</code>
             <code>    --dry-run                      Execute command in dry run mode</code>
             <code>    --exit-code-from string        Return the exit code of the selected</code>
             <code>                                    service container. Implies</code>
             <code>                                    --abort-on-container-exit</code>
             <code>    --force-recreate               Recreate containers even if their</code>
             <code>                                    configuration and image haven't changed</code>
+            <code class="e">docker compose up -d --force-recreate</code>
             <code>    --menu                         Enable interactive shortcuts when</code>
             <code>                                    running attached. Incompatible with</code>
             <code>                                    --detach. Can also be enable/disable</code>
@@ -62,6 +67,7 @@
             <code>    --no-recreate                  If containers already exist, don't</code>
             <code>                                    recreate them. Incompatible with</code>
             <code>                                    --force-recreate.</code>
+            <code class="e">docker compose up --no-recreate</code>
             <code>    --no-start                     Don't start the services after</code>
             <code>                                    creating them</code>
             <code>    --pull string                  Pull image before running</code>
@@ -71,9 +77,11 @@
             <code>                                    information</code>
             <code>    --remove-orphans               Remove containers for services not</code>
             <code>                                    defined in the Compose file</code>
+            <code class="e">docker compose up web --remove-orphans</code>
             <code>-V, --renew-anon-volumes           Recreate anonymous volumes instead</code>
             <code>                                    of retrieving data from the previous</code>
             <code>                                    containers</code>
+            <code class="e">docker compose up -V</code>
             <code>    --scale scale                  Scale SERVICE to NUM instances.</code>
             <code>                                    Overrides the scale setting in the</code>
             <code>                                    Compose file if present.</code>
