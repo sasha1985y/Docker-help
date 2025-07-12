@@ -23,6 +23,13 @@
     <main>
         <pre>
             <code class="p">Usage:  docker compose exec [OPTIONS] SERVICE COMMAND [ARGS...]</code>
+            <code class="e">docker compose exec &lt;service_name&gt; /bin/bash</code>
+            <code class="i" title="Подключение к контейнеру web для диагностики:">docker compose exec web /bin/bash</code>
+            <code class="e">docker compose exec &lt;service_name&gt; curl http://&lt;hostname&gt;</code>
+            <code class="e">docker compose exec &lt;service_name&gt; netcat -z -v &lt;hostname&gt; <port></code>
+
+            <code class="i" title="Проверка сетевого соединения между web и db:">docker compose exec web ping db</code>
+            <code class="i" title="Проверка сетевого соединения между web и db:">docker compose exec web curl http://db:5432</code>
 
             <code>Execute a command in a running container</code>
 

@@ -147,6 +147,8 @@
                                                     <code>безымянные тома при выходе</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar czf /backup/my_volume_backup.tar.gz /volume</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar xzf /backup/my_volume_backup.tar.gz -C /volume</code>
+<code class="i" title="Если том доступен, команда ls выведет список файлов и директорий, находящихся в томе. Если том недоступен или пуст, вы получите соответствующее сообщение.">docker run --rm -v my_volume:/mnt/volume alpine ls /mnt/volume</code>
+<code class="i" title="Чтобы проверить, сколько места доступно на томе изнутри контейнера, используйте команду df:">docker run --rm -v my_volume:/mnt/volume alpine df -h /mnt/volume</code>
                 <code>--runtime string                   Среда выполнения, используемая для этого контейнера</code>
                 <code>--security-opt list                Параметры безопасности</code>
                 <code>--shm-size bytes                   Размер /dev/shm</code>

@@ -14,6 +14,7 @@
     --font-general-size: 16px;
     --no-color: #5c5c5c00;
     --example-bg-color: #b9f5ff;
+    --example-info-bg-color: #b9c9ff;
     --example-color: #ed61ff;
     --before-after-example-color: #ff7739;
     --overal-body-color: #fffbf0;
@@ -88,11 +89,34 @@ pre code {
     margin-top: 1.5%;
 }
 
+/* example */
+
 .e {
     background-color: var(--example-bg-color);
-    color: var(--example-color);
     box-shadow: 3px 3px 3px 3px var(--example-bg-color), -3px -3px 3px 3px var(--example-bg-color);
+}
+
+/* example + info */
+
+.i {
+    background-color: var(--example-info-bg-color);
+     box-shadow: 3px 3px 3px 3px var(--example-info-bg-color), -3px -3px 3px 3px var(--example-info-bg-color);
+}
+
+.e,
+.i {
+    color: var(--example-color);
     border-radius: 1px;
+}
+
+.i::before {
+    content: "<info>    ";
+    color: var(--before-after-example-color);
+}
+
+.i::after {
+    content: "    </info>";
+    color: var(--before-after-example-color);
 }
 
 .e::before {
@@ -104,6 +128,8 @@ pre code {
     content: "    </example>";
     color: var(--before-after-example-color);
 }
+
+/* pattern */
 
 .p {
     background-color: var(--pattern-bg-color);
@@ -121,6 +147,8 @@ pre code {
     content: "    </pattern>";
     color: var(--before-after-pattern-color);
 }
+
+/* flag */
 
 .f {
     color: var(--flag-color);
