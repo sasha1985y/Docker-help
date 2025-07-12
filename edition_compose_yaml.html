@@ -73,6 +73,8 @@
                 <code class="p">            context:</code> <code class="e">.</code>     
                 <code class="p">            dockerfile:</code> <code class="e">Dockerfile</code>     
                 <code class="p">        image:</code> <code class="e">myapp:latest</code> 
+                <code class="p">        ports:</code>
+                <code class="e">            - "80-90:80"</code>
                 <code class="p">        ontainer_name:</code> <code class="e">myapp_container</code> 
                 <code class="p">        volumes:</code>
                 <code class="e">            - ./app:/usr/src/app</code>
@@ -84,6 +86,7 @@
                 
                 <code class="e">    db:</code>
                 <code class="p">        image:</code> <code class="e">mongo:latest</code>
+                <code class="p">        restart: </code> <code class="e">always</code>
                 <code class="p">        environment:</code>        
                 <code class="e">            MONGO_USER: ${DB_USER}</code>
                 <code class="e">            MONGO_PASSWORD: ${DB_PASSWORD}</code>
@@ -122,6 +125,8 @@
                     <code>      context: .</code>
                     <code>      dockerfile: Dockerfile</code>
                     <code>    image: myapp:latest</code>
+                    <code>    ports:</code>
+                    <code>      - "80-90:80"</code>
                     <code>    container_name: myapp_container</code>
                     <code>    volumes:</code>
                     <code>      - ./app:/usr/src/app</code>
@@ -133,6 +138,7 @@
                 
                     <code>db:</code>
                     <code>    image: mongo:latest</code>
+                    <code>    restart: always</code>
                     <code>    environment:</code>
                     <code>      MONGO_USER: ${DB_USER}</code>
                     <code>      MONGO_PASSWORD: ${DB_PASSWORD}</code>
