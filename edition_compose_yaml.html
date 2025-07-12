@@ -84,7 +84,8 @@
                 <code class="e">            - "80:80"</code>
                 <code class="e">            - "81:80"</code>                
                 <code class="e">            - "82:80"</code>            
-                <code class="p">        ontainer_name:</code> <code class="e">myapp_container</code> 
+                <code class="p">        container_name: </code> <code class="e">app</code>
+                <code class="p">        command: </code> <code class="p">sh -c "ping -c 3 db"</code>
                 <code class="p">        volumes:</code>
                 <code class="e">            - ./app:/usr/src/app</code>
                 <code class="p">        environment:</code>
@@ -147,7 +148,8 @@
                     <code>      - "80:80"</code>
                     <code>      - "81:80"</code>                
                     <code>      - "82:80"</code> 
-                    <code>    container_name: myapp_container</code>
+                    <code>    container_name: app</code>
+                    <code>    command: sh -c "ping -c 3 db"</code>
                     <code>    volumes:</code>
                     <code>      - ./app:/usr/src/app</code>
                     <code>    environment:</code>

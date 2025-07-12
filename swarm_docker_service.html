@@ -28,6 +28,7 @@
 
             <code>Commands:</code>
             <code>create      Create a new service</code>
+            <code class="i" title="Для использования драйвера overlay необходимо сначала создать кластер Docker Swarm. 1. Инициализация Docker Swarm: docker swarm init 2. Создание overlay сети: docker network create -d overlay my_overlay_network 3. Запуск контейнеров с подключением к overlay сети:">docker service create --name my_service --network my_overlay_network nginx</code>
             <code>inspect     Display detailed information on one or more services</code>
             <code>logs        Fetch the logs of a service or task</code>
             <code>ls          List services</code>

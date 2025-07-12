@@ -121,6 +121,8 @@
                 <code>--name string                      Присвойте имя контейнеру</code>
                 <code class="e">docker run --name my_nginx nginx</code>
                 <code>--network network                  Подключение контейнера к сети</code>
+                <code class="i" title="Сетевой драйвер host позволяет контейнеру использовать сетевой стек хостовой машины напрямую. Это означает, что контейнер будет иметь тот же IP-адрес, что и хост, и сможет использовать все сетевые интерфейсы хоста.">docker run -d --network host --name my_container nginx</code>
+                <code class="i" title="Сетевой драйвер none отключает все сетевые возможности контейнера. Контейнер, подключенный к сети none, не имеет сетевого интерфейса, что полностью изолирует его от других контейнеров и сетей.">docker run -d --network none --name my_container busybox</code>
                 <code>--network-alias list               Добавьте сетевой псевдоним для контейнера</code>
                 <code>--no-healthcheck                   Отключите любую проверку работоспособности, указанную в контейнере</code>
                 <code>--oom-kill-disable                 Отключить OOM-убийцу</code>
