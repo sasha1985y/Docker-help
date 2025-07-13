@@ -26,13 +26,66 @@
             <code>Manage networks</code>
             <code>Commands:</code>
             <code>connect               Connect a container to a network</code>
+            <code class="e">docker network connect my_bridge_network my_container</code>
             <code>create                Create a network</code>
+            <code class="e">docker network create --driver bridge my_bridge_network</code>
             <code class="i" title="Для использования драйвера overlay необходимо сначала создать кластер Docker Swarm. docker swarm init">docker network create -d overlay my_overlay_network</code>
+
+            <code class="i" title="Пример создания сети с драйвером macvlan">docker network create --driver macvlan \</code>
+            <code class="i" title="Пример создания сети с драйвером macvlan">    --subnet=192.168.1.0/24   \</code>
+            <code class="i" title="Пример создания сети с драйвером macvlan">    --gateway=192.168.1.1 \</code>
+            <code class="i" title="Пример создания сети с драйвером macvlan">    -o parent=eth0 my_macvlan_network</code>
+
             <code>disconnect            Disconnect a container from a network</code>
+            <code class="e">docker network disconnect my_bridge_network my_container</code>
             <code>inspect               Display detailed information on one or more networks</code>
+            <code class="i" title="
+                                    Пример вывода:
+                                        [
+                                {
+                                    &quot;Name&quot;: &quot;my_bridge_network&quot;,
+                                    &quot;Id&quot;: &quot;0e7e2d58fe94&quot;,
+                                    &quot;Created&quot;: &quot;2021-01-01T00:00:00.000000000Z&quot;,
+                                    &quot;Scope&quot;: &quot;local&quot;,
+                                    &quot;Driver&quot;: &quot;bridge&quot;,
+                                    &quot;EnableIPv6&quot;: false,
+                                    &quot;IPAM&quot;: {
+                                        &quot;Driver&quot;: &quot;default&quot;,
+                                        &quot;Options&quot;: null,
+                                        &quot;Config&quot;: [
+                                            {
+                                                &quot;Subnet&quot;: &quot;172.18.0.0/16&quot;,
+                                                &quot;Gateway&quot;: &quot;172.18.0.1&quot;
+                                            }
+                                        ]
+                                    },
+                                    &quot;Internal&quot;: false,
+                                    &quot;Attachable&quot;: false,
+                                    &quot;Containers&quot;: {
+                                        &quot;container_id&quot;: {
+                                            &quot;Name&quot;: &quot;my_container&quot;,
+                                            &quot;EndpointID&quot;: &quot;6c52f8c75c1e&quot;,
+                                            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:02&quot;,
+                                            &quot;IPv4Address&quot;: &quot;172.18.0.2/16&quot;,
+                                            &quot;&quot;Pv6Address&quot;: &quot;
+                                        }
+                                    },
+                                    &quot;Options&quot;: {},
+                                    &quot;Labels&quot;: {}
+                                }
+                            ]
+            ">docker network inspect my_bridge_network</code>
+            <code class="i" title="Чтобы сделать вывод более читаемым, можно использовать утилиту jq: Это удобно для фильтрации и структурированного просмотра данных о сети, таких как подключённые контейнеры, их IP-адреса и настройки подсети.">docker network inspect my_bridge_network | jq</code>
             <code>ls                    List networks</code>
+            <code class="i" title="
+            Пример вывода:
+            NETWORK ID          NAME                DRIVER              SCOPE
+            0e7e2d58fe94        bridge              bridge              local
+            9c84fdfc69ee        host                host                local
+            71cfb6a79d9e        none                null                local">docker network ls</code>
             <code>prune                 Remove all unused networks</code>
             <code>rm                    Remove one or more networks</code>
+            <code class="i" title="сеть можно удалить только после отключения всех подключенных к ней контейнеров.">docker network rm my_bridge_network</code>
         </pre>
     </main>
 

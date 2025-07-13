@@ -123,6 +123,10 @@
                 <code>--network network                  Подключение контейнера к сети</code>
                 <code class="i" title="Сетевой драйвер host позволяет контейнеру использовать сетевой стек хостовой машины напрямую. Это означает, что контейнер будет иметь тот же IP-адрес, что и хост, и сможет использовать все сетевые интерфейсы хоста.">docker run -d --network host --name my_container nginx</code>
                 <code class="i" title="Сетевой драйвер none отключает все сетевые возможности контейнера. Контейнер, подключенный к сети none, не имеет сетевого интерфейса, что полностью изолирует его от других контейнеров и сетей.">docker run -d --network none --name my_container busybox</code>
+                <code class="e">docker run -d --name nginx_container --network bridge -p 8080:80 nginx</code>
+                <code class="e">docker run --rm --network host nginx:latest</code>
+                <code class="e">docker run -d --name isolated_container --network none busybox sleep 3600</code>
+                <code class="i" title="# Инициализация Docker Swarm docker swarm init # Создание overlay-сети docker network create --driver overlay my_overlay_network # Развертывание сервиса с контейнером Nginx в overlay-сети">docker service create --name nginx_service --network my_overlay_network -p 8080:80 nginx</code>
                 <code>--network-alias list               Добавьте сетевой псевдоним для контейнера</code>
                 <code>--no-healthcheck                   Отключите любую проверку работоспособности, указанную в контейнере</code>
                 <code>--oom-kill-disable                 Отключить OOM-убийцу</code>
