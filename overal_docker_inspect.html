@@ -28,6 +28,8 @@
 
             <code>Options:</code>
             <code>-f, --format string   Format output using a custom template:</code>
+            <code class="i" title="Эти команды выведут IP-адреса контейнеров, которые можно использовать для связи между ними.">docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container1</code>
+            <code class="i" title="Эти команды выведут IP-адреса контейнеров, которые можно использовать для связи между ними.">docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container2</code>
             <code>                        'json':             Print in JSON format</code>
             <code>                        'TEMPLATE':         Print output using the given</code>
             <code>                        Go template.</code>

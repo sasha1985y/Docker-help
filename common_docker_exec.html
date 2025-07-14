@@ -34,6 +34,15 @@
             <code class="e">docker exec -it my_container vim /etc/nginx/nginx.conf</code>
             <code class="e">docker exec -it my_container python /app/scripts/debug.py</code>
             <code class="e">docker exec my_container top</code>
+            <code class="i" title="
+                Для проверки связи между контейнерами используйте команду ping из контейнера container2 
+                для пинга container1. Если контейнеры правильно подключены к сети bridge, команда ping 
+                будет успешной.">docker exec container2 ping -c 4 &lt;IP_ADDRESS_OF_CONTAINER1&gt;</code>
+            <code class="i" title="
+                docker run -d --name webserver --network bridge nginx
+                docker run -d --name appserver --network bridge busybox sleep 1000
+                Используйте команду ping из контейнера appserver для пинга webserver:
+            ">docker exec appserver ping -c 4 webserver</code>
             <code>Options:</code>
             <code>-d, --detach               Detached mode: run command in the background</code>
             <code>    --detach-keys string   Override the key sequence for detaching a</code>
