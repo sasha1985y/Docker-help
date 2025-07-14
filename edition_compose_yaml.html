@@ -47,7 +47,7 @@
 
             .example_2 code {
                 display: inline-block;
-                margin-top: 2.2%;
+                margin-top: 2.17%;
             }
         </style>
     </header>
@@ -57,62 +57,62 @@
                 <code class="p">version:</code> <code class="e"> '3.8'</code>
     
                 <code class="p">services:</code>
-                <code class="e">    web:</code>
-                <code class="p">        image:</code> <code class="e">nginx:${NGINX_VERSION}</code>
-                <code class="p">        ports:</code>
-                <code class="e">            - "${HOST_PORT}:80"</code>
-                <code class="p">        healthcheck: </code>
-                <code class="p">            test: </code> <code class="e">["CMD-SHELL", "curl -f http://localhost || exit 1"]</code>
-                <code class="p">            interval: </code> <code class="e">30s</code>
-                <code class="p">            timeout: </code> <code class="e">10s</code>
-                <code class="p">            retries: </code> <code class="e">3</code>
-                <code class="p">        volumes:</code>
-                <code class="e">            - ./nginx.conf:${PWD}/nginx.conf</code>
-                <code class="p">        depends_on:</code>
-                <code class="e">            - app</code>
-                <code class="p">        networks:</code>
-                <code class="e">            - front-end</code>
+                    <code class="e">web:</code>
+                        <code class="p">image:</code> <code class="e">nginx:${NGINX_VERSION}</code>
+                        <code class="p">ports:</code>
+                            <code class="e">- "${HOST_PORT}:80"</code>
+                        <code class="p">healthcheck: </code>
+                            <code class="p">test: </code> <code class="e">["CMD-SHELL", "curl -f http://localhost || exit 1"]</code>
+                            <code class="p">interval: </code> <code class="e">30s</code>
+                            <code class="p">timeout: </code> <code class="e">10s</code>
+                            <code class="p">retries: </code> <code class="e">3</code>
+                        <code class="p">volumes:</code>
+                            <code class="e">- ./nginx.conf:${PWD}/nginx.conf</code>
+                        <code class="p">depends_on:</code>
+                            <code class="e">- app</code>
+                        <code class="p">networks:</code>
+                            <code class="e">- front-end</code>
                 
-                <code class="e">    app:</code>
-                <code class="p">        build:</code> <code class="e">./app</code>
-                <code class="p">            context:</code> <code class="e">.</code>     
-                <code class="p">            dockerfile:</code> <code class="e">Dockerfile</code>     
-                <code class="p">        image:</code> <code class="e">myapp:latest</code> 
-                <code class="p">        deploy:</code>
-                <code class="p">            replicas: </code> <code class="e">3</code>
-                <code class="p">        ports:</code>
-                <code class="e">            - "80:80"</code>
-                <code class="e">            - "81:80"</code>                
-                <code class="e">            - "82:80"</code>            
-                <code class="p">        container_name: </code> <code class="e">app</code>
-                <code class="p">        command: </code> <code class="p">sh -c "ping -c 3 db"</code>
-                <code class="p">        volumes:</code>
-                <code class="e">            - ./app:/usr/src/app</code>
-                <code class="p">        environment:</code>
-                <code class="e">            - NODE_ENV=production</code>
-                <code class="p">        networks:</code>
-                <code class="e">            - front-end</code>
-                <code class="e">            - back-end</code>
+                    <code class="e">app:</code>
+                        <code class="p">build:</code> <code class="e">./app</code>
+                            <code class="p">context:</code> <code class="e">.</code>     
+                            <code class="p">dockerfile:</code> <code class="e">Dockerfile</code>     
+                        <code class="p">image:</code> <code class="e">myapp:latest</code> 
+                        <code class="p">deploy:</code>
+                            <code class="p">replicas: </code> <code class="e">3</code>
+                        <code class="p">ports:</code>
+                            <code class="e">- "80:80"</code>
+                            <code class="e">- "81:80"</code>                
+                            <code class="e">- "82:80"</code>            
+                        <code class="p">container_name: </code> <code class="e">app</code>
+                        <code class="p">command: </code> <code class="e">sh -c "ping -c 3 db"</code>
+                        <code class="p">volumes:</code>
+                            <code class="e">- ./app:/usr/src/app</code>
+                        <code class="p">environment:</code>
+                            <code class="e">- NODE_ENV=production</code>
+                        <code class="p">networks:</code>
+                            <code class="e">- front-end</code>
+                            <code class="e">- back-end</code>
                 
-                <code class="e">    db:</code>
-                <code class="p">        image:</code> <code class="e">mongo:latest</code>
-                <code class="p">        restart: </code> <code class="e">always</code>
-                <code class="p">        environment:</code>        
-                <code class="e">            MONGO_USER: ${DB_USER}</code>
-                <code class="e">            MONGO_PASSWORD: ${DB_PASSWORD}</code>
-                <code class="p">        volumes:</code>
-                <code class="e">            - mongo-data:/data/db</code>
-                <code class="p">        networks:</code>
-                <code class="e">            - back-end</code>
+                    <code class="e">db:</code>
+                        <code class="p">image:</code> <code class="e">mongo:latest</code>
+                        <code class="p">restart: </code> <code class="e">always</code>
+                        <code class="p">environment:</code>        
+                            <code class="e">MONGO_USER: ${DB_USER}</code>
+                            <code class="e">MONGO_PASSWORD: ${DB_PASSWORD}</code>
+                        <code class="p">volumes:</code>
+                            <code class="e">- mongo-data:/data/db</code>
+                        <code class="p">networks:</code>
+                            <code class="e">- back-end</code>
     
                 <code class="p">volumes:</code>
-                <code class="e">    mongo-data:</code>
+                    <code class="e">mongo-data:</code>
     
                 <code class="p">networks:</code>
-                <code class="e">    front-end:</code>
-                <code class="p">        driver: </code> <code class="e">brige</code>
-                <code class="e">    back-end:</code>
-                <code class="p">        driver: </code> <code class="e">brige</code>
+                    <code class="e">front-end:</code>
+                        <code class="p">driver: </code> <code class="e">brige</code>
+                    <code class="e">back-end:</code>
+                        <code class="p">driver: </code> <code class="e">brige</code>
             </pre>
         </div>
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>compose.yaml(macvlan)</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+        <style>
+            main {
+                display: flex;
+                justify-content: start;
+            }
+
+            .p::before {
+                content: "<pattern> ";
+                color: var(--before-after-pattern-color);
+            }
+
+            .p::after {
+                content: " </pattern>";
+                color: var(--before-after-pattern-color);
+            }
+
+            .e::before {
+                content: "<example> ";
+                color: var(--before-after-example-color);
+            }
+
+            .e::after {
+                content: " </example>";
+                color: var(--before-after-example-color);
+            }
+
+            .example_2 code {
+                display: inline-block;
+                margin-top: 2.9%;
+            }
+        </style>
+    </header>
+    <main>
+        <div class="example_1">
+            <pre>
+                <code class="p">version: </code> <code class="e">'3.8'</code>
+
+                <code class="p">services:</code>
+                    <code class="p">web:</code>
+                        <code class="p">image: </code> <code class="e">nginx:latest</code>
+                        <code class="p">networks:</code>
+                            <code class="e">- my_macvlan_network</code>
+
+                <code class="p">networks:</code>
+                    <code class="p">my_macvlan_network:</code>
+                        <code class="p">driver: </code> <code class="e">macvlan</code>
+                        <code class="p">driver_opts:</code>
+                            <code class="p">parent: </code> <code class="e">eth0</code>
+                        <code class="p">ipam:</code>
+                            <code class="p">config:</code>
+                                <code class="p">- subnet: </code> <code class="e">192.168.1.0/24</code>
+                                <code class="p">  gateway: </code> <code class="e">192.168.1.1</code>        
+            </pre>
+        </div>
+
+        <div class="example_2">
+            <pre>
+                <code>version: '3.8'</code>
+
+                <code>services:</code>
+                <code>web:</code>
+                <code>    image: nginx:latest</code>
+                <code>    networks:</code>
+                <code>        - my_macvlan_network</code>
+
+                <code>networks:</code>
+                <code>    my_macvlan_network:</code>
+                <code>        driver: macvlan</code>
+                <code>        driver_opts:</code>
+                <code>            parent: eth0</code>
+                <code>        ipam:</code>
+                <code>            config:</code>
+                <code>                - subnet: 192.168.1.0/24</code>
+                <code>                  gateway: 192.168.1.1</code>
+            </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

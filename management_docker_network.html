@@ -31,10 +31,15 @@
             <code class="e">docker network create --driver bridge my_bridge_network</code>
             <code class="i" title="Для использования драйвера overlay необходимо сначала создать кластер Docker Swarm. docker swarm init">docker network create -d overlay my_overlay_network</code>
 
-            <code class="i" title="Пример создания сети с драйвером macvlan">docker network create --driver macvlan \</code>
-            <code class="i" title="Пример создания сети с драйвером macvlan">    --subnet=192.168.1.0/24   \</code>
-            <code class="i" title="Пример создания сети с драйвером macvlan">    --gateway=192.168.1.1 \</code>
-            <code class="i" title="Пример создания сети с драйвером macvlan">    -o parent=eth0 my_macvlan_network</code>
+            <code class="i" title="
+                Пример создания сети с драйвером macvlan:
+                --subnet: определяет подсеть, в которой будут находиться контейнеры.
+                --gateway: задает шлюз для контейнеров.
+                -o parent: указывает сетевой интерфейс хоста, к которому привязывается сеть.
+            ">docker network create --driver macvlan \
+                --subnet=192.168.1.0/24   \
+                --gateway=192.168.1.1 \
+                -o parent=eth0 my_macvlan_network</code>
 
             <code>disconnect            Disconnect a container from a network</code>
             <code class="e">docker network disconnect my_bridge_network my_container</code>

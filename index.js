@@ -154,6 +154,7 @@ function createDropdown() {
         { value: "edition_dockerfile.html", text: ".Dockerfile" },
         { value: "edition_compose_yaml.html", text: "compose.yaml" },
         { value: "edition_env_file.html", text: ".env" },
+        { value: "edition_compose_yaml_macvlan.html", text: "compose.yaml(macvlan)" },
         
     ];
 
