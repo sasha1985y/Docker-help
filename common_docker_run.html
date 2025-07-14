@@ -47,7 +47,7 @@
                 <code class="e">docker run -d --name custom_cpu_quota_container --cpu-period=50000 --cpu-quota=25000 nginx</code>
                 <code>--cpu-rt-period int                Ограничение периода реального времени процессора в микросекундах</code>
                 <code>--cpu-rt-runtime int               Ограничьте время работы процессора в реальном времени микросекундами</code>
-                <code class="f">-c</code>, <code>--cpu-shares int                   Доли процессора (относительный вес)</code>
+            <code class="f">-c</code>, <code>--cpu-shares int                   Доли процессора (относительный вес)</code>
                 <code class="e">docker run -d --name low_priority_container --cpu-shares=512 nginx</code>
                 <code class="e">docker run -d --name high_priority_container --cpu-shares=2048 nginx</code>
                 <code class="e">docker run -d --name high_priority_task --cpu-shares=2048 my_high_priority_image</code>
@@ -138,12 +138,16 @@
                 <code>--privileged                       Предоставьте расширенные привилегии этому контейнеру</code>
             <code class="f">-p</code>, <code>--publish list                     Опубликуйте порт(ы) контейнера на хосте</code>
                 <code class="p">docker run -p [HOST_PORT]:[CONTAINER_PORT] [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
+                <code class="p">docker run -d -p 	&lt;host_port&gt;:&lt;container_port&gt; &lt;image&gt;</code>
                 <code class="e">docker run -d -p 8080:80 nginx</code>
                 <code class="e">docker run -d -p 8080:80 -p 8443:443 nginx</code>
                 <code class="e">docker run -d -p 127.0.0.1:8080:80 nginx</code>
                 <code class="e">docker run -d -p 7000-8000:7000-8000 someimage</code>
                 <code class="e">docker run -d -p 8080:80 -p 8443:443 myapp</code>
+                <code class="i" title="Nginx будет доступен по HTTP на порту 8080 и по HTTPS на порту 8443.">Nginx будет доступен по HTTP на порту 8080 и по HTTPS на порту 8443</code>
+                <code class="i" title="Nginx будет доступен только с локального хоста по адресу http://127.0.0.1:8080.">docker run -d -p 127.0.0.1:8080:80 --name mynginx nginx</code>
             <code class="f">-P</code>, <code>--publish-all                      Опубликуйте все открытые порты на случайных портах</code>
+                <code class="e">docker run -d -P --name mynginx nginx</code>
                 <code>--pull string                      Извлеките изображение перед запуском ("всегда", "отсутствует", "никогда")</code>
                                                     <code>(по умолчанию "отсутствует")</code>
             <code class="f">-q</code>, <code>--quiet                            Подавите выходное напряжение</code>
