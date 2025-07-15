@@ -149,12 +149,13 @@ function createDropdown() {
     });
 
     var editFilesOptions = [
-        { value: "", text: "Редактировать файлы" },
+        { value: "", text: "Конфигурацинные файлы" },
         { value: "index.html", text: "Домой" },
         { value: "edition_dockerfile.html", text: ".Dockerfile" },
         { value: "edition_compose_yaml.html", text: "compose.yaml" },
         { value: "edition_env_file.html", text: ".env" },
         { value: "edition_compose_yaml_macvlan.html", text: "compose.yaml(macvlan)" },
+        { value: "edition_compose_yaml(Swarm).html", text: "compose.yaml(Swarm)" },
         
     ];
 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>compose.yaml(Swarm)</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+        <style>
+            main {
+                display: flex;
+                justify-content: start;
+            }
+
+            .p::before {
+                content: "<pattern> ";
+                color: var(--before-after-pattern-color);
+            }
+
+            .p::after {
+                content: " </pattern>";
+                color: var(--before-after-pattern-color);
+            }
+
+            .e::before {
+                content: "<example> ";
+                color: var(--before-after-example-color);
+            }
+
+            .e::after {
+                content: " </example>";
+                color: var(--before-after-example-color);
+            }
+
+            .example_2 code {
+                display: inline-block;
+                margin-top: 2.7%;
+            }
+        </style>
+    </header>
+    <main>
+        <div class="example_1">
+            <pre>
+                <code class="p">version: </code> <code class="e">'3.8'</code>
+
+                <code class="p">services:</code>
+                    <code class="p">web:</code>
+                        <code class="p">image: </code> <code class="e">nginx:latest</code>
+                        <code class="p">ports:</code>
+                            <code class="p">- "8080-8090:80"</code>
+                        <code class="p">deploy:</code>
+                            <code class="p">replicas: </code> <code class="e">3</code>
+                            <code class="p">restart_policy:</code>
+                                <code class="p">condition: </code> <code class="e">on-failure</code>
+                        <code class="p">networks:</code>
+                            <code class="p">- my_overlay_network</code>
+
+                    <code class="p">db:</code>
+                        <code class="p">image: </code> <code class="e">postgres:latest</code>
+                        <code class="p">environment:</code>
+                            <code class="e">POSTGRES_PASSWORD: example</code>
+                        <code class="p">deploy:</code>
+                            <code class="p">replicas: </code> <code class="e">1</code>
+                            <code class="p">restart_policy:</code>
+                                <code class="p">condition: </code> <code class="e">on-failure</code>
+                        <code class="p">networks:</code>
+                            <code class="e">- my_overlay_network</code>
+
+                <code class="p">networks:</code>
+                    <code class="e">my_overlay_network:</code>
+                        <code class="p">driver: </code> <code class="e">overlay</code>      
+            </pre>
+        </div>
+
+        <div class="example_2">
+            <pre>
+                <code>version: '3.8'</code>
+
+                <code>services:</code>
+                <code>    web:</code>
+                <code>        image: nginx:latest</code>
+                <code>        ports:</code>
+                <code>            - "8080-8090:80"</code>
+                <code>        deploy:</code>
+                <code>            replicas: 3</code>
+                <code>            restart_policy:</code>
+                <code>                condition: on-failure</code>
+                <code>        networks:</code>
+                <code>            - my_overlay_network</code>
+            
+                <code>    db:</code>
+                <code>        image: postgres:latest</code>
+                <code>        environment:</code>
+                <code>            POSTGRES_PASSWORD: example</code>
+                <code>        deploy:</code>
+                <code>            replicas: 1</code>
+                <code>            restart_policy:</code>
+                <code>                condition: on-failure</code>
+                <code>        networks:</code>
+                <code>            - my_overlay_network</code>
+
+                <code>networks:</code>
+                <code>    my_overlay_network:</code>
+                <code>        driver: overlay</code>
+            </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

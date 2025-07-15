@@ -27,13 +27,26 @@
             <code>Manage Swarm nodes</code>
 
             <code>Commands:</code>
-            <code>demote      Demote one or more nodes from manager in the swarm</code>
-            <code>inspect     Display detailed information on one or more nodes</code>
-            <code>ls          List nodes in the swarm</code>
-            <code>promote     Promote one or more nodes to manager in the swarm</code>
-            <code>ps          List tasks running on one or more nodes, defaults to current node</code>
-            <code>rm          Remove one or more nodes from the swarm</code>
-            <code>update      Update a node</code>
+            <code>demote      Понизьте статус одного или нескольких узлов в диспетчере в swarm</code>
+            <code>inspect     Отображение подробной информации об одном или нескольких узлах</code>
+            <code>ls          Перечислите узлы в swarm</code>
+            <code class="i" title="
+                Пример вывода:
+                ID                 HOSTNAME            STATUS              AVAILABILITY       MANAGER STATUS
+                qwertyuiop12345    manager-node        Ready               Active             Leader
+                asdfghjkl67890     worker-node1        Ready               Active
+                zxcvbnm09876       worker-node2        Ready               Active
+
+                ID: Уникальный идентификатор узла.
+                HOSTNAME: Имя хоста, на котором запущен узел.
+                STATUS: Текущий статус узла (например, Ready).
+                AVAILABILITY: Доступность узла (например, Active).
+                MANAGER STATUS: Показывает, является ли узел менеджером (например, Leader, Reachable) или рабочим узлом
+            ">docker node ls</code>
+            <code>promote     Продвиньте один или несколько узлов в качестве менеджера в swarm</code>
+            <code>ps          Перечислите задачи, запущенные на одном или нескольких узлах, по умолчанию на текущем узле</code>
+            <code>rm          Удалите один или несколько узлов из swarm</code>
+            <code>update      Обновить узел</code>
         </pre>
     </main>
 

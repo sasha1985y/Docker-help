@@ -24,19 +24,21 @@
         <pre>
             <code class="p">Usage:  docker service COMMAND</code>
 
-            <code>Manage Swarm services</code>
+            <code>Управление сервисами Swarm</code>
 
             <code>Commands:</code>
-            <code>create      Create a new service</code>
+            <code>create                Создайте новый сервис</code>
             <code class="i" title="Для использования драйвера overlay необходимо сначала создать кластер Docker Swarm. 1. Инициализация Docker Swarm: docker swarm init 2. Создание overlay сети: docker network create -d overlay my_overlay_network 3. Запуск контейнеров с подключением к overlay сети:">docker service create --name my_service --network my_overlay_network nginx</code>
-            <code>inspect     Display detailed information on one or more services</code>
-            <code>logs        Fetch the logs of a service or task</code>
-            <code>ls          List services</code>
-            <code>ps          List the tasks of one or more services</code>
-            <code>rm          Remove one or more services</code>
-            <code>rollback    Revert changes to a service's configuration</code>
-            <code>scale       Scale one or multiple replicated services</code>
-            <code>update      Update a service</code>
+            <code>inspect               Отображение подробной информации об одной или нескольких службах</code>
+            <code>logs                  Извлекать журналы службы или задачи</code>
+            <code>ls                    Список услуг</code>
+            <code>ps                    Перечислите задачи одной или нескольких служб</code>
+            <code>rm                    Удалите одну или несколько служб</code>
+            <code>rollback              Отменить изменения в конфигурации службы</code>
+            <code>scale                 Масштабирование одной или нескольких реплицируемых служб</code>
+            <code class="e">docker service scale my_web=5</code>
+            <code>update                Обновить службу</code>
+            <code class="e">docker service update --image nginx:latest my_web</code>
         </pre>
     </main>
 

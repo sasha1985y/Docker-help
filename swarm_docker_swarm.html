@@ -27,14 +27,20 @@
             <code>Manage Swarm</code>
 
             <code>Commands:</code>
-            <code>ca          Display and rotate the root CA</code>
-            <code>init        Initialize a swarm</code>
-            <code>join        Join a swarm as a node and/or manager</code>
-            <code>join-token  Manage join tokens</code>
-            <code>leave       Leave the swarm</code>
-            <code>unlock      Unlock swarm</code>
-            <code>unlock-key  Manage the unlock key</code>
-            <code>update      Update the swarm</code>
+            <code>ca                Отображение и поворот корня CA</code>
+            <code>init              Инициализировать swarm</code>
+            <code class="i" title="Шаг 1: Инициализация кластера. На первом хосте (менеджере) выполните команду:">docker swarm init --advertise-addr &lt;MANAGER_IPl&gt;</code>
+            <code>join              Присоединиться к swarm как узел и/или менеджер</code>
+            <code class="i" title="
+                Шаг 2: Присоединение рабочих узлов
+                &lt;SWARM_TOKEN&gt;: токен для подключения к кластеру (выдается командой docker swarm init).
+                &lt;MANAGER_IP&gt;: IP-адрес узла-менеджера.
+            ">docker swarm join --token 	&lt;SWARM_TOKEN&gt; &lt;MANAGER_IP&gt;:2377</code>
+            <code>join-token        Управление токенами присоединения</code>
+            <code>leave             Оставить swarm</code>
+            <code>unlock            Unlock swarm</code>
+            <code>unlock-key        Управление ключом разблокировки</code>
+            <code>update            Обновите swarm</code>
         </pre>
     </main>
 
