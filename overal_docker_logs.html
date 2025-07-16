@@ -22,31 +22,32 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker logs [OPTIONS] CONTAINER</code>
+            <code class="i" title="просмотр журналов Docker на системах с systemd">journalctl -u docker.service</code>
+            <code class="p">Использование:  docker logs [OPTIONS] CONTAINER</code>
 
-            <code>Fetch the logs of a container</code>
+            <code>Извлеките логи из контейнера</code>
 
-            <code>Aliases:</code>
+            <code>Псевдонимы:</code>
             <code>docker container logs, docker logs</code>
             <code class="e">docker logs --stdout my_container</code>
             <code>Options:</code>
-            <code>    --details        Show extra details provided to logs</code>
-            <code>-f, --follow         Follow log output</code>
+            <code>    --details                    Показывать дополнительные сведения, предоставляемые журналам</code>
+            <code>-f, --follow                     Следите за выводами журнала</code>
             <code class="e">docker logs -f my_container</code>
             <code class="e">docker logs -f --tail 50 my_container</code>
-            <code>    --since string   Show logs since timestamp (e.g.</code>
-            <code>                    "2013-01-02T13:23:37Z") or relative (e.g. "42m"</code>
-            <code>                    for 42 minutes)</code>
+            <code>    --since string               Показывать журналы с момента установки временной метки (например</code>
+            <code>                                "2013-01-02T13:23:37Z") или относительный (например, "42 м"</code>
+            <code>                                в течение 42 минут)</code>
             <code class="e">docker logs --since "2023-07-20T15:00:00" my_container</code>
             <code class="e">docker logs --since 1h my_container</code>
             <code class="e">docker logs --since "2023-07-20T15:00:00" --until "2023-07-20T16:00:00" my_container</code>
-            <code>-n, --tail string    Number of lines to show from the end of the logs</code>
+            <code>-n, --tail string                Количество строк, отображаемых с конца журналов</code>
             <code class="e">docker logs --tail 100 my_container</code>
-            <code>                    (default "all")</code>
-            <code>-t, --timestamps     Show timestamps</code>
-            <code>    --until string   Show logs before a timestamp (e.g.</code>
-            <code>                    "2013-01-02T13:23:37Z") or relative (e.g. "42m"</code>
-            <code>                    for 42 minutes)</code>
+            <code>                                (по умолчанию "all")</code>
+            <code>-t, --timestamps                 Показывать временные метки</code>
+            <code>    --until string               Показывать журналы перед временной меткой (например,</code>
+            <code>                                "2013-01-02T13:23:37Z") или относительный (например, "42 м"</code>
+            <code>                                в течение 42 минут)</code>
             <code class="e">docker logs --until "2023-07-20T16:00:00" my_container</code>
             <code class="e">docker logs --until 10m my_container</code>
         </pre>

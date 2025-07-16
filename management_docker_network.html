@@ -22,13 +22,15 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker network COMMAND</code>
-            <code>Manage networks</code>
+            <code class="p">Использование:  docker network COMMAND</code>
+            <code>Управление сетями</code>
             <code>Commands:</code>
-            <code>connect               Connect a container to a network</code>
+            <code>connect                           Подключение контейнера к сети</code>
+            <code class="e">docker network connect &lt;network_name&gt; &lt;container_name&gt;</code>
             <code class="e">docker network connect my_bridge_network my_container</code>
-            <code>create                Create a network</code>
+            <code>create                            Создайте сеть</code>
             <code class="e">docker network create --driver bridge my_bridge_network</code>
+            <code class="i" title="Изменение подсети">docker network create --subnet=192.168.2.0/24 my_network</code>
             <code class="i" title="Для использования драйвера overlay необходимо сначала создать кластер Docker Swarm. docker swarm init">docker network create -d overlay my_overlay_network</code>
 
             <code class="i" title="
@@ -41,9 +43,12 @@
                 --gateway=192.168.1.1 \
                 -o parent=eth0 my_macvlan_network</code>
 
-            <code>disconnect            Disconnect a container from a network</code>
+            <code>disconnect                        Отключите контейнер от сети</code>
             <code class="e">docker network disconnect my_bridge_network my_container</code>
-            <code>inspect               Display detailed information on one or more networks</code>
+            <code>inspect                           Отображение подробной информации по одной или нескольким сетям</code>
+            <code class="e">docker network inspect 	&lt;network_name&gt;</code>
+            <code class="i" title="Вывод информации о подключенных к сети webnet контейнерах">docker network inspect webnet | grep -A 5 Containers</code>
+            <code class="i" title="Проверка атрибутов сети, таких как драйвер и другие параметры">docker network inspect webnet | grep -E '"Driver":|"Scope":|"EnableIPv6":|"Subnet":|"Gateway":'</code>
             <code class="i" title="
                                     Пример вывода:
                                         [
@@ -81,7 +86,7 @@
                             ]
             ">docker network inspect my_bridge_network</code>
             <code class="i" title="Чтобы сделать вывод более читаемым, можно использовать утилиту jq: Это удобно для фильтрации и структурированного просмотра данных о сети, таких как подключённые контейнеры, их IP-адреса и настройки подсети.">docker network inspect my_bridge_network | jq</code>
-            <code>ls                    List networks</code>
+            <code>ls                                Список сетей</code>
             <code class="i" title="
             Пример вывода:
             NETWORK ID          NAME                DRIVER              SCOPE
