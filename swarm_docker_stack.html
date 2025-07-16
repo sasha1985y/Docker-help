@@ -27,12 +27,15 @@
             <code>Manage Swarm stacks</code>
 
             <code>Commands:</code>
-            <code>config      Outputs the final config file, after doing merges and interpolations</code>
-            <code>deploy      Deploy a new stack or update an existing stack</code>
-            <code>ls          List stacks</code>
-            <code>ps          List the tasks in the stack</code>
-            <code>rm          Remove one or more stacks</code>
-            <code>services    List the services in the stack</code>
+            <code>config          Выводит окончательный конфигурационный файл после выполнения слияний и интерполяций</code>
+            <code>deploy          Разверните новый стек или обновите существующий</code>
+            <code class="e">docker stack deploy -c docker-compose.yml mystack</code>
+            <code>ls              Стеки списков</code>
+            <code class="e">docker stack ls</code>
+            <code>ps              Перечислите задачи в стеке</code>
+            <code>rm              Удалите одну или несколько стопок</code>
+            <code>services        Перечислите службы в стеке</code>
+            <code class="e">docker stack services mystack</code>
         </pre>
     </main>
 

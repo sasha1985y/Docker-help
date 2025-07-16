@@ -13,7 +13,7 @@ app.use(express.static(__dirname));
 wss.on('connection', (ws) => {
     ws.on('message', (message) => {
         // Запись изменений в index.html
-        fs.writeFile(path.join(__dirname, 'swarm_docker_service.html'), message, (err) => {
+        fs.writeFile(path.join(__dirname, 'swarm_docker_stack.html'), message, (err) => {
             if (err) console.error(err);
         });
     });
