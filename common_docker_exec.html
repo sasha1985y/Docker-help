@@ -24,9 +24,9 @@
         <pre>
             <code>Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code>
 
-            <code>Execute a command in a running container</code>
+            <code>Выполните команду в запущенном контейнере</code>
 
-            <code>Aliases:</code>
+            <code>Псевдонимы:</code>
             <code>docker container exec, docker exec</code>
             <code class="e">docker exec my_container ps aux</code>
             <code class="e">docker exec my_container service nginx status</code>
@@ -43,21 +43,36 @@
                 docker run -d --name appserver --network bridge busybox sleep 1000
                 Используйте команду ping из контейнера appserver для пинга webserver:
             ">docker exec appserver ping -c 4 webserver</code>
-            <code>Options:</code>
-            <code>-d, --detach               Detached mode: run command in the background</code>
-            <code>    --detach-keys string   Override the key sequence for detaching a</code>
-            <code>                            container</code>
+            <code>Опции:</code>
+            <code>-d, --detach                       Автономный режим: запуск команды в фоновом режиме</code>
+            <code>    --detach-keys string           Переопределить последовательность клавиш для отсоединения</code>
+            <code>                                   контейнера</code>
             <code class="e">docker exec -d my_container touch /app/newfile.txt</code>
-            <code>-e, --env list             Set environment variables</code>
+            <code>-e, --env list                     Установите переменные среды</code>
             <code class="e">docker exec -e MY_VAR=value my_container env</code>
-            <code>    --env-file list        Read in a file of environment variables</code>
-            <code>-i, --interactive          Keep STDIN open even if not attached</code>
+            <code>    --env-file list                Чтение в файле переменных окружения</code>
+            <code>-i, --interactive                  Держи STDIN открытым, даже если не подключено</code>
+            <code>    --privileged                   Предоставьте расширенные привилегии команде</code>
+            <code>-t, --tty                          Выделите псевдо-TTY</code>
             <code class="e">docker exec -it my_container /bin/bash</code>
-            <code>    --privileged           Give extended privileges to the command</code>
-            <code>-t, --tty                  Allocate a pseudo-TTY</code>
-            <code>-u, --user string          Username or UID (format:</code>
-            <code>                            "<name|uid>[:<group|gid>]")</code>
-            <code>-w, --workdir string       Working directory inside the container</code>
+            <code class="i" title="
+                Подключитесь к контейнеру и проверьте связь с другим контейнером или сервисом, используя утилиту ping для отправки ICMP-запросов:
+            ">docker exec -it &lt;container_name&gt; ping &lt;target_container_name_or_ip&gt;</code>
+            <code class="i" title="
+                Проверьте доступность веб-сервиса внутри контейнера с помощью утилиты curl:
+            ">docker exec -it &lt;container_name&gt; curl http://&lt;target_service&gt;</code>
+            <code class="i" title="
+                Используйте nslookup для проверки разрешения DNS имен контейнеров, что полезно для диагностики проблем с сетевыми сервисами:
+            ">docker exec -it &lt;container_name&gt; nslookup &lt;target_container_name&gt;</code> 
+            <code class="i" title="
+                Утилита nc используется для отладки и диагностики сетевых подключений. С помощью команды nc host port можно установить соединение с заданным хостом и портом, проверяя доступность порта на целевом хосте:
+            ">docker exec -it &lt;container_name&gt; nc -zv 192.168.1.1 22</code>
+            <code class="i" title="
+                Проверка DNS внутри контейнера:
+            ">docker exec -it &lt;container_name&gt; cat /etc/resolv.conf</code>  
+            <code>-u, --user string                  Имя пользователя или UID (format:</code>
+            <code>                                   "&lt;name|uid	&gt;[:&lt;group|gid	&gt;]")</code>
+            <code>-w, --workdir string               Рабочий каталог внутри контейнера</code>
         </pre>
     </main>
 
