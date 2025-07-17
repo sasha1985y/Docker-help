@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker rm</title>
+    <title>Docker rmi</title>
 </head>
 
 <body class="body-overal">
@@ -22,23 +22,23 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]</code>
+            <code class="p">Использование:  docker rmi [OPTIONS] IMAGE [IMAGE...]</code>
 
-            <code>Remove one or more images</code>
+            <code>Удалите одно или несколько изображений</code>
             <code class="e">docker rmi nginx</code>
             <code class="e">docker rmi 5a7e5b1a3b8c</code>
             <code class="e">docker rmi nginx ubuntu:20.04 myapp:1.0</code>
-            <code class="e">docker rmi $(docker images -q)</code>
+            <code class="i" title="найти и удалить все образы по их id">docker rmi $(docker images -q)</code>
             <code class="e">docker rmi $(docker images -f "dangling=true" -q)</code>
-            <code>Aliases:</code>
+            <code>Псевдонимы:</code>
             <code>docker image rm, docker image remove, docker rmi</code>
 
             <code>Options:</code>
-            <code>-f, --force              Force removal of the image</code>
-            <code>    --no-prune           Do not delete untagged parents</code>
-            <code>    --platform strings   Remove only the given platform variant.</code>
-            <code>                        Formatted as "os[/arch[/variant]]" (e.g.,</code>
-            <code>                        "linux/amd64")</code>
+            <code>-f, --force                           Принудительное удаление изображения</code>
+            <code>    --no-prune                        Не удаляйте родителей, не помеченных тегами</code>
+            <code>    --platform strings                Удалите только данный вариант платформы.</code>
+            <code>                                      Отформатированный как "os[/arch[/variant]]" (напр.,</code>
+            <code>                                      "linux/amd64")</code>
             <code class="e">docker rmi -f myapp:1.0</code>
         </pre>
     </main>

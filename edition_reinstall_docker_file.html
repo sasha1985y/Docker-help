@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <title>Reinstall docker desctop ubuntu 22.04</title>
+</head>
+
+<body class="body-overal">
+    <header class="header-overal">
+        <select name="commonCommands" id="commonCommands"></select>
+        <select name="overalCommands" id="overalCommands"></select>
+        <select name="managementCommands" id="managementCommands"></select>
+        <select name="swarmCommands" id="swarmCommands"></select>
+        <select name="globalOptions" id="globalOptions"></select>
+        <select name="editFiles" id="editFiles"></select>
+        <select name="overalComposeCommands" id="overalComposeCommands"></select>
+        <select name="composeOptions" id="composeOptions"></select>
+    </header>
+    <main>
+        <pre>
+            <code>1. Удалите приложение Docker Desktop. Выполнить:</code>
+            <code class="i" title="При этом удаляется сам пакет Docker Desktop, но не все его файлы и настройки.">sudo apt remove docker-desktop</code>
+            
+            <code>2. Удалить остатки файла вручную</code>
+            
+            <code class="i" title="
+                Это приведёт к удалению файлов конфигурации и данных
+                по адресу $HOME/.docker/desktop, символической ссылки
+                по адресу /usr/local/bin/com.docker.cli и очистке
+                оставшихся файлов службы systemd.
+            ">rm -r $HOME/.docker/desktop</code>
+            
+            <code>sudo rm /usr/local/bin/com.docker.cli</code>
+            
+            <code>sudo apt purge docker-desktop</code>
+
+            <code>3. Очистите настройки конфигурации Docker. В $HOME/.docker/config.json </code>
+            <code>удалите свойства credsStore и currentContext .</code>
+
+            <code>4. Чтобы удалить все конфликтующие пакеты, выполните следующую команду:</code>
+            <code>for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done</code>
+
+            <code>5.Установка. Если впервые, то советую посетить <a href="https://docs.docker.com/desktop/setup/install/linux/">эту страницу</a></code>
+
+            <code>6. И далее продолжаем установку <a href="https://docs.docker.com/desktop/setup/install/linux/ubuntu/">по этому плану пункт 1</a></code>
+
+            <code>Если вы не используете GNOME, вам необходимо установить gnome-terminal, чтобы получить доступ к терминалу из Docker Desktop:</code>
+
+            <code>sudo apt install gnome-terminal</code>
+
+            <code>7. Настройте репозиторий apt в Docker.</code>
+
+            <code>🔹Добавить официальный ключ GPG Docker:</code>
+
+            <code>sudo apt-get update</code>
+            <code>sudo apt-get install ca-certificates curl</code>
+            <code>sudo install -m 0755 -d /etc/apt/keyrings</code>
+            <code>sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc</code>
+            <code>sudo chmod a+r /etc/apt/keyrings/docker.asc</code>
+
+            <code>🔹Добавьте хранилище в APT -источники:</code>
+
+            <code>echo \</code>
+            <code>"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</code>
+            <code>$(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \</code>
+            <code>sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
+            <code>sudo apt-get update</code>
+
+            <code>8. Скачиваем файл нужной версии <a href="https://docs.docker.com/desktop/release-notes/">здесь</a></code>
+
+            <code>9. Устанавливаем пакет с помощью apt:</code>
+
+            <code>sudo apt-get update</code>
+            <code>sudo apt-get install ./docker-desktop-amd64.deb</code>
+
+            <code>10. Запускаем через терминал:</code>
+            <code>systemctl --user start docker-desktop</code>
+
+            <code>11. Проверяем корректность установки:</code>
+
+            <code class="i" title="Пример вывода: Docker Compose version v2.29.1">docker compose version</code>
+
+            <code class="i" title="Пример вывода: Docker version 27.1.1, build 6312585">docker --version</code>
+
+            <code class="i" title="
+                Пример вывода:
+                                Client: 
+                Version:           23.0.5
+                API version:       1.42
+                Go version:        go1.21.12
+                <...>
+            ">docker version</code>
+
+            <code>Чтобы включить запуск Docker Desktop при входе в систему</code>
+
+            <code>systemctl --user enable docker-desktop</code>
+
+            <code>Чтобы остановить Docker Desktop</code>
+
+            <code>systemctl --user stop docker-desktop</code>
+
+        </pre>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

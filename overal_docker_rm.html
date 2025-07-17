@@ -22,17 +22,17 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code class="p">Использование:  docker rm [OPTIONS] CONTAINER [CONTAINER...]</code>
+            <code class="i" title="найти удалить все запущенные и незапущенные контейнеры по идентификаторам">docker rm $(docker ps -aq)</code>
+            <code>Извлеките один или несколько контейнеров</code>
 
-            <code>Remove one or more containers</code>
-
-            <code>Aliases:</code>
+            <code>Псевдонимы:</code>
             <code>docker container rm, docker container remove, docker rm</code>
             <code class="e">docker rm $(docker ps -a -f "status=exited" -q)</code>
             <code>Options:</code>
-            <code>-f, --force     Force the removal of a running container (uses SIGKILL)</code>
-            <code>-l, --link      Remove the specified link</code>
-            <code>-v, --volumes   Remove anonymous volumes associated with the container</code>
+            <code>-f, --force                 Принудительное извлечение работающего контейнера (использует SIGKILL)</code>
+            <code>-l, --link                  Удалите указанную ссылку</code>
+            <code>-v, --volumes               Удалите анонимные тома, связанные с контейнером</code>
         </pre>
     </main>
 
