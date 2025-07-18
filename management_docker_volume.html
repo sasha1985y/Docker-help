@@ -22,21 +22,42 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker volume COMMAND</code>
+            <code class="p">Использование:  docker volume COMMAND</code>
 
-            <code>Manage volumes</code>
+            <code>Управление томами</code>
 
             <code>Commands:</code>
-            <code>create      Create a volume</code>
-            <code>inspect     Display detailed information on one or more volumes</code>
-            <code class="e">docker volume inspect my_volume</code>
-            <code>ls          List volumes</code>
-            <code class="e">docker volume ls</code>
-            <code>prune       Remove unused local volumes</code>
-            <code>rm          Remove one or more volumes</code>
+            <code>create                  Создайте том</code>
+            <code class="e">docker volume create my_volume</code>
+            <code class="i" title="драйвер и параметры для создания тома с определенными характеристиками">docker volume create --driver local --opt o=uid=1000 --opt o=gid=1000 --opt type=tmpfs --opt
+            device=tmpfs my_custom_volume</code>
+            <code>inspect                 Отображение подробной информации по одному или нескольким томам</code>
+            <code class="i" title="
+                Пример вывода:
+                [
+                    {
+                        &quot;CreatedAt&quot;: &quot;2023-07-26T12:34:56Z&quot;,
+                        &quot;Driver&quot;: &quot;local&quot;,
+                        &quot;Labels&quot;: {},
+                        &quot;Mountpoint&quot;: &quot;/var/lib/docker/volumes/my_volume/_data&quot;,
+                        &quot;Name&quot;: &quot;my_volume&quot;,
+                        &quot;Options&quot;: {},
+                        &quot;Scope&quot;: &quot;local&quot;
+                    }
+                ]
+            ">docker volume inspect my_volume</code>
+            <code>ls                      Перечислите тома</code>
+            <code class="i" title="
+                Пример вывода:
+                DRIVER    VOLUME NAME
+                local     my_volume
+                local     my_custom_volume
+            ">docker volume ls</code>
+            <code>prune                   Удаление неиспользуемых локальных томов</code>
+            <code>rm                      Удалите один или несколько томов</code>
             <code class="i" title="найти и удалить все тома">docker volume rm $(docker volume ls)</code>
             <code class="e">docker volume rm my_volume</code>
-            <code>update      Update a volume (cluster volumes only)</code>
+            <code>update                  Обновление тома (только для кластерных томов)</code>
         </pre>
     </main>
 

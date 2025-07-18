@@ -27,6 +27,7 @@
             <code>Return low-level information on Docker objects</code>
 
             <code>Options:</code>
+            <code class="i" title="Проверка, что том подключен к контейнеру">docker inspect nginx_with_volume | grep "Mounts"</code>
             <code>-f, --format string   Format output using a custom template:</code>
             <code class="i" title="Эти команды выведут IP-адреса контейнеров, которые можно использовать для связи между ними.">docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container1</code>
             <code class="i" title="Эти команды выведут IP-адреса контейнеров, которые можно использовать для связи между ними.">docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container2</code>

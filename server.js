@@ -13,7 +13,7 @@ app.use(express.static(__dirname));
 wss.on('connection', (ws) => {
     ws.on('message', (message) => {
         // Запись изменений в index.html
-        fs.writeFile(path.join(__dirname, 'overal_docker_rmi.html'), message, (err) => {
+        fs.writeFile(path.join(__dirname, 'management_docker_volume.html'), message, (err) => {
             if (err) console.error(err);
         });
     });
