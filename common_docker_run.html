@@ -24,7 +24,7 @@
             <code class="p">Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</code>
             <code>Create and run a new container from an image</code>
             <code>Aliases: docker container run, docker run</code>
-            Опции:
+            <code>Опции: </code>
                 <code>--add-host list                    Добавить пользовательское картирование хоста в IP(host:ip)</code>
                 <code>--annotation map                   Добавить аннотацию в контейнер (перенесено в OCI Runtime)(default map[])</code>
             <code class="f">-a</code>, <code>--attach list                      Прикрепить к STDIN, STDOUT or STDERR</code>
@@ -189,6 +189,11 @@
             <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>
                 <code class="p">docker run -v &lt;host_path&gt;:&lt;container_path&gt; [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
                 <code class="e">docker run -d -v /host/data:/container/data nginx</code>
+                <code class="i" title="том my_volume монтируется в директорию /data внутри контейнера my_container">docker run -d --name my_container -v my_volume:/data nginx</code>
+                <code class="i" title="Запуск контейнера с привязанной директорией">docker run -d --name my_container -v /path/on/host:/data nginx</code>
+                <code class="i" title="Запуск контейнера базы данных с использованием тома">docker run -d --name postgres -e POSTGRES_PASSWORD=mysecretpassword -v
+                db_data:/var/lib/postgresql/data postgres</code>
+                <code class="e">docker run -d --name web_dev -v $(pwd)/my_website:/usr/share/nginx/html nginx</code>
                 <code>--volume-driver string             Дополнительный драйвер тома для контейнера</code>
                 <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
             <code class="f">-w</code>, <code>--workdir string                   Рабочий каталог внутри контейнера</code>
