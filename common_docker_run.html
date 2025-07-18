@@ -118,6 +118,11 @@
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
                 <code>--mount mount                      Прикрепите монтируемую файловую систему к контейнеру</code>
                 <code class="e">docker run -d --mount type=bind,source=/host/data,target=/container/data nginx</code>
+                <code class="i" title="
+                    Использование шифрования файловой системы для томов, используемых контейнерами.
+                ">docker run -d --name my_secure_container --mount
+                type=volume,source=my_volume,destination=/data,volume-driver=local,
+                volume-opt=o=bind,volume-opt=device=/mnt/secure_data nginx</code>
                 <code>--name string                      Присвойте имя контейнеру</code>
                 <code class="e">docker run --name my_nginx nginx</code>
                 <code>--network network                  Подключение контейнера к сети</code>
@@ -139,11 +144,17 @@
             <code class="f">-p</code>, <code>--publish list                     Опубликуйте порт(ы) контейнера на хосте</code>
                 <code class="p">docker run -p [HOST_PORT]:[CONTAINER_PORT] [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
                 <code class="p">docker run -d -p 	&lt;host_port&gt;:&lt;container_port&gt; &lt;image&gt;</code>
+                <code class="i" title="
+                    Использование TLS для шифрования данных, передаваемых между контейнерами и внешними сервисами.
+                ">docker run -d -p 443:443 --name my_secure_container -v /path/to/cert.pem:/etc/nginx/cert.pem -v
+                /path/to/key.pem:/etc/nginx/key.pem nginx</code>
                 <code class="e">docker run -d -p 8080:80 nginx</code>
                 <code class="e">docker run -d -p 8080:80 -p 8443:443 nginx</code>
                 <code class="e">docker run -d -p 127.0.0.1:8080:80 nginx</code>
                 <code class="e">docker run -d -p 7000-8000:7000-8000 someimage</code>
                 <code class="e">docker run -d -p 8080:80 -p 8443:443 myapp</code>
+                <code class="i" title="Ограничение доступа к портам контейнеров только для необходимых IP-адресов и необходимых хостов.">docker run -d -p 192.168.1.100:8080:80 --name restricted_container nginx</code>
+                <code class="i" title="Ограничение доступа к опубликованным портам, используя IP-адреса и правила брандмауэра.">docker run -d -p 127.0.0.1:8080:80 --name my_secure_container nginx</code>
                 <code class="i" title="Nginx будет доступен по HTTP на порту 8080 и по HTTPS на порту 8443.">Nginx будет доступен по HTTP на порту 8080 и по HTTPS на порту 8443</code>
                 <code class="i" title="Nginx будет доступен только с локального хоста по адресу http://127.0.0.1:8080.">docker run -d -p 127.0.0.1:8080:80 --name mynginx nginx</code>
             <code class="f">-P</code>, <code>--publish-all                      Опубликуйте все открытые порты на случайных портах</code>
@@ -172,6 +183,7 @@
                 <code class="e">docker run -it ubuntu bash</code>     
                 <code>--ulimit ulimit                    Ограничить параметры (по умолчанию [])</code>
             <code class="f">-u</code>, <code>--user string                      Имя пользователя или UID (format: <name|uid>[:<group|gid>])</code>
+                <code class="i" title="Использование роли и политики доступа для ограничения прав пользователей, управляющих контейнерами и сетями.">docker run -d --user &lt;uid&gt;:&lt;gid&gt; my_secure_container</code>
                 <code>--userns string                    Используемое пространство имен пользователя</code>
                 <code>--uts string                       Используемое пространство имен UTS</code>
             <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>

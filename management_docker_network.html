@@ -26,7 +26,11 @@
             <code>Управление сетями</code>
             <code>Commands:</code>
             <code>connect                           Подключение контейнера к сети</code>
-            <code class="e">docker network connect &lt;network_name&gt; &lt;container_name&gt;</code>
+            <code class="p">docker network connect &lt;network_name&gt; &lt;container_name&gt;</code>
+            <code class="p">docker network connect --link &lt;source_container&gt;:&lt;alias&gt; &lt;target_network&gt; &lt;container_name&gt;</code>
+            <code class="i" title="
+                Docker позволяет задавать межконтейнерные правила для управления взаимодействием между контейнерами на уровне сети.
+            ">docker network connect --link container1:c1 multi-host-network container2</code>
             <code class="e">docker network connect my_bridge_network my_container</code>
             <code>create                            Создайте сеть</code>
             <code class="e">docker network create --driver bridge my_bridge_network</code>
