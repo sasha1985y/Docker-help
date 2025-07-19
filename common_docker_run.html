@@ -191,6 +191,7 @@
                 <code>--uts string                       Используемое пространство имен UTS</code>
             <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>
                 <code class="p">docker run -v &lt;host_path&gt;:&lt;container_path&gt; [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
+                <code class="i" title="Пример монтирования файла хоста в контейнер">docker run -d --name my_container -v /path/on/host/config.conf:/etc/nginx/nginx.conf nginx</code>
                 <code class="e">docker run -d -v /host/data:/container/data nginx</code>
                 <code class="i" title="Запуск временного контейнера с монтированием тома">docker run --rm -v my_volume:/app busybox ls /app</code>
                 <code class="i" title="Копирование конфигурационных файлов в том">docker run --rm -v config_data:/app busybox sh -c "echo 'configuration data' > /app/config.txt"</code>
@@ -210,6 +211,13 @@
                 <code class="i" title="данные из архива my_volume_backup.tar.gz извлекаются в том my_volume">docker run --rm -v my_volume:/data -v /path/to/backup:/backup busybox tar xzf
                 /backup/my_volume_backup.tar.gz -C /data</code>
                 <code class="e">docker run -d --name web_dev -v $(pwd)/my_website:/usr/share/nginx/html nginx</code>
+                <code class="i" title="
+                    Пример запуска контейнера с монтированием директории:
+                    создадим директорию:
+                    mkdir -p ~/my_web_app
+                    echo 	&quot;Hello, World!	&quot; > ~/my_web_app/index.html
+                    смонтируем директорию в контейнер:
+                ">docker run -d --name web_dev -v ~/my_web_app:/usr/share/nginx/html nginx</code>
                 <code>--volume-driver string             Дополнительный драйвер тома для контейнера</code>
                 <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
             <code class="f">-w</code>, <code>--workdir string                   Рабочий каталог внутри контейнера</code>

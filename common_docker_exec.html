@@ -93,7 +93,9 @@
             ">docker exec -it &lt;container_name&gt; nc -zv 192.168.1.1 22</code>
             <code class="i" title="
                 Проверка DNS внутри контейнера:
-            ">docker exec -it &lt;container_name&gt; cat /etc/resolv.conf</code>  
+            ">docker exec -it &lt;container_name&gt; cat /etc/resolv.conf</code>
+            <code class="i" title="Проверка содержимого директории">docker exec -it my_container ls /path/in/container</code>
+            <code class="i" title="Проверка содержимого файла">docker exec -it my_container cat /path/in/container/config.conf</code>  
             <code>-u, --user string                  Имя пользователя или UID (format:</code>
             <code>                                   "&lt;name|uid	&gt;[:&lt;group|gid	&gt;]")</code>
             <code>-w, --workdir string               Рабочий каталог внутри контейнера</code>
