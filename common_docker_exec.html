@@ -22,7 +22,7 @@
     </header>
     <main>
         <pre>
-            <code>Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code>
+            <code class="p">Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code>
 
             <code>Выполните команду в запущенном контейнере</code>
 
@@ -54,7 +54,31 @@
             <code>-i, --interactive                  Держи STDIN открытым, даже если не подключено</code>
             <code>    --privileged                   Предоставьте расширенные привилегии команде</code>
             <code>-t, --tty                          Выделите псевдо-TTY</code>
+            <code class="i" title="
+                Пример создания бэкапа данных внутри контейнера
+                данные из директории /data внутри контейнера my_container архивируются в файл my_container_backup.tar.gz.
+            ">docker exec -t my_container tar czf /backup/my_container_backup.tar.gz -C /data .</code>
+            <code class="i" title="
+                Пример восстановления данных из архива:
+            ">docker exec -t my_container tar xzf /backup/my_container_backup.tar.gz -C /data</code>
             <code class="e">docker exec -it my_container /bin/bash</code>
+            <code class="i" title="
+                Пример бэкапа базы данных PostgreSQL:
+                Используйте утилиту pg_dump для создания бэкапа базы данных:
+                База данных mydb экспортируется в файл mydb_backup.sql
+            ">docker exec -t my_postgres_container pg_dump -U myuser mydb > /path/to/backup/mydb_backup.sql</code>
+            <code class="i" title="
+                Пример восстановления базы данных PostgreSQL:
+                Используйте утилиту psql для восстановления базы данных из бэкапа:
+            ">cat /path/to/backup/mydb_backup.sql | docker exec -i my_postgres_container psql -U myuser mydb</code>
+            <code class="i" title="
+                Пример восстановления базы данных MySQL:
+                Используйте утилиту mysqldump для создания бэкапа базы данных:
+            ">docker exec my_mysql_container mysqldump -u myuser -p mypassword mydb > /path/to/backup/mydb_backup.sql</code>
+            <code class="i" title="
+                Пример восстановления базы данных MySQL:
+                Используйте утилиту mysql для восстановления базы данных:
+            ">cat /path/to/backup/mydb_backup.sql | docker exec -i my_mysql_container mysql -u myuser -p mypassword mydb</code>
             <code class="i" title="
                 Подключитесь к контейнеру и проверьте связь с другим контейнером или сервисом, используя утилиту ping для отправки ICMP-запросов:
             ">docker exec -it &lt;container_name&gt; ping &lt;target_container_name_or_ip&gt;</code>

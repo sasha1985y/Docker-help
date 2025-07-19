@@ -168,6 +168,7 @@
                 <code>--restart string                   Политика перезапуска, применяемая при выходе из контейнера (по умолчанию "нет")</code>
                 <code>--rm                               Автоматически извлекать контейнер и связанные с ним</code>
                 <code>                                   безымянные тома при выходе</code>
+                <code class="i" title="Вывод содержимого файла конфигурации">docker run --rm -v config_volume:/config busybox cat /config/nginx.conf</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar czf /backup/my_volume_backup.tar.gz /volume</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar xzf /backup/my_volume_backup.tar.gz -C /volume</code>
 <code class="i" title="Если том доступен, команда ls выведет список файлов и директорий, находящихся в томе. Если том недоступен или пуст, вы получите соответствующее сообщение.">docker run --rm -v my_volume:/mnt/volume alpine ls /mnt/volume</code>
@@ -198,6 +199,16 @@
                 <code class="i" title="Запуск контейнера с привязанной директорией">docker run -d --name my_container -v /path/on/host:/data nginx</code>
                 <code class="i" title="Запуск контейнера базы данных с использованием тома">docker run -d --name postgres -e POSTGRES_PASSWORD=mysecretpassword -v
                 db_data:/var/lib/postgresql/data postgres</code>
+                <code class="i" title="
+                    Пример восстановления данных из бэкапа тома
+                ">docker run --rm -v my_volume:/data -v /path/to/backup:/backup busybox tar xzf
+                /backup/my_volume_backup.tar.gz -C /data</code>
+                <code class="i" title="
+                    Создание бэкапа тома: содержимое тома my_volume архивируется в файл my_volume_backup.tar.gz, который сохраняется в директории /path/to/backup на хосте
+                ">docker run --rm -v my_volume:/data -v /path/to/backup:/backup busybox tar czf
+                /backup/my_volume_backup.tar.gz -C /data .</code>
+                <code class="i" title="данные из архива my_volume_backup.tar.gz извлекаются в том my_volume">docker run --rm -v my_volume:/data -v /path/to/backup:/backup busybox tar xzf
+                /backup/my_volume_backup.tar.gz -C /data</code>
                 <code class="e">docker run -d --name web_dev -v $(pwd)/my_website:/usr/share/nginx/html nginx</code>
                 <code>--volume-driver string             Дополнительный драйвер тома для контейнера</code>
                 <code>--volumes-from list                Монтируйте тома из указанных контейнеров</code>
