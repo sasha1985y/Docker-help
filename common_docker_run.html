@@ -118,6 +118,8 @@
                 <code>--memory-swappiness int            Настройка скорости замены памяти контейнера (от 0 до 100) (по умолчанию -1)</code>
                 <code>--mount mount                      Прикрепите монтируемую файловую систему к контейнеру</code>
                 <code class="e">docker run -d --mount type=bind,source=/host/data,target=/container/data nginx</code>
+                <code class="e">docker run -d --name my_container --mount source=my_volume,target=/app nginx</code>
+                <code class="i" title="Монтирование с дополнительными параметрами">docker run -d --name my_container --mount source=my_volume,target=/app,readonly nginx</code>
                 <code class="i" title="
                     Использование шифрования файловой системы для томов, используемых контейнерами.
                 ">docker run -d --name my_secure_container --mount
@@ -165,7 +167,7 @@
                 <code>--read-only                        Смонтируйте корневую файловую систему контейнера как доступную только для чтения</code>
                 <code>--restart string                   Политика перезапуска, применяемая при выходе из контейнера (по умолчанию "нет")</code>
                 <code>--rm                               Автоматически извлекать контейнер и связанные с ним</code>
-                                                    <code>безымянные тома при выходе</code>
+                <code>                                   безымянные тома при выходе</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar czf /backup/my_volume_backup.tar.gz /volume</code>
 <code class="e">docker run --rm -v my_volume:/volume -v /backup:/backup busybox tar xzf /backup/my_volume_backup.tar.gz -C /volume</code>
 <code class="i" title="Если том доступен, команда ls выведет список файлов и директорий, находящихся в томе. Если том недоступен или пуст, вы получите соответствующее сообщение.">docker run --rm -v my_volume:/mnt/volume alpine ls /mnt/volume</code>
@@ -189,6 +191,9 @@
             <code class="f">-v</code>, <code>--volume list                      Привязать, смонтировать том</code>
                 <code class="p">docker run -v &lt;host_path&gt;:&lt;container_path&gt; [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
                 <code class="e">docker run -d -v /host/data:/container/data nginx</code>
+                <code class="i" title="Запуск временного контейнера с монтированием тома">docker run --rm -v my_volume:/app busybox ls /app</code>
+                <code class="i" title="Копирование конфигурационных файлов в том">docker run --rm -v config_data:/app busybox sh -c "echo 'configuration data' > /app/config.txt"</code>
+                <code class="i" title="монтировать несколько томов в один контейнер">docker run -d --name my_container -v volume1:/app/data -v volume2:/app/logs nginx</code>
                 <code class="i" title="том my_volume монтируется в директорию /data внутри контейнера my_container">docker run -d --name my_container -v my_volume:/data nginx</code>
                 <code class="i" title="Запуск контейнера с привязанной директорией">docker run -d --name my_container -v /path/on/host:/data nginx</code>
                 <code class="i" title="Запуск контейнера базы данных с использованием тома">docker run -d --name postgres -e POSTGRES_PASSWORD=mysecretpassword -v
