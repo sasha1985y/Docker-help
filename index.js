@@ -157,6 +157,7 @@ function createDropdown() {
         { value: "edition_compose_yaml_macvlan.html", text: "compose.yaml(macvlan)" },
         { value: "edition_compose_yaml(Swarm).html", text: "compose.yaml(Swarm)" },
         { value: "edition_reinstall_docker_file.html", text: "docker reinstall" },
+        { value: "edition_nginx_config.html", text: "nginx.conf" },
         
     ];
 

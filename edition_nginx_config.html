@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
-    <title>Docker swarm config</title>
+    <title>nginx.conf</title>
 </head>
 
 <body class="body-overal">
@@ -22,21 +22,32 @@
     </header>
     <main>
         <pre>
-            <code class="p">Usage:  docker config COMMAND</code>
+            <code>user www-data;</code>
+            <code>worker_processes auto;</code>
+            <code>pid /run/nginx.pid;</code>
 
-            <code>Manage Swarm configs</code>
+            <code>events {</code>
+            <code>    worker_connections 768;</code>
+            <code>}</code>
 
-            <code>Commands:</code>
-            <code>create      Create a config from a file or STDIN</code>
+            <code>http {</code>
+            <code>    server {</code>
+            <code>        listen 80;</code>
+            <code>        location / {</code>
+            <code>            return 200 'Hello, World!';</code>
+            <code>            add_header Content-Type text/plain;</code>
+            <code>        }</code>
+            <code>    }</code>
+            <code>}</code>
+
+            <code>Пример создания:</code>
+
+            <code class="e">echo "user www-data;" > ./nginx.conf</code>
+            <code class="e">echo "worker_processes auto;" >> ./nginx.conf</code>
             <code class="e">docker config create nginx_config ./nginx.conf</code>
-            <code>inspect     Display detailed information on one or more configs</code>
-            <code>ls          List configs</code>
-            <code class="i" title="
-                Пример вывода:
-                ID                                        NAME            CREATED            UPDATED
-                k6;l54k7;56l5674ывц   nginx_config    10 seconds ago     10 seconds ago
-            ">docker config ls</code>
-            <code>rm          Remove one or more configs</code>
+
+            <code class="e">echo "mysecretpassword" > ./db_password.txt</code>
+            <code class="e">docker secret create db_password ./db_password.txt</code>
         </pre>
     </main>
 

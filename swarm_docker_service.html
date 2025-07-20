@@ -32,17 +32,20 @@
             <code class="e">docker service create --name my_web --replicas 3 -p 8080:80 nginx</code>
             <code class="e">docker service create --name webserver --network my_overlay_network -p 8080:80 nginx</code>
             <code class="e">docker service create --name database --network my_overlay_network -e POSTGRES_PASSWORD=mysecretpassword postgres</code>
+            <code class="i" title="создание сервиса на основе конфигурационного файла nginx.conf">docker service create --name nginx --config source=nginx_config,target=/etc/nginx/nginx.conf -p 8080:80 nginx</code>
             <code>inspect               Отображение подробной информации об одной или нескольких службах</code>
             <code>logs                  Извлекать журналы службы или задачи</code>
             <code>ls                    Список услуг</code>
             <code>ps                    Перечислите задачи одной или нескольких служб</code>
             <code>rm                    Удалите одну или несколько служб</code>
+            <code class="e">docker config rm nginx_config</code>
             <code>rollback              Отменить изменения в конфигурации службы</code>
             <code>scale                 Масштабирование одной или нескольких реплицируемых служб</code>
             <code class="e">docker service scale my_web=5</code>
             <code>update                Обновить службу</code>
             <code class="e">docker service update --image nginx:latest my_web</code>
             <code class="e">docker service update --image nginx:latest --update-order start-first my_web</code>
+            <code class="i" title="Обновление сервиса с новой конфигурацией">docker service update --config-rm nginx_config --config-add source=nginx_config_v2,target=/etc/nginx/nginx.conf nginx</code>
         </pre>
     </main>
 
