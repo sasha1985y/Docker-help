@@ -6,19 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
     <title>Docker save</title>
 </head>
 
 <body class="body-overal">
     <header class="header-overal">
-        <select name="commonCommands" id="commonCommands"></select>
-        <select name="overalCommands" id="overalCommands"></select>
-        <select name="managementCommands" id="managementCommands"></select>
-        <select name="swarmCommands" id="swarmCommands"></select>
-        <select name="globalOptions" id="globalOptions"></select>
-        <select name="editFiles" id="editFiles"></select>
-        <select name="overalComposeCommands" id="overalComposeCommands"></select>
-        <select name="composeOptions" id="composeOptions"></select>
+        <select name="commonCommands" id="commonCommands">
+            <option id="opt1" class="translated">Основные команды</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="overalCommands" id="overalCommands">
+            <option id="opt2" class="translated">Общие команды</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="managementCommands" id="managementCommands">
+            <option id="opt3" class="translated">Управляющие команды</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="swarmCommands" id="swarmCommands">
+            <option id="opt4" class="translated">Swarm-команды</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="globalOptions" id="globalOptions">
+            <option id="opt5" class="translated">Глобальные опции</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="editFiles" id="editFiles">
+            <option id="opt6" class="translated">Конфигурацинные файлы</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="overalComposeCommands" id="overalComposeCommands">
+            <option id="opt7" class="translated">Общие команды compose</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
+        <select name="composeOptions" id="composeOptions">
+            <option id="opt8" class="translated">Compose опции</option>
+            <option value="index.html" class="translated opt9">Домой</option>
+        </select>
     </header>
     <main>
         <pre>
@@ -37,6 +62,7 @@
     </main>
 
     <footer></footer>
+    <script type="module" src="overal_docker_save.js"></script>
     <script src="index.js"></script>
 </body>
 

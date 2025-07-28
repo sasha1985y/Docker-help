@@ -1,0 +1,165 @@
+переведи эти 9 фраз кроме слов: Swarm, Compose и compose, (оставь их без изменения) на языки: ... и создай на каждый перевод такой же объект java script, как в образце:
+'ru (Русский)': {
+        translation: {
+            usage: {
+                opt1: "Основные команды",
+                opt2: "Общие команды",
+                opt3: "Управляющие команды",
+                opt4: "Swarm-команды",
+                opt5: "Глобальные опции",
+                opt6: "Конфигурационные файлы",
+                opt7: "Общие команды compose",
+                opt8: "Compose опции",
+                opt9: "Домой"
+            }
+        }
+    },
+попрошу сделать все объекты одним файлом, а не каждый объект в отдельном файле, 
+фразы на русском в этот объект не включать
+
+i18next.init({
+    lng: 'en',
+    resources: {
+        en: {
+            translation: {
+                usage: {
+                    1: "Download all tagged images in the repository",
+                    2: "Skip image verification (default true)",
+                    3: "Set platform if server is multi-platform capable",
+                    4: "Suppress verbose output"
+                }
+            }
+        },
+
+    }
+}, function(err, t) {
+    updateContent();
+});
+переведи эти 4 фразы на языки: zh, nl, en, fr, de, it, ja, ko, ms, es, aa, ab, af, am, ar, as, ay, az, ba, be, bg, bh, bi, bn, bo, br, ca, co, cs, cy, da, dz, el, eo, et, eu, fa, fi, fj, fo, fy, ga, gd, gl, gn, gu, ha, hi, hr, hu, hy, ia, ie, ik, in, is, iw, ji, jw, ka, kk, kl, km, kn, ks, ku, ky, la, lt, lv, mg, mi, mk, ml, mn, mo, mr, mt, my, na, ne, no, oc, om, or, pa, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sd, sg, sh, si, sk, sl, sm, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, uk, ur, uz, vi, vo, wo, xh, to, zu
+и заполни эту функцию по приведённому образцу
+en: {
+            translation: {
+                usage: {
+                    1: "Download all tagged images in the repository",
+                    2: "Skip image verification (default true)",
+                    3: "Set platform if server is multi-platform capable",
+                    4: "Suppress verbose output"
+                }
+            }
+        },
+такими же объектами с текстом на этих языках
+
+/*zh, nl, en, fr, de, it, ja, ko, ms, es, aa,*/
+
+/*ab, af, am, ar, as, ay, az, ba, be, bg,*/ 
+
+/*bh, bi, bn, bo, br, ca, co, cs, cy, da,*/ 
+
+/*dz, el, eo, et, eu, fa, fi, fj, fo, fy,*/
+
+/*ga, gd, gl, gn, gu, ha, hi, hr, hu, hy,*/ 
+
+/*ia, ie, ik, in, is, iw, ji, jw, ka, kk,*/
+
+/*kl, km, kn, ks, ku, ky, la, lt, lv, mg,*/
+
+/*mi, mk, ml, mn, mo, mr, mt, my, na, ne,*/ 
+
+/*no, oc, om, or, pa, pl, ps, pt, qu, rm,*/
+
+/*rn, ro, ru, rw, sa, sd, sg, sh, si, sk,*/
+
+/*sl, sm, sm, sn, so, sq, sr, ss, st, su,*/
+
+/*sv, sw, ta, te, tg, th, ti, tk, tl, tn,*/
+
+/*to, tr, ts, tt, tw, uk, ur, uz, vi, vo,*/
+
+/*wo, xh, to, zu*/
+
+zh (китайский), nl (голландский), en (английский), fr (французский), de (немецкий), 
+it (итальянский), ja (японский), ko (корейский), ms (малайский), es (испанский),
+aa (афар), ab (абхазский), af (африкаанс), am (амхарик), ar (арабский), 
+as (ассамский), ay (аймара), az (азербайджанский), ba (башкирский), be (белорусский),
+bg (болгарский), bh (бихари), bi (бислама), bn (бенгальский), bo (тибетский), 
+br (бретонский), ca (каталонский), co (корсиканский), cs (чешский), cy (валийский),
+da (датский), dz (бхутани), el (греческий), eo (эсперанто), et (эстонский), 
+eu (баскский), fa (персидский), fi (финский), fj (фиджи), fo (фарерский),
+fy (фризский), ga (ирландский), gd (гальский), gl (галисийский), gn (гуарани), 
+gu (гуярати), ha (хауса), hi (хинди), hr (хорватский), hu (венгерский),
+hy (армянский), ia (интерлингва), ie (интерлингве), ik (инупиак), in (индонезийский), 
+is (исландский), iw (иврит), ji (идиш), jw (яванский), ka (грузинский),
+kk (казахский), kl (гренландский), km (камбоджийский), kn (канадский), ks (кашмирский), 
+ku (курдский), ky (киргизский), la (латинский), ln (лингала), lo (лаосский), lt (литовский), 
+lv (латышский), mg (малагасийский), mi (маори), mk (македонский), ml (малаялам), 
+mn (монгольский), mo (молдавский), mr (маратхи), mt (мальтийский), my (бурмезский), 
+na (науру), ne (непальский), no (норвежский), oc (окцитан), om (оромо), 
+or (ориеа), pa (пенджабский), pl (польский), ps (пуштунский), pt (португальский), 
+qu (квечуа), rm (ретроманский), rn (кирунди), ro (румынский), ru (Русский), 
+rw (киньярванда), sa (санскрит), sd (синдхи), sg (санго), sh (сербохорватский), 
+si (сингалезский), sk (словацкий), sl (словенский), sm (самоанский), sn (шона), 
+so (сомалийский), sq (албанский), sr (сербский), ss (сисвати), st (сесото), 
+su (суданский), sv (шведский), sw (суахили), ta (тамильский), te (телугу), 
+tg (таджикский), th (тайский), ti (тигринья), tk (туркменский), tl (тагалог), 
+tn (сетсвана), to (тонган), tr (турецкий), ts (тсонга), tt (татарский), 
+tw (туи), uk (украинский), ur (урду), uz (узбекский), vi (вьетнамский), 
+vo (воляпюк), wo (волоф), xh (хоса), to (йоруба), zu (зулу)
+
+
+'zh (китайский)', 'nl (голландский)', 'en (английский)', 'fr (французский)', 'de (немецкий)', 
+'it (итальянский)', 'ja (японский)', 'ko (корейский)', 'ms (малайский)', 'es (испанский)',
+'aa (афар)', 'ab (абхазский)', 'af (африкаанс)', 'am (амхарик)', 'ar (арабский)', 
+'as (ассамский)', 'ay (аймара)', 'az (азербайджанский)', 'ba (башкирский)', 'be (белорусский)',
+'bg (болгарский)', 'bh (бихари)', 'bi (бислама)', 'bn (бенгальский)', 'bo (тибетский)', 
+'br (бретонский)', 'ca (каталонский)', 'co (корсиканский)', 'cs (чешский)', 'cy (валийский)',
+'da (датский)', 'dz (бхутани)', 'el (греческий)', 'eo (эсперанто)', 'et (эстонский)', 
+'eu (баскский)', 'fa (персидский)', 'fi (финский)', 'fj (фиджи)', 'fo (фарерский)',
+'fy (фризский)', 'ga (ирландский)', 'gd (гальский)', 'gl (галисийский)', 'gn (гуарани)', 
+'gu (гуярати)', 'ha (хауса)', 'hi (хинди)', 'hr (хорватский)', 'hu (венгерский)',
+'hy (армянский)', 'ia (интерлингва)', 'ie (интерлингве)', 'ik (инупиак)', 'in (индонезийский)', 
+'is (исландский)', 'iw (иврит)', 'ji (идиш)', 'jw (яванский)', 'ka (грузинский)',
+'kk (казахский)', 'kl (гренландский)', 'km (камбоджийский)', 'kn (канадский)', 'ks (кашмирский)', 
+'ku (курдский)', 'ky (киргизский)', 'la (латинский)', 'ln (лингала)', 'lo (лаосский)', 'lt (литовский)', 
+'lv (латышский)', 'mg (малагасийский)', 'mi (маори)', 'mk (македонский)', 'ml (малаялам)', 
+'mn (монгольский)', 'mo (молдавский)', 'mr (маратхи)', 'mt (мальтийский)', 'my (бурмезский)', 
+'na (науру)', 'ne (непальский)', 'no (норвежский)', 'oc (окцитан)', 'om (оромо)', 
+'or (ориеа)', 'pa (пенджабский)', 'pl (польский)', 'ps (пуштунский)', 'pt (португальский)', 
+'qu (квечуа)', 'rm (ретроманский)', 'rn (кирунди)', 'ro (румынский)', 'ru (Русский)', 
+'rw (киньярванда)', 'sa (санскрит)', 'sd (синдхи)', 'sg (санго)', 'sh (сербохорватский)', 
+'si (сингалезский)', 'sk (словацкий)', 'sl (словенский)', 'sm (самоанский)', 'sn (шона)', 
+'so (сомалийский)', 'sq (албанский)', 'sr (сербский)', 'ss (сисвати)', 'st (сесото)', 
+'su (суданский)', 'sv (шведский)', 'sw (суахили)', 'ta (тамильский)', 'te (телугу)', 
+'tg (таджикский)', 'th (тайский)', 'ti (тигринья)', 'tk (туркменский)', 'tl (тагалог)', 
+'tn (сетсвана)', 'to (тонган)', 'tr (турецкий)', 'ts (тсонга)', 'tt (татарский)', 
+'tw (туи)', 'uk (украинский)', 'ur (урду)', 'uz (узбекский)', 'vi (вьетнамский)', 
+'vo (воляпюк)', 'wo (волоф)', 'xh (хоса)', 'to (йоруба)', 'zu (зулу)'
+
+[ 
+  'zh (中文)', 'nl (Nederlands)', 'en (English)', 'fr (français)', 'de (Deutsch)', 
+  'it (italiano)', 'ja (日本語)', 'ko (한국어)', 'ms (Bahasa Melayu)', 'es (español)',
+  'aa (afar)', 'ab (абхазский)', 'af (Afrikaans)', 'am (አማርኛ)', 'ar (العربية)', 
+  'as (অসমীয়া)', 'ay (aymar aru)', 'az (azərbaycan dili)', 'ba (башҡорт теле)', 'be (Беларуская)',
+  'bg (български)', 'bh (भोजपुरी)', 'bi (Bislama)', 'bn (বাংলা)', 'bo (བོད་ཡིག)', 
+  'br (brezhoneg)', 'ca (català)', 'co (corsu)', 'cs (čeština)', 'cy (Cymraeg)',
+  'da (dansk)', 'dz (རྫོང་ཁ)', 'el (Ελληνικά)', 'eo (Esperanto)', 'et (eesti)', 
+  'eu (euskara)', 'fa (فارسی)', 'fi (suomi)', 'fj (vosa Vakaviti)', 'fo (føroyskt)',
+  'fy (Frysk)', 'ga (Gaeilge)', 'gd (Gàidhlig)', 'gl (galego)', 'gn (Aña Guaraní)', 
+  'gu (ગુજરાતી)', 'ha (Hausa)', 'hi (हिन्दी)', 'hr (hrvatski)', 'hu (magyar)',
+  'hy (Հայերեն)', 'ia (Interlingua)', 'ie (Interlingue)', 'ik (Iñupiatun)', 'in (Bahasa Indonesia)', 
+  'is (Íslenska)', 'iw (עברית)', 'ji (ייִדיש)', 'jw (Basa Jawa)', 'ka (ქართული)',
+  'kk (қазақ тілі)', 'kl (kalaallisut)', 'km (ភាសាខ្មែរ)', 'kn (ಕನ್ನಡ)', 'ks (कश्मीरी)', 
+  'ku (Kurdî)', 'ky (Кыргызча)', 'la (Lingua Latina)', 'ln (Lingala)', 'lo (ລາວ)',
+  'lt (lietuvių kalba)', 'lv (latviešu valoda)', 'mg (fiteny malagasy)', 'mi (te reo Māori)', 'mk (македонски јазик)', 
+  'ml (മലയാളം)', 'mn (монгол хэл)', 'mo (limba moldovenească)', 'mr (मराठी)', 'mt (Malti)',
+  'my (ဗမာစာ)', 'na (Dorerin Naoero)', 'ne (नेपाली)', 'no (norsk)', 'oc (occitan)',
+  'om (Oromoo)', 'or (ଓଡ଼ିଆ)', 'pa (ਪੰਜਾਬੀ)', 'pl (polski)', 'ps (پښتو)',
+  'pt (português)', 'qu (Runa Simi)', 'rm (rumantsch)', 'rn (Kirundi)', 'ro (română)',
+  'ru (Русский)', 'rw (Ikinyarwanda)', 'sa (संस्कृतम्)', 'sd (سنڌي)', 'sg (Sango)',
+  'sh (srpskohrvatski)', 'si (සිංහල)', 'sk (slovenčina)', 'sl (slovenščina)', 'sm (gagana Samoa)',
+  'sn (chiShona)', 'so (Soomaaliga)', 'sq (shqip)', 'sr (српски)', 'ss (siSwati)',
+  'st (seSotho)', 'su (Basa Sunda)', 'sv (svenska)', 'sw (Kiswahili)', 'ta (தமிழ்)',
+  'te (తెలుగు)', 'tg (тоҷикӣ)', 'th (ไทย)', 'ti (ትግርኛ)', 'tk (Türkmençe)',
+  'tl (Wikang Tagalog)', 'tn (Setswana)', 'to (faka-Tonga)', 'tr (Türkçe)', 'ts (Xitsonga)',
+  'tt (татарча)', 'tw (Twi)', 'uk (українська)', 'ur (اردو)', 'uz (oʻzbekcha)',  
+  'vi (Tiếng Việt)', 'vo (Volapük)', 'wo (Wolof)', 'xh (isiXhosa)', 'zu (isiZulu)'
+]

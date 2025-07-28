@@ -19,8 +19,8 @@ function createDropdown() {
 
     // Создаем опции
     var commonCommandsOptions = [
-        { value: "", text: "Основные команды" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Основные команды" },
+        // { value: "index.html", text: "Домой" },
         { value: "common_docker_bake.html", text: "docker bake" },
         { value: "common_docker_build.html", text: "docker build" },
         { value: "common_docker_exec.html", text: "docker exec" },
@@ -44,8 +44,8 @@ function createDropdown() {
     });
 
     var overalCommandsOptions = [
-        { value: "", text: "Общие команды" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Общие команды" },
+        // { value: "index.html", text: "Домой" },
         { value: "overal_docker_attach.html", text: "docker attach" },
         { value: "overal_docker_commit.html", text: "docker commit" },
         { value: "overal_docker_cp.html", text: "docker cp" },
@@ -85,8 +85,8 @@ function createDropdown() {
     });
     
     var managementCommandsOptions = [
-        { value: "", text: "Управляющие команды" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Управляющие команды" },
+        // { value: "index.html", text: "Домой" },
         { value: "management_docker_ai.html", text: "docker ai" },
         { value: "management_docker_checkpoint.html", text: "docker checkpoint" },
         { value: "management_docker_cloud.html", text: "docker cloud" },
@@ -116,8 +116,8 @@ function createDropdown() {
     });
 
     var swarmCommandsOptions = [
-        { value: "", text: "Swarm-команды" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Swarm-команды" },
+        // { value: "index.html", text: "Домой" },
         { value: "swarm_docker_config.html", text: "docker config" },
         { value: "swarm_docker_node.html", text: "docker node" },
         { value: "swarm_docker_secret.html", text: "docker secret" },
@@ -135,8 +135,8 @@ function createDropdown() {
     });
 
     var globalOptions = [
-        { value: "", text: "Глобальные опции" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Глобальные опции" },
+        // { value: "index.html", text: "Домой" },
         { value: "global_docker_options.html", text: "global options" },
         
     ];
@@ -149,8 +149,8 @@ function createDropdown() {
     });
 
     var editFilesOptions = [
-        { value: "", text: "Конфигурацинные файлы" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Конфигурацинные файлы" },
+        // { value: "index.html", text: "Домой" },
         { value: "edition_dockerfile.html", text: ".Dockerfile" },
         { value: "edition_compose_yaml.html", text: "compose.yaml" },
         { value: "edition_env_file.html", text: ".env" },
@@ -158,6 +158,7 @@ function createDropdown() {
         { value: "edition_compose_yaml(Swarm).html", text: "compose.yaml(Swarm)" },
         { value: "edition_reinstall_docker_file.html", text: "docker reinstall" },
         { value: "edition_nginx_config.html", text: "nginx.conf" },
+        { value: "edition_utilites.html", text: "utilites" },
         
     ];
 
@@ -169,8 +170,8 @@ function createDropdown() {
     });
 
     var overalComposeCommandsOptions = [
-        { value: "", text: "Общие команды compose" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Общие команды compose" },
+        // { value: "index.html", text: "Домой" },
         { value: "overal_compose_attach.html", text: "compose attach" },
         { value: "overal_compose_bridge.html", text: "compose bridge" },
         { value: "overal_compose_build.html", text: "compose build" },
@@ -215,8 +216,8 @@ function createDropdown() {
     });
 
     var composeOptions = [
-        { value: "", text: "Compose опции" },
-        { value: "index.html", text: "Домой" },
+        // { value: "", text: "Compose опции" },
+        // { value: "index.html", text: "Домой" },
         { value: "compose_docker_options.html", text: "compose options" },
         
     ];
